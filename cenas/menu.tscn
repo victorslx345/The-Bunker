@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bfr18c065kbfl"]
+
+[ext_resource type="Texture2D" uid="uid://d3gt5kms5v1wf" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png" id="1_64url"]
+[ext_resource type="Script" uid="uid://dsxgcd5wodi2u" path="res://scripts/menu.gd" id="1_hsu4v"]
+[ext_resource type="Script" uid="uid://cyw2mq7r4m8sq" path="res://scripts/parallax_background.gd" id="2_mmoso"]
+[ext_resource type="FontFile" uid="uid://4teaefjsb4p4" path="res://fontes/deltarune.ttf" id="4_qvcyk"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="5_nxpqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj4ri"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf16f"]
+bg_color = Color(0, 0, 0, 0.40392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncfd"]
+bg_color = Color(0, 0, 0, 0.15686275)
+
+[node name="Menu" type="Control" unique_id=426771093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsu4v")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=250972565]
+script = ExtResource("2_mmoso")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1875197593]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="fundo menu" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=292806821]
+texture_filter = 1
+position = Vector2(576.00006, 324)
+scale = Vector2(3.657143, 2.722689)
+texture = ExtResource("1_64url")
+
+[node name="Titulo" type="Label" parent="." unique_id=1407203824]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 103.0
+offset_right = 264.0
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_qvcyk")
+theme_override_font_sizes/font_size = 125
+text = "The Bunker"
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=175384694]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -46.0
+offset_right = 116.5
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="botoes" type="VBoxContainer" parent="BoxContainer" unique_id=1825152990]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Jogar" type="Button" parent="BoxContainer/botoes" unique_id=1748851243]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nxpqr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Jogar"
+
+[node name="Sair" type="Button" parent="BoxContainer/botoes" unique_id=1337747339]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nxpqr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Sair
+"
+
+[node name="Creditos" type="Button" parent="BoxContainer/botoes" unique_id=984352672]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nxpqr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Creditos"
+
+[connection signal="pressed" from="BoxContainer/botoes/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/Creditos" to="." method="_on_creditos_pressed"]

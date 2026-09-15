@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://yswxlhwldbcw"]
+
+[ext_resource type="Texture2D" uid="uid://d3n3x3bsc5ey8" path="res://assets/shelter/Shelter_location.png" id="1_ri44r"]
+[ext_resource type="Texture2D" uid="uid://dca6mqo84jmaf" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png" id="2_tn21j"]
+[ext_resource type="Texture2D" uid="uid://b5jbf2sjk02ne" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png" id="3_5cs4p"]
+[ext_resource type="Texture2D" uid="uid://dbmox668v02qa" path="res://assets/kris/kris (2).png" id="4_tn21j"]
+[ext_resource type="Texture2D" uid="uid://dvu7jmgsnn7tw" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png" id="4_xj1bx"]
+[ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/shelter/border_lw_town_0.png" id="5_qafao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmpd3"]
+atlas = ExtResource("2_tn21j")
+region = Rect2(0, 0, 209, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phha8"]
+atlas = ExtResource("3_5cs4p")
+region = Rect2(0, 0, 208, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eewm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmpd3")
+}],
+"loop": 1,
+"name": &"abrido",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phha8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
+size = Vector2(332, 269)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cs4p"]
+atlas = ExtResource("4_tn21j")
+region = Rect2(0, 0, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj1bx"]
+atlas = ExtResource("4_tn21j")
+region = Rect2(24, 0, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qafao"]
+atlas = ExtResource("4_tn21j")
+region = Rect2(48, 0, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0d5f"]
+atlas = ExtResource("4_tn21j")
+region = Rect2(72, 0, 19, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ri44r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cs4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj1bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qafao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0d5f")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bunker_cena" type="Node2D" unique_id=423744718]
+
+[node name="cenario" type="Area2D" parent="." unique_id=1488183077]
+
+[node name="bunker_fundo" type="Sprite2D" parent="cenario" unique_id=50569594]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_ri44r")
+
+[node name="shelter" type="Area2D" parent="cenario" unique_id=1876661456]
+
+[node name="bunker_sprite" type="AnimatedSprite2D" parent="cenario/shelter" unique_id=2064749544]
+texture_filter = 1
+position = Vector2(577, 281.00003)
+scale = Vector2(2.9, 2.9)
+sprite_frames = SubResource("SpriteFrames_eewm5")
+animation = &"abrido"
+frame_progress = 0.3963111
+
+[node name="shelter_hitbox" type="CollisionShape2D" parent="cenario/shelter" unique_id=981894032]
+position = Vector2(579, 315.5)
+shape = SubResource("RectangleShape2D_eewm5")
+
+[node name="kris" type="CharacterBody2D" parent="cenario" unique_id=761743697]
+z_index = 1
+position = Vector2(100, 0)
+collision_mask = 2
+
+[node name="kris_sprites" type="AnimatedSprite2D" parent="cenario/kris" unique_id=1756349172]
+texture_filter = 1
+position = Vector2(643, 426)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_ri44r")
+
+[node name="kris_hitbox" type="CollisionShape2D" parent="cenario/kris" unique_id=1692121041]
+
+[node name="arvore" type="Sprite2D" parent="cenario" unique_id=1621214027]
+texture_filter = 1
+position = Vector2(27, 605.625)
+scale = Vector2(2.7777777, 2.7884583)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore" unique_id=108201303]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore" unique_id=2041310960]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore" unique_id=991960530]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore" unique_id=1896754846]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore/arvore" unique_id=267484849]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=1581234737]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.153622)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=1670534470]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=503225003]
+texture_filter = 1
+position = Vector2(0.3599602, -24.336435)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore/arvore/arvore/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=1112264703]
+texture_filter = 1
+position = Vector2(-4.7683716e-07, -22.577694)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore2" type="Sprite2D" parent="cenario" unique_id=696866515]
+texture_filter = 1
+position = Vector2(1148, 608)
+scale = Vector2(2.7777777, 2.7884583)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2" unique_id=1685425500]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore" unique_id=442269472]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore" unique_id=776415656]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore" unique_id=1208686971]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore/arvore" unique_id=1627621712]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore/arvore/arvore" unique_id=616307354]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.153622)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=1604595940]
+texture_filter = 1
+position = Vector2(-1.0799942, -23.534508)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=2015341022]
+texture_filter = 1
+position = Vector2(0.3599602, -24.336435)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="arvore" type="Sprite2D" parent="cenario/arvore2/arvore/arvore/arvore/arvore/arvore/arvore/arvore/arvore" unique_id=681520951]
+texture_filter = 1
+position = Vector2(-4.7683716e-07, -22.577694)
+scale = Vector2(1, 1.004)
+texture = ExtResource("4_xj1bx")
+flip_h = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062801181]
+visible = false
+
+[node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=1512035764]
+texture_filter = 1
+position = Vector2(576, 323.99994)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_qafao")
