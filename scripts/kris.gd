@@ -8,7 +8,6 @@ const SPEED = 300.0
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
-	$kris_sprites.flip_h = false
 	#if Input.is_action_pressed('ui_up'):
 		#velocity.y = -1*SPEED
 		#$kris_sprites.play("andadno_cima")
@@ -31,8 +30,10 @@ func _physics_process(delta: float) -> void:
 		$kris_sprites.flip_h = true
 	if velocity.x < 0:
 		$kris_sprites.play("andando_lado")
+		$kris_sprites.flip_h = false
 	if velocity.y < 0:
 		$kris_sprites.play("andadno_cima")
+		$kris_sprites.flip_h = false
 	if velocity.y > 0:
 		$kris_sprites.play("default")
 	if position.y != 120:

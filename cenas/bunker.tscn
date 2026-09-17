@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/shelter/border_lw_town_0.png" id="5_qafao"]
 [ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png" id="7_jmpd3"]
 [ext_resource type="Texture2D" uid="uid://df7a1v5jyknn4" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png" id="8_phha8"]
+[ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png" id="10_phha8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(86, 682)
@@ -95,6 +96,22 @@ region = Rect2(48, 0, 19, 38)
 atlas = ExtResource("4_tn21j")
 region = Rect2(72, 0, 19, 38)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xva2t"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 0, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkput"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 132, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlvfj"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 88, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcvgp"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 44, 19, 38)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ri44r"]
 animations = [{
 "frames": [{
@@ -146,6 +163,38 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xva2t")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkput")
+}],
+"loop": 1,
+"name": &"parado_cima",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlvfj")
+}],
+"loop": 1,
+"name": &"parado_dire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcvgp")
+}],
+"loop": 1,
+"name": &"parado_esq",
 "speed": 5.0
 }]
 
@@ -329,7 +378,15 @@ texture_filter = 1
 position = Vector2(472, -75)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ri44r")
-animation = &"andadno_cima"
+animation = &"parado_esq"
+
+[node name="kris_parado" type="Sprite2D" parent="kris" unique_id=546124232]
+texture_filter = 1
+position = Vector2(569, -39)
+scale = Vector2(4, 4)
+texture = ExtResource("10_phha8")
+vframes = 4
+frame = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062801181]
 visible = false
