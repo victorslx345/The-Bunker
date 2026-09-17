@@ -1,10 +1,14 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789657865
+::res://::1789660959
 icon.svg::CompressedTexture2D::364685189568326866::1789573205::1789573288::1::::<><><>0<>0<>e2aef5ed285df076cca5e3162386a3de<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1789573204::0::1::::<><><>0<>0<><>::
 ::res://assets/::1789573205
-::res://assets/kris/::1789658570
+::res://assets/kris/::1789662216
 kris (2).png::CompressedTexture2D::7255116216565833732::1789573205::1789573288::1::::<><><>0<>0<>0cfd785903aef37b579b73f0eadfcd72<>res://.godot/imported/kris (2).png-eeed0418bffa967c12215f0d848af72a.ctex::
+kris.png::CompressedTexture2D::7380809015370101237::1789662216::1789662216::1::::<><><>0<>0<>caaaae95376f0eeb31f346d7056bb166<>res://.godot/imported/kris.png-c0c33c42d39d406c3a1616212fd50870.ctex::
+kris_l.png::CompressedTexture2D::4371980182917053171::1789662216::1789662216::1::::<><><>0<>0<>7b4f0c82cd230fee645a7bf105903156<>res://.godot/imported/kris_l.png-4bff7665e1f31cd7a3e2cea030a0f3b3.ctex::
+kris_r.png::CompressedTexture2D::3749402656164610457::1789662216::1789662216::1::::<><><>0<>0<>bcd7a22eb12231a9012353a6a741feca<>res://.godot/imported/kris_r.png-8fb988d01029436c49a78ea1fdd9094d.ctex::
+kris_up.png::CompressedTexture2D::1504407181553250972::1789662216::1789662216::1::::<><><>0<>0<>396253f555128d0a1bb51cf4bf812fbb<>res://.godot/imported/kris_up.png-fb6de6206575a86872d2e623ccb2bb4e.ctex::
 PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png::CompressedTexture2D::7576313937816790139::1789573204::1789573288::1::::<><><>0<>0<>c0dbc86fb989915d812c29476940e618<>res://.godot/imported/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png-a74b192f5c9d24e4b04ae34d330a9513.ctex::
 PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png::CompressedTexture2D::8370744852707022064::1789573204::1789573288::1::::<><><>0<>0<>d1db9e075b4e9c9fc2001854d862db2f<>res://.godot/imported/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png-322429cfaadb404233b2f977c34d8f84.ctex::
 PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png::CompressedTexture2D::7215596485598707745::1789658570::1789658570::1::::<><><>0<>0<>2cf151e27f92c25efad89ef580c49519<>res://.godot/imported/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png-5838a71ffb149ed7be8da6c77fe1a664.ctex::
@@ -19,15 +23,18 @@ PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png::Compresse
 PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png::CompressedTexture2D::8676474978857636500::1789573205::1789573288::1::::<><><>0<>0<>8078aeccf291b908513ad4283bdb485b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png-f813a91d22be27a1a384e52e76cf5019.ctex::
 PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png::CompressedTexture2D::4510736484943131314::1789573205::1789573288::1::::<><><>0<>0<>2107cdd64b05408c1931e3f11f8ea3af<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png-bb40b02cb66b44baeab8c7c33e15edc6.ctex::
 Shelter_location.png::CompressedTexture2D::9153129205824563953::1789573205::1789573288::1::::<><><>0<>0<>e55fe7996537e8818a25cc70cd11795c<>res://.godot/imported/Shelter_location.png-4c582b752226fb667c56fd30313fc729.ctex::
-::res://cenas/::1789658334
-bunker.tscn::PackedScene::1723068483571408678::1789658334::0::1::::<><><>0<>0<><>::uid://d3n3x3bsc5ey8::::res://assets/shelter/Shelter_location.png<>uid://dcc478mpj0ded::::res://assets/shelter/bunker_abrido_down.png<>uid://b4s1k1gnbtmj8::::res://assets/shelter/bunker_up.png<>uid://w3j221ttbfdw::::res://assets/shelter/bunker_down.png<>uid://dbmox668v02qa::::res://assets/kris/kris (2).png<>uid://dvu7jmgsnn7tw::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png<>uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://bp28s2thdim3a::::res://assets/shelter/border_lw_town_0.png<>uid://dri37eega1reu::::res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png<>uid://df7a1v5jyknn4::::res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png
-menu.tscn::PackedScene::2774097041828862089::1789577286::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf
+::res://cenas/::1789661685
+bunker.tscn::PackedScene::1723068483571408678::1789661685::0::1::::<><><>0<>0<><>::uid://d3n3x3bsc5ey8::::res://assets/shelter/Shelter_location.png<>uid://b7gwy8mqqd2sf::::res://scripts/bunker.gd<>uid://dcc478mpj0ded::::res://assets/shelter/bunker_abrido_down.png<>uid://b4s1k1gnbtmj8::::res://assets/shelter/bunker_up.png<>uid://w3j221ttbfdw::::res://assets/shelter/bunker_down.png<>uid://dbmox668v02qa::::res://assets/kris/kris (2).png<>uid://dvu7jmgsnn7tw::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png<>uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://bp28s2thdim3a::::res://assets/shelter/border_lw_town_0.png<>uid://dri37eega1reu::::res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png<>uid://df7a1v5jyknn4::::res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png<>uid://da2j242t4oiqb::::res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png<>uid://blovk6wpm8hji::::res://scripts/character_body_2d.gd
+menu.tscn::PackedScene::2774097041828862089::1789658841::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf
 ::res://fontes/::1789573288
 deltarune.ttf::FontFile::2074942729051609623::1789573205::1789573288::1::::<><><>0<>0<>7f212d010f130bd60018a3183d2778ad<>res://.godot/imported/deltarune.ttf-da3746d619aa9b28bca5b2535f2f763f.fontdata::
 determination.ttf::FontFile::7114663273726971162::1789573205::1789573288::1::::<><><>0<>0<>a0c1fb9923dd33006a375088cad0a5e8<>res://.godot/imported/determination.ttf-a1d74d5246280621ac0d6f2e4be4a8f6.fontdata::
-::res://scripts/::1789577271
-kris.gd::GDScript::5985068904232026476::1789577271::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/::1789661686
+kris.gd::GDScript::5985068904232026476::1789661686::0::1::::<>CharacterBody2D<><>0<>0<><>::
 menu.gd::GDScript::8470510003384268546::1789573205::0::1::::<>Control<><>0<>0<><>::
 parallax_background.gd::GDScript::6504451604238857672::1789573205::0::1::::<>ParallaxBackground<><>0<>0<><>::
+bunker.gd::GDScript::4646230332085781357::1789661043::0::1::::<>Node2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::3188693829963863294::1789661114::0::1::::<>CharacterBody2D<><>0<>0<><>::
+shelter.gd::GDScript::5588138989462019956::1789660755::0::1::::<>StaticBody2D<><>0<>0<><>::
 ::res://The-Bunker/::1789573204
 README.md::TextFile::-1::1789573204::0::1::::<><><>0<>0<><>::
