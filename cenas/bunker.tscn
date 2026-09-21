@@ -27,35 +27,56 @@ size = Vector2(149, 662)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
 size = Vector2(1059, 11)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ghnf1"]
-atlas = ExtResource("2_xj1bx")
-region = Rect2(0, 0, 209, 70)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_yyqby"]
 atlas = ExtResource("3_qafao")
 region = Rect2(0, 0, 208, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghnf1"]
+atlas = ExtResource("2_xj1bx")
+region = Rect2(0, 0, 209, 70)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hl1l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yyqby")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ghnf1")
 }],
-"loop": 1,
-"name": &"abrido",
+"loop": 0,
+"name": &"abrir",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yyqby")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
-size = Vector2(229, 169)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnh55"]
+size = Vector2(450, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbp17"]
+size = Vector2(419, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxkrw"]
+size = Vector2(408, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nw1q6"]
+size = Vector2(97, 31.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deghi"]
+size = Vector2(91, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux7cy"]
+size = Vector2(250, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ndd"]
+size = Vector2(228, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_edcp2"]
 atlas = ExtResource("7_jmpd3")
@@ -365,30 +386,60 @@ shape = SubResource("RectangleShape2D_sncfd")
 position = Vector2(519.5, -4.5)
 shape = SubResource("RectangleShape2D_cf16f")
 
-[node name="bunker" type="Area2D" parent="." unique_id=1595986564]
+[node name="Bunker" type="StaticBody2D" parent="." unique_id=489467673]
 
-[node name="bunker_up" type="Sprite2D" parent="bunker" unique_id=1664728812]
+[node name="bunker_up" type="Sprite2D" parent="Bunker" unique_id=1664728812]
 z_index = 2
 texture_filter = 1
 position = Vector2(574.00006, 179.00002)
 scale = Vector2(2.9, 2.9)
 texture = ExtResource("4_jmpd3")
 
-[node name="bunker_down" type="AnimatedSprite2D" parent="bunker" unique_id=1429774779]
+[node name="bunker_down" type="AnimatedSprite2D" parent="Bunker" unique_id=1429774779]
 texture_filter = 1
 position = Vector2(575.00006, 353.00003)
 scale = Vector2(2.9, 2.9)
 sprite_frames = SubResource("SpriteFrames_2hl1l")
+animation = &"abrir"
+autoplay = "default"
 
-[node name="bunker_hitbox" type="CollisionShape2D" parent="bunker" unique_id=270549271]
-position = Vector2(575.5, 370.5)
-shape = SubResource("RectangleShape2D_eewm5")
-debug_color = Color(0.30088833, 0.62698823, 0.1196967, 0.41960785)
+[node name="hitbox" type="CollisionShape2D" parent="Bunker" unique_id=243626323]
+position = Vector2(574, 305)
+shape = SubResource("RectangleShape2D_nnh55")
+
+[node name="hitbox2" type="CollisionShape2D" parent="Bunker" unique_id=1669842995]
+position = Vector2(575.5, 268)
+shape = SubResource("RectangleShape2D_kbp17")
+
+[node name="hitbox3" type="CollisionShape2D" parent="Bunker" unique_id=537693598]
+position = Vector2(575, 253)
+shape = SubResource("RectangleShape2D_kxkrw")
+
+[node name="hitbox_lado" type="CollisionShape2D" parent="Bunker" unique_id=1094020511]
+position = Vector2(415.5, 297.75)
+shape = SubResource("RectangleShape2D_nw1q6")
+
+[node name="hitbox_lado2" type="CollisionShape2D" parent="Bunker" unique_id=1349208597]
+position = Vector2(739.5, 298.5)
+shape = SubResource("RectangleShape2D_deghi")
+
+[node name="interacao" type="Area2D" parent="Bunker" unique_id=1352377178]
+
+[node name="hitbox" type="CollisionShape2D" parent="Bunker/interacao" unique_id=1839154450]
+position = Vector2(578, 365.5)
+shape = SubResource("RectangleShape2D_ux7cy")
+debug_color = Color(4.428029e-06, 0.6508084, 0.08838285, 0.41960785)
+
+[node name="teleporte" type="Area2D" parent="Bunker" unique_id=1294863547]
+
+[node name="hitbox" type="CollisionShape2D" parent="Bunker/teleporte" unique_id=2080142517]
+position = Vector2(579, 291.5)
+shape = SubResource("RectangleShape2D_p5ndd")
+debug_color = Color(0.99591, 0, 0.19757634, 0.81960785)
 
 [node name="kris" type="CharacterBody2D" parent="." unique_id=761743697]
 z_index = 1
 position = Vector2(100, 0)
-collision_mask = 2
 script = ExtResource("5_phha8")
 
 [node name="kris_sprites" type="AnimatedSprite2D" parent="kris" unique_id=1756349172]
@@ -443,4 +494,6 @@ texture = ExtResource("5_qafao")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1804091023]
 script = ExtResource("13_ghnf1")
 
-[connection signal="body_entered" from="bunker" to="." method="_on_bunker_body_entered"]
+[connection signal="body_entered" from="Bunker/interacao" to="." method="_on_interacao_body_entered"]
+[connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]
+[connection signal="body_entered" from="Bunker/teleporte" to="." method="_on_teleporte_body_entered"]
