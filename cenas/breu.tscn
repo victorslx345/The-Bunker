@@ -1,3 +1,40 @@
 [gd_scene format=3 uid="uid://1y78iefrmte1"]
 
+[ext_resource type="Texture2D" uid="uid://sop3gb45qo7p" path="res://assets/breu/porta_breu.png" id="1_ph2t0"]
+[ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="2_2jcy5"]
+[ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="2_iqvn8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
+size = Vector2(1372, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
+size = Vector2(1458, 20)
+
 [node name="breu" type="Node2D" unique_id=1645734124]
+
+[node name="kris" parent="." unique_id=462716732 instance=ExtResource("2_2jcy5")]
+position = Vector2(306, 351)
+
+[node name="cenario" type="StaticBody2D" parent="." unique_id=1562946742]
+
+[node name="Porta" type="Sprite2D" parent="cenario" unique_id=585449198]
+texture_filter = 1
+position = Vector2(426, 315)
+scale = Vector2(4, 4)
+texture = ExtResource("1_ph2t0")
+
+[node name="htibox" type="CollisionShape2D" parent="cenario" unique_id=1700973995]
+position = Vector2(954, 213)
+shape = SubResource("RectangleShape2D_eewm5")
+
+[node name="chao" type="CollisionShape2D" parent="cenario" unique_id=2088408632]
+position = Vector2(919, 457)
+shape = SubResource("RectangleShape2D_2hl1l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1873300089]
+
+[node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=388681034]
+texture_filter = 1
+position = Vector2(576, 323.99994)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_iqvn8")

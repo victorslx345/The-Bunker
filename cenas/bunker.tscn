@@ -234,6 +234,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
+size = Vector2(124, 170)
+
 [node name="Bunker_cena" type="Node2D" unique_id=423744718]
 script = ExtResource("1_t0d5f")
 
@@ -507,6 +510,14 @@ script = ExtResource("13_ghnf1")
 one_shot = true
 autostart = true
 
+[node name="Anim" type="Area2D" parent="." unique_id=1676841840]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Anim" unique_id=479192267]
+position = Vector2(571, -127)
+shape = SubResource("RectangleShape2D_eewm5")
+debug_color = Color(0.3695353, 0.47837073, 1, 0.41960785)
+
 [connection signal="body_entered" from="Bunker/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]
 [connection signal="body_entered" from="Bunker/teleporte" to="." method="_on_teleporte_body_entered"]
+[connection signal="body_entered" from="Anim" to="kris" method="_on_anim_body_entered"]

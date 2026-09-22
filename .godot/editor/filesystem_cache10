@@ -1,38 +1,44 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790035503
-icon.svg::CompressedTexture2D::364685189568326866::1790032920::1790033003::1::::<><><>0<>0<>e2aef5ed285df076cca5e3162386a3de<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1790032920::0::1::::<><><>0<>0<><>::
-::res://assets/::1790033037
-::res://assets/kris/::1790035772
-kris_andando.png::CompressedTexture2D::7255116216565833732::1790032920::1790035495::1::::<><><>0<>0<>6b7f93ca3489097d0b464e37d7532dfc<>res://.godot/imported/kris_andando.png-df5423835340cb1a83db02d6cfac398a.ctex::
-kris_andando_lado.png::CompressedTexture2D::9101614846926707200::1790035772::1790035772::1::::<><><>0<>0<>05371060bada9b243875a097986161bc<>res://.godot/imported/kris_andando_lado.png-8cfc3dd75d5c9c93e55a92d2d2f7da5f.ctex::
-kris_andando_up.png::CompressedTexture2D::8370744852707022064::1790032920::1790035503::1::::<><><>0<>0<>f208df932dd8e9f46a64a54c9fd2f976<>res://.godot/imported/kris_andando_up.png-5ed81cc3a80cd397f3c087fce588bf2e.ctex::
-kris_parado.png::CompressedTexture2D::7215596485598707745::1790032920::1790035375::1::::<><><>0<>0<>319793642261448621ab7a3931c474b3<>res://.godot/imported/kris_parado.png-779f4c24141af93d0b0288f6faa18576.ctex::
-::res://assets/shelter/::1790033037
-border_lw_town_0.png::CompressedTexture2D::3497028790478906232::1790032920::1790033004::1::::<><><>0<>0<>e5e6edcfdafe9d43e63c8479d58966b3<>res://.godot/imported/border_lw_town_0.png-d70485a925d4dd63d8630ae00cf970f3.ctex::
-bunker_abrido_down.png::CompressedTexture2D::7305588184561423951::1790032920::1790033003::1::::<><><>0<>0<>f89b4f8d78db133730e239e2e30b89cf<>res://.godot/imported/bunker_abrido_down.png-64833fd271913ec938efa1ad99adaf35.ctex::
-bunker_abrido_up.png::CompressedTexture2D::6850936906783973554::1790032920::1790033003::1::::<><><>0<>0<>b3d002d831cf9627c10eadae692c91a4<>res://.godot/imported/bunker_abrido_up.png-42f82239f6ac91d7925982becdd49910.ctex::
-bunker_down.png::CompressedTexture2D::1602553265704793896::1790032920::1790033003::1::::<><><>0<>0<>c4d4ac71b5333daed409427bf269c741<>res://.godot/imported/bunker_down.png-addcfb7153dec361081bdd64d949ba3d.ctex::
-bunker_up.png::CompressedTexture2D::4460653823988781259::1790032920::1790033003::1::::<><><>0<>0<>9c67590ba6c61ea555f6a5b8b95d1e7d<>res://.godot/imported/bunker_up.png-1d212acdb46fad5076e7c084a261c3e9.ctex::
-PC _ Computer - Deltarune - Backgrounds - Depths.png::CompressedTexture2D::9138143680778216609::1790032920::1790033003::1::::<><><>0<>0<>60a3a3495ef1e4f07c9fd299597b0a0b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Depths.png-f0fdcc7cf26d7422441287c867c136f9.ctex::
-PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png::CompressedTexture2D::7301544258197341549::1790032920::1790033003::1::::<><><>0<>0<>f0e7129c62ba304d5273cac85144010e<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png-35286f7098ee5cf460d953f386049c01.ctex::
-PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png::CompressedTexture2D::8676474978857636500::1790032920::1790033003::1::::<><><>0<>0<>8078aeccf291b908513ad4283bdb485b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png-f813a91d22be27a1a384e52e76cf5019.ctex::
-PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png::CompressedTexture2D::4510736484943131314::1790032920::1790033003::1::::<><><>0<>0<>2107cdd64b05408c1931e3f11f8ea3af<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png-bb40b02cb66b44baeab8c7c33e15edc6.ctex::
-Shelter_location.png::CompressedTexture2D::9153129205824563953::1790032920::1790033003::1::::<><><>0<>0<>e55fe7996537e8818a25cc70cd11795c<>res://.godot/imported/Shelter_location.png-4c582b752226fb667c56fd30313fc729.ctex::
-::res://cenas/::1790035533
-breu.tscn::PackedScene::1876457302270072446::1790035533::0::1::::<><><>0<>0<><>::
-bunker.tscn::PackedScene::1723068483571408678::1790035503::0::1::::<><><>0<>0<><>::uid://d3n3x3bsc5ey8::::res://assets/shelter/Shelter_location.png<>uid://b7gwy8mqqd2sf::::res://scripts/bunker.gd<>uid://dcc478mpj0ded::::res://assets/shelter/bunker_abrido_down.png<>uid://b4s1k1gnbtmj8::::res://assets/shelter/bunker_up.png<>uid://w3j221ttbfdw::::res://assets/shelter/bunker_down.png<>uid://dbmox668v02qa::::res://assets/kris/kris_andando.png<>uid://dvu7jmgsnn7tw::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png<>uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://bp28s2thdim3a::::res://assets/shelter/border_lw_town_0.png<>uid://dri37eega1reu::::res://assets/kris/kris_andando_up.png<>uid://da2j242t4oiqb::::res://assets/kris/kris_parado.png<>uid://ofsti44t46jk::::res://scripts/idle.gd<>uid://blovk6wpm8hji::::res://scripts/character_body_2d.gd
-menu.tscn::PackedScene::2774097041828862089::1790032920::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf
-::res://fontes/::1790033037
-deltarune.ttf::FontFile::2074942729051609623::1790032920::1790033003::1::::<><><>0<>0<>7f212d010f130bd60018a3183d2778ad<>res://.godot/imported/deltarune.ttf-da3746d619aa9b28bca5b2535f2f763f.fontdata::
-determination.ttf::FontFile::7114663273726971162::1790032920::1790033003::1::::<><><>0<>0<>a0c1fb9923dd33006a375088cad0a5e8<>res://.godot/imported/determination.ttf-a1d74d5246280621ac0d6f2e4be4a8f6.fontdata::
-::res://scripts/::1790035207
-bunker.gd::GDScript::4646230332085781357::1790032920::0::1::::<>Node2D<><>0<>0<><>::
-character_body_2d.gd::GDScript::3188693829963863294::1790032920::0::1::::<>CharacterBody2D<><>0<>0<><>::
-idle.gd::GDScript::994093001987064496::1790035121::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-kris.gd::GDScript::5985068904232026476::1790035207::0::1::::<>CharacterBody2D<><>0<>0<><>::
-menu.gd::GDScript::8470510003384268546::1790032920::0::1::::<>Control<><>0<>0<><>::
-parallax_background.gd::GDScript::6504451604238857672::1790032920::0::1::::<>ParallaxBackground<><>0<>0<><>::
-shelter.gd::GDScript::5588138989462019956::1790032920::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://The-Bunker/::1790033037
-README.md::TextFile::-1::1790032920::0::1::::<><><>0<>0<><>::
+::res://::1790074273
+icon.svg::CompressedTexture2D::364685189568326866::1790074224::1790074273::1::::<><><>0<>0<>e2aef5ed285df076cca5e3162386a3de<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1790074224::0::1::::<><><>0<>0<><>::
+::res://assets/::1790075569
+::res://assets/bordas/::1790075622
+Borcda_breu.png::CompressedTexture2D::8242008878559575870::1790075622::1790075623::1::::<><><>0<>0<>f09eab31c4dc9c86cfde49a844094475<>res://.godot/imported/Borcda_breu.png-bea00d4a99f4302d2a85cb47a2009949.ctex::
+::res://assets/breu/::1790075450
+Papeis_anim.png::CompressedTexture2D::7296453541847860936::1790075444::1790075445::1::::<><><>0<>0<>af5574b594325d6d9040897b00708ab3<>res://.godot/imported/Papeis_anim.png-bb1980b9e01cef25363ab8d00db807c4.ctex::
+Papeis_parado.png::CompressedTexture2D::7856609380058155400::1790075449::1790075450::1::::<><><>0<>0<>792e1d03ff02f9bbbb6d7144be2aebbe<>res://.godot/imported/Papeis_parado.png-2641c1ccfb6c0bccecb105e940e23f2f.ctex::
+porta_breu.png::CompressedTexture2D::1293261549205522631::1790075440::1790075440::1::::<><><>0<>0<>6a91866b6d173ee7df0f3a0c2466f210<>res://.godot/imported/porta_breu.png-52d3e6c11578d9951321456e340529b2.ctex::
+::res://assets/kris/::1790074273
+kris_andando.png::CompressedTexture2D::7255116216565833732::1790074224::1790074273::1::::<><><>0<>0<>6b7f93ca3489097d0b464e37d7532dfc<>res://.godot/imported/kris_andando.png-df5423835340cb1a83db02d6cfac398a.ctex::
+kris_andando_lado.png::CompressedTexture2D::9101614846926707200::1790074224::1790074273::1::::<><><>0<>0<>05371060bada9b243875a097986161bc<>res://.godot/imported/kris_andando_lado.png-8cfc3dd75d5c9c93e55a92d2d2f7da5f.ctex::
+kris_andando_up.png::CompressedTexture2D::8370744852707022064::1790074224::1790074273::1::::<><><>0<>0<>f208df932dd8e9f46a64a54c9fd2f976<>res://.godot/imported/kris_andando_up.png-5ed81cc3a80cd397f3c087fce588bf2e.ctex::
+kris_parado.png::CompressedTexture2D::7215596485598707745::1790074224::1790074273::1::::<><><>0<>0<>319793642261448621ab7a3931c474b3<>res://.godot/imported/kris_parado.png-779f4c24141af93d0b0288f6faa18576.ctex::
+::res://assets/shelter/::1790074273
+border_lw_town_0.png::CompressedTexture2D::3497028790478906232::1790074224::1790074273::1::::<><><>0<>0<>e5e6edcfdafe9d43e63c8479d58966b3<>res://.godot/imported/border_lw_town_0.png-d70485a925d4dd63d8630ae00cf970f3.ctex::
+bunker_abrido_down.png::CompressedTexture2D::7305588184561423951::1790074224::1790074273::1::::<><><>0<>0<>f89b4f8d78db133730e239e2e30b89cf<>res://.godot/imported/bunker_abrido_down.png-64833fd271913ec938efa1ad99adaf35.ctex::
+bunker_abrido_up.png::CompressedTexture2D::6850936906783973554::1790074224::1790074273::1::::<><><>0<>0<>b3d002d831cf9627c10eadae692c91a4<>res://.godot/imported/bunker_abrido_up.png-42f82239f6ac91d7925982becdd49910.ctex::
+bunker_down.png::CompressedTexture2D::1602553265704793896::1790074224::1790074273::1::::<><><>0<>0<>c4d4ac71b5333daed409427bf269c741<>res://.godot/imported/bunker_down.png-addcfb7153dec361081bdd64d949ba3d.ctex::
+bunker_up.png::CompressedTexture2D::4460653823988781259::1790074224::1790074273::1::::<><><>0<>0<>9c67590ba6c61ea555f6a5b8b95d1e7d<>res://.godot/imported/bunker_up.png-1d212acdb46fad5076e7c084a261c3e9.ctex::
+PC _ Computer - Deltarune - Backgrounds - Depths.png::CompressedTexture2D::9138143680778216609::1790074224::1790074273::1::::<><><>0<>0<>60a3a3495ef1e4f07c9fd299597b0a0b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Depths.png-f0fdcc7cf26d7422441287c867c136f9.ctex::
+PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png::CompressedTexture2D::7301544258197341549::1790074224::1790074273::1::::<><><>0<>0<>f0e7129c62ba304d5273cac85144010e<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png-35286f7098ee5cf460d953f386049c01.ctex::
+PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png::CompressedTexture2D::8676474978857636500::1790074224::1790074273::1::::<><><>0<>0<>8078aeccf291b908513ad4283bdb485b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png-f813a91d22be27a1a384e52e76cf5019.ctex::
+PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png::CompressedTexture2D::4510736484943131314::1790074224::1790074273::1::::<><><>0<>0<>2107cdd64b05408c1931e3f11f8ea3af<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png-bb40b02cb66b44baeab8c7c33e15edc6.ctex::
+Shelter_location.png::CompressedTexture2D::9153129205824563953::1790074224::1790074273::1::::<><><>0<>0<>e55fe7996537e8818a25cc70cd11795c<>res://.godot/imported/Shelter_location.png-4c582b752226fb667c56fd30313fc729.ctex::
+::res://cenas/::1790074224
+breu.tscn::PackedScene::1876457302270072446::1790074224::0::1::::<><><>0<>0<><>::
+bunker.tscn::PackedScene::1723068483571408678::1790074224::0::1::::<><><>0<>0<><>::uid://d3n3x3bsc5ey8::::res://assets/shelter/Shelter_location.png<>uid://b7gwy8mqqd2sf::::res://scripts/bunker.gd<>uid://dcc478mpj0ded::::res://assets/shelter/bunker_abrido_down.png<>uid://b4s1k1gnbtmj8::::res://assets/shelter/bunker_up.png<>uid://w3j221ttbfdw::::res://assets/shelter/bunker_down.png<>uid://dbmox668v02qa::::res://assets/kris/kris_andando.png<>uid://dvu7jmgsnn7tw::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png<>uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://bp28s2thdim3a::::res://assets/shelter/border_lw_town_0.png<>uid://dri37eega1reu::::res://assets/kris/kris_andando_up.png<>uid://d2w5jcm8oqorg::::res://assets/kris/kris_andando_lado.png<>uid://da2j242t4oiqb::::res://assets/kris/kris_parado.png<>uid://ofsti44t46jk::::res://scripts/idle.gd<>uid://blovk6wpm8hji::::res://scripts/character_body_2d.gd
+menu.tscn::PackedScene::2774097041828862089::1790074224::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf
+::res://fontes/::1790074273
+deltarune.ttf::FontFile::2074942729051609623::1790074224::1790074273::1::::<><><>0<>0<>7f212d010f130bd60018a3183d2778ad<>res://.godot/imported/deltarune.ttf-da3746d619aa9b28bca5b2535f2f763f.fontdata::
+determination.ttf::FontFile::7114663273726971162::1790074224::1790074273::1::::<><><>0<>0<>a0c1fb9923dd33006a375088cad0a5e8<>res://.godot/imported/determination.ttf-a1d74d5246280621ac0d6f2e4be4a8f6.fontdata::
+::res://scripts/::1790074383
+bunker.gd::GDScript::4646230332085781357::1790074224::0::1::::<>Node2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::3188693829963863294::1790074224::0::1::::<>CharacterBody2D<><>0<>0<><>::
+idle.gd::GDScript::994093001987064496::1790074224::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+kris.gd::GDScript::5985068904232026476::1790074383::0::1::::<>CharacterBody2D<><>0<>0<><>::
+menu.gd::GDScript::8470510003384268546::1790074224::0::1::::<>Control<><>0<>0<><>::
+parallax_background.gd::GDScript::6504451604238857672::1790074224::0::1::::<>ParallaxBackground<><>0<>0<><>::
+shelter.gd::GDScript::5588138989462019956::1790074224::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://The-Bunker/::1790074224
+README.md::TextFile::-1::1790074224::0::1::::<><><>0<>0<><>::

@@ -1,6 +1,6 @@
-res://cenas/bunker.tscn
 res://scripts/kris.gd
-res://scripts/idle.gd
 res://cenas/breu.tscn
-res://cenas/sprite_2d.gd
+res://cenas/bunker.tscn
 res://cenas/menu.tscn
+res://cenas/kris.tscn
+res://scripts/idle.gd
