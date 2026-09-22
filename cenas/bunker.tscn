@@ -5,18 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://dcc478mpj0ded" path="res://assets/shelter/bunker_abrido_down.png" id="2_xj1bx"]
 [ext_resource type="Texture2D" uid="uid://b4s1k1gnbtmj8" path="res://assets/shelter/bunker_up.png" id="3_qafao"]
 [ext_resource type="Texture2D" uid="uid://w3j221ttbfdw" path="res://assets/shelter/bunker_down.png" id="4_jmpd3"]
-[ext_resource type="Texture2D" uid="uid://dbmox668v02qa" path="res://assets/kris/kris (2).png" id="4_tn21j"]
+[ext_resource type="Texture2D" uid="uid://dbmox668v02qa" path="res://assets/kris/kris_andando.png" id="4_tn21j"]
 [ext_resource type="Texture2D" uid="uid://dvu7jmgsnn7tw" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png" id="4_xj1bx"]
 [ext_resource type="Script" uid="uid://crjhhfiqc52ou" path="res://scripts/kris.gd" id="5_phha8"]
 [ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/shelter/border_lw_town_0.png" id="5_qafao"]
-[ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (2).png" id="7_jmpd3"]
-[ext_resource type="Texture2D" uid="uid://df7a1v5jyknn4" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2) (1).png" id="8_phha8"]
-[ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/PC _ Computer - Deltarune - Playable Characters - Kris (Chapter 1 + 2).png" id="10_phha8"]
-[ext_resource type="Texture2D" uid="uid://vo0mpwjfef1e" path="res://assets/kris/kris_up.png" id="12_nnh55"]
+[ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/kris_andando_up.png" id="7_jmpd3"]
+[ext_resource type="Texture2D" uid="uid://d2w5jcm8oqorg" path="res://assets/kris/kris_andando_lado.png" id="9_yyqby"]
+[ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/kris_parado.png" id="10_phha8"]
+[ext_resource type="Script" uid="uid://ofsti44t46jk" path="res://scripts/idle.gd" id="12_yyqby"]
 [ext_resource type="Script" uid="uid://blovk6wpm8hji" path="res://scripts/character_body_2d.gd" id="13_ghnf1"]
-[ext_resource type="Texture2D" uid="uid://ddfk31eougrwv" path="res://assets/kris/kris.png" id="13_lbscf"]
-[ext_resource type="Texture2D" uid="uid://b3j240lox36t8" path="res://assets/kris/kris_l.png" id="14_43kmc"]
-[ext_resource type="Texture2D" uid="uid://btoid4y1008o8" path="res://assets/kris/kris_r.png" id="15_mm4sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(86, 682)
@@ -26,6 +23,9 @@ size = Vector2(149, 662)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
 size = Vector2(1059, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
+size = Vector2(1148, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yyqby"]
 atlas = ExtResource("3_qafao")
@@ -64,19 +64,19 @@ size = Vector2(450, 18)
 size = Vector2(419, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxkrw"]
-size = Vector2(408, 58)
+size = Vector2(408, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nw1q6"]
-size = Vector2(97, 31.5)
+size = Vector2(97, 46.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_deghi"]
-size = Vector2(91, 31)
+size = Vector2(90, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ux7cy"]
 size = Vector2(250, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ndd"]
-size = Vector2(228, 19)
+size = Vector2(228, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_edcp2"]
 atlas = ExtResource("7_jmpd3")
@@ -95,19 +95,19 @@ atlas = ExtResource("7_jmpd3")
 region = Rect2(72, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_43kmc"]
-atlas = ExtResource("8_phha8")
+atlas = ExtResource("9_yyqby")
 region = Rect2(0, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mm4sy"]
-atlas = ExtResource("8_phha8")
+atlas = ExtResource("9_yyqby")
 region = Rect2(24, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sooru"]
-atlas = ExtResource("8_phha8")
+atlas = ExtResource("9_yyqby")
 region = Rect2(48, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gof4i"]
-atlas = ExtResource("8_phha8")
+atlas = ExtResource("9_yyqby")
 region = Rect2(72, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5cs4p"]
@@ -126,22 +126,6 @@ region = Rect2(48, 0, 19, 38)
 atlas = ExtResource("4_tn21j")
 region = Rect2(72, 0, 19, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xva2t"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pkput"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 132, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vlvfj"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 88, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xcvgp"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 44, 19, 38)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ri44r"]
 animations = [{
 "frames": [{
@@ -157,7 +141,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lbscf")
 }],
-"loop": 2,
+"loop": 1,
 "name": &"andadno_cima",
 "speed": 5.0
 }, {
@@ -194,42 +178,61 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
+size = Vector2(77, 148.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6osoy"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 132, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxv4j"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 0, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1dmj"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 88, 19, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xva2t"]
+atlas = ExtResource("10_phha8")
+region = Rect2(0, 44, 19, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6osoy")
+}],
+"loop": 0,
+"name": &"cima",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxv4j")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1dmj")
+}],
+"loop": 0,
+"name": &"direita",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xva2t")
 }],
-"loop": 1,
-"name": &"parado",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pkput")
-}],
-"loop": 1,
-"name": &"parado_cima",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vlvfj")
-}],
-"loop": 1,
-"name": &"parado_dire",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xcvgp")
-}],
-"loop": 1,
-"name": &"parado_esq",
+"loop": 0,
+"name": &"esquerda",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
-size = Vector2(77, 148.5)
 
 [node name="Bunker_cena" type="Node2D" unique_id=423744718]
 script = ExtResource("1_t0d5f")
@@ -374,6 +377,28 @@ position = Vector2(-4.7683716e-07, -22.577694)
 scale = Vector2(1, 1.004)
 texture = ExtResource("4_xj1bx")
 
+[node name="arvore_chao" type="Sprite2D" parent="cenario" unique_id=1159029878]
+z_index = 3
+texture_filter = 1
+position = Vector2(213, 605)
+scale = Vector2(3, 3)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore_chao2" type="Sprite2D" parent="cenario/arvore_chao" unique_id=2088042010]
+texture_filter = 1
+position = Vector2(150.33334, -0.33333334)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore_chao" type="Sprite2D" parent="cenario/arvore_chao/arvore_chao2" unique_id=879191883]
+texture_filter = 1
+position = Vector2(72.66667, 0)
+texture = ExtResource("4_xj1bx")
+
+[node name="arvore_chao" type="Sprite2D" parent="cenario/arvore_chao" unique_id=1607727740]
+texture_filter = 1
+position = Vector2(75.66667, 0)
+texture = ExtResource("4_xj1bx")
+
 [node name="parede_l" type="CollisionShape2D" parent="cenario" unique_id=328335686]
 position = Vector2(33, 331)
 shape = SubResource("RectangleShape2D_aj4ri")
@@ -385,6 +410,11 @@ shape = SubResource("RectangleShape2D_sncfd")
 [node name="teto" type="CollisionShape2D" parent="cenario" unique_id=887112778]
 position = Vector2(519.5, -4.5)
 shape = SubResource("RectangleShape2D_cf16f")
+disabled = true
+
+[node name="chao" type="CollisionShape2D" parent="cenario" unique_id=85140107]
+position = Vector2(574, 642.5)
+shape = SubResource("RectangleShape2D_ls2uy")
 
 [node name="Bunker" type="StaticBody2D" parent="." unique_id=489467673]
 
@@ -412,15 +442,15 @@ position = Vector2(575.5, 268)
 shape = SubResource("RectangleShape2D_kbp17")
 
 [node name="hitbox3" type="CollisionShape2D" parent="Bunker" unique_id=537693598]
-position = Vector2(575, 253)
+position = Vector2(575, 245.5)
 shape = SubResource("RectangleShape2D_kxkrw")
 
 [node name="hitbox_lado" type="CollisionShape2D" parent="Bunker" unique_id=1094020511]
-position = Vector2(415.5, 297.75)
+position = Vector2(415.5, 290.25)
 shape = SubResource("RectangleShape2D_nw1q6")
 
 [node name="hitbox_lado2" type="CollisionShape2D" parent="Bunker" unique_id=1349208597]
-position = Vector2(739.5, 298.5)
+position = Vector2(739, 290.5)
 shape = SubResource("RectangleShape2D_deghi")
 
 [node name="interacao" type="Area2D" parent="Bunker" unique_id=1352377178]
@@ -433,55 +463,34 @@ debug_color = Color(4.428029e-06, 0.6508084, 0.08838285, 0.41960785)
 [node name="teleporte" type="Area2D" parent="Bunker" unique_id=1294863547]
 
 [node name="hitbox" type="CollisionShape2D" parent="Bunker/teleporte" unique_id=2080142517]
-position = Vector2(579, 291.5)
+position = Vector2(579, 276)
 shape = SubResource("RectangleShape2D_p5ndd")
 debug_color = Color(0.99591, 0, 0.19757634, 0.81960785)
 
 [node name="kris" type="CharacterBody2D" parent="." unique_id=761743697]
 z_index = 1
-position = Vector2(100, 0)
+position = Vector2(571, -122)
 script = ExtResource("5_phha8")
 
 [node name="kris_sprites" type="AnimatedSprite2D" parent="kris" unique_id=1756349172]
+visible = false
 texture_filter = 1
-position = Vector2(241, 131)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ri44r")
-animation = &"parado_cima"
+animation = &"andando_lado"
+autoplay = "default"
 
 [node name="hitbox" type="CollisionShape2D" parent="kris" unique_id=1020780036]
-position = Vector2(241.5, 129.25)
 shape = SubResource("RectangleShape2D_2hl1l")
 one_way_collision = true
 one_way_collision_direction = Vector2(0, -1)
 
-[node name="parado_up" type="Sprite2D" parent="kris" unique_id=102717466]
-visible = false
+[node name="idle" type="AnimatedSprite2D" parent="kris" unique_id=489887236]
 texture_filter = 1
-position = Vector2(241, 131)
 scale = Vector2(4, 4)
-texture = ExtResource("12_nnh55")
-
-[node name="parado_down" type="Sprite2D" parent="kris" unique_id=609247574]
-visible = false
-texture_filter = 1
-position = Vector2(241, 131)
-scale = Vector2(4, 4)
-texture = ExtResource("13_lbscf")
-
-[node name="parado_esq" type="Sprite2D" parent="kris" unique_id=1583290869]
-visible = false
-texture_filter = 1
-position = Vector2(241, 131)
-scale = Vector2(4, 4)
-texture = ExtResource("14_43kmc")
-
-[node name="parado_dir" type="Sprite2D" parent="kris" unique_id=949491517]
-visible = false
-texture_filter = 1
-position = Vector2(241, 131)
-scale = Vector2(4, 4)
-texture = ExtResource("15_mm4sy")
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+autoplay = "default"
+script = ExtResource("12_yyqby")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062801181]
 
@@ -493,6 +502,10 @@ texture = ExtResource("5_qafao")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1804091023]
 script = ExtResource("13_ghnf1")
+
+[node name="Timer" type="Timer" parent="." unique_id=1204454070]
+one_shot = true
+autostart = true
 
 [connection signal="body_entered" from="Bunker/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]
