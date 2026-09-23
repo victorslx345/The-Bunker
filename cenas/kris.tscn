@@ -164,6 +164,7 @@ animations = [{
 }]
 
 [node name="kris" type="CharacterBody2D" unique_id=462716732]
+visibility_layer = 513
 z_index = 1
 script = ExtResource("1_tk380")
 

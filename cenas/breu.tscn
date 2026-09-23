@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://1y78iefrmte1"]
 
+[ext_resource type="Script" uid="uid://becl13ag7qnnh" path="res://scripts/breu.gd" id="1_5ok8l"]
 [ext_resource type="Texture2D" uid="uid://sop3gb45qo7p" path="res://assets/breu/porta_breu.png" id="1_ph2t0"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="2_2jcy5"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="2_iqvn8"]
+[ext_resource type="Texture2D" uid="uid://kps4va7wrsop" path="res://assets/breu/brilho.png" id="3_2jcy5"]
+[ext_resource type="Texture2D" uid="uid://db7pr2r14npka" path="res://assets/breu/Papeis_anim.png" id="4_riypj"]
+[ext_resource type="Texture2D" uid="uid://dj62hdf1ropci" path="res://assets/breu/Papeis_parado.png" id="5_jrtru"]
+[ext_resource type="Script" uid="uid://ddbqsc6gc1poo" path="res://scripts/papeis/papeis.gd" id="6_wfpk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(1372, 64)
@@ -10,10 +15,113 @@ size = Vector2(1372, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
 size = Vector2(1458, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
+size = Vector2(41, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxkv0"]
+atlas = ExtResource("4_riypj")
+region = Rect2(0, 0, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rnst"]
+atlas = ExtResource("4_riypj")
+region = Rect2(20, 0, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_figga"]
+atlas = ExtResource("4_riypj")
+region = Rect2(40, 0, 19, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hl1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxkv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rnst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_figga")
+}],
+"loop": 1,
+"name": &"caindo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jrtru")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ok8l"]
+load_path = "res://.godot/imported/brilho.png-bc8deeadbf7cc0138f36ae2c148eea89.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqn6w"]
+atlas = SubResource("CompressedTexture2D_5ok8l")
+region = Rect2(0, 0, 20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2g2l"]
+atlas = SubResource("CompressedTexture2D_5ok8l")
+region = Rect2(22, 0, 20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riypj"]
+atlas = SubResource("CompressedTexture2D_5ok8l")
+region = Rect2(44, 0, 20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrtru"]
+atlas = SubResource("CompressedTexture2D_5ok8l")
+region = Rect2(66, 0, 20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfpk7"]
+atlas = ExtResource("3_2jcy5")
+region = Rect2(0, 0, 20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxeff"]
+atlas = ExtResource("3_2jcy5")
+region = Rect2(22, 0, 20, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eewm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqn6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2g2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riypj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrtru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfpk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxeff")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
+size = Vector2(22, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gn68"]
+size = Vector2(78, 192)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
+bg_color = Color(0.7882353, 0.54901963, 0, 0.34901962)
+
 [node name="breu" type="Node2D" unique_id=1645734124]
+script = ExtResource("1_5ok8l")
 
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("2_2jcy5")]
-position = Vector2(306, 351)
+position = Vector2(275, 353)
 
 [node name="cenario" type="StaticBody2D" parent="." unique_id=1562946742]
 
@@ -31,10 +139,55 @@ shape = SubResource("RectangleShape2D_eewm5")
 position = Vector2(919, 457)
 shape = SubResource("RectangleShape2D_2hl1l")
 
+[node name="parede" type="CollisionShape2D" parent="cenario" unique_id=2005097578]
+position = Vector2(214.5, 309)
+shape = SubResource("RectangleShape2D_sncfd")
+
+[node name="papeis" type="AnimatedSprite2D" parent="cenario" unique_id=1018818824]
+texture_filter = 1
+position = Vector2(286, 430.00003)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+frame_progress = 0.7437995
+script = ExtResource("6_wfpk7")
+
+[node name="brilho" type="Area2D" parent="." unique_id=682440831]
+position = Vector2(-514, -19)
+
+[node name="brilho_sprite" type="AnimatedSprite2D" parent="brilho" unique_id=1504047156]
+texture_filter = 1
+position = Vector2(1281, 371)
+sprite_frames = SubResource("SpriteFrames_eewm5")
+autoplay = "default"
+frame_progress = 0.68519664
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brilho" unique_id=1556413703]
+position = Vector2(1280, 370)
+shape = SubResource("RectangleShape2D_aj4ri")
+
+[node name="detector" type="Area2D" parent="." unique_id=1099614186]
+
+[node name="hitbox" type="CollisionShape2D" parent="detector" unique_id=463449825]
+position = Vector2(282, 345)
+shape = SubResource("RectangleShape2D_7gn68")
+disabled = true
+debug_color = Color(0.2658056, 0.6336873, 0, 0.41960785)
+
+[node name="Panel" type="Panel" parent="detector" unique_id=1474474148]
+offset_left = 242.0
+offset_top = 249.0
+offset_right = 324.0
+offset_bottom = 443.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eewm5")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1873300089]
+visible = false
 
 [node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=388681034]
 texture_filter = 1
 position = Vector2(576, 323.99994)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_iqvn8")
+
+[connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]

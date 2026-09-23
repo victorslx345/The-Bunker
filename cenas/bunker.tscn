@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://d2w5jcm8oqorg" path="res://assets/kris/kris_andando_lado.png" id="9_yyqby"]
 [ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/kris_parado.png" id="10_phha8"]
 [ext_resource type="Script" uid="uid://ofsti44t46jk" path="res://scripts/idle.gd" id="12_yyqby"]
-[ext_resource type="Script" uid="uid://blovk6wpm8hji" path="res://scripts/character_body_2d.gd" id="13_ghnf1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(86, 682)
@@ -502,9 +501,6 @@ texture_filter = 1
 position = Vector2(576, 323.99994)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_qafao")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1804091023]
-script = ExtResource("13_ghnf1")
 
 [node name="Timer" type="Timer" parent="." unique_id=1204454070]
 one_shot = true
