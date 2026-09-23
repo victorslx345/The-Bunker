@@ -1,7 +1,8 @@
+res://cenas/menu.tscn
 res://cenas/breu.tscn
 res://scripts/breu.gd
+res://scripts/detector.gd
+res://scripts/kris.gd
 res://cenas/bunker.tscn
-res://scripts/bunker.gd
 res://scripts/menu.gd
 res://cenas/kris.tscn
-res://cenas/menu.tscn

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cyw2mq7r4m8sq" path="res://scripts/parallax_background.gd" id="2_mmoso"]
 [ext_resource type="FontFile" uid="uid://4teaefjsb4p4" path="res://fontes/deltarune.ttf" id="4_qvcyk"]
 [ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="5_nxpqr"]
+[ext_resource type="AudioStream" uid="uid://bcoqpl38ewrcs" path="res://musicas/AUDIO_ANOTHERHIM.ogg" id="6_nxpqr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj4ri"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -100,6 +101,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
 text = "Creditos"
+
+[node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
+position = Vector2(565, 350)
+stream = ExtResource("6_nxpqr")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="BoxContainer/botoes/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Sair" to="." method="_on_sair_pressed"]

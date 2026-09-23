@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dj62hdf1ropci" path="res://assets/breu/Papeis_parado.png" id="5_jrtru"]
 [ext_resource type="Script" uid="uid://ddbqsc6gc1poo" path="res://scripts/papeis/papeis.gd" id="6_wfpk7"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(1372, 64)
 
@@ -111,12 +114,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(22, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gn68"]
-size = Vector2(78, 192)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
-bg_color = Color(0.7882353, 0.54901963, 0, 0.34901962)
-
 [node name="breu" type="Node2D" unique_id=1645734124]
 script = ExtResource("1_5ok8l")
 
@@ -124,6 +121,12 @@ script = ExtResource("1_5ok8l")
 position = Vector2(275, 353)
 
 [node name="cenario" type="StaticBody2D" parent="." unique_id=1562946742]
+
+[node name="Panel" type="Panel" parent="cenario" unique_id=1285901744]
+texture_filter = 1
+offset_right = 1158.0
+offset_bottom = 608.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
 
 [node name="Porta" type="Sprite2D" parent="cenario" unique_id=585449198]
 texture_filter = 1
@@ -153,7 +156,7 @@ frame_progress = 0.7437995
 script = ExtResource("6_wfpk7")
 
 [node name="brilho" type="Area2D" parent="." unique_id=682440831]
-position = Vector2(-514, -19)
+position = Vector2(-481, -21)
 
 [node name="brilho_sprite" type="AnimatedSprite2D" parent="brilho" unique_id=1504047156]
 texture_filter = 1
@@ -165,21 +168,6 @@ frame_progress = 0.68519664
 [node name="CollisionShape2D" type="CollisionShape2D" parent="brilho" unique_id=1556413703]
 position = Vector2(1280, 370)
 shape = SubResource("RectangleShape2D_aj4ri")
-
-[node name="detector" type="Area2D" parent="." unique_id=1099614186]
-
-[node name="hitbox" type="CollisionShape2D" parent="detector" unique_id=463449825]
-position = Vector2(282, 345)
-shape = SubResource("RectangleShape2D_7gn68")
-disabled = true
-debug_color = Color(0.2658056, 0.6336873, 0, 0.41960785)
-
-[node name="Panel" type="Panel" parent="detector" unique_id=1474474148]
-offset_left = 242.0
-offset_top = 249.0
-offset_right = 324.0
-offset_bottom = 443.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_eewm5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1873300089]
 visible = false

@@ -1,4 +1,6 @@
+AudioStreamPlayer2D
 Panel
+AudioListener2D
 CollisionShape2D
 Area2D
 AnimatedSprite2D
