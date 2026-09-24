@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/shelter/border_lw_town_0.png" id="5_qafao"]
 [ext_resource type="AudioStream" uid="uid://36o41qn3m1df" path="res://sfx/snd_smile.ogg" id="7_edcp2"]
 [ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/kris_andando_up.png" id="7_jmpd3"]
+[ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="8_rvdk3"]
 [ext_resource type="Texture2D" uid="uid://d2w5jcm8oqorg" path="res://assets/kris/kris_andando_lado.png" id="9_yyqby"]
 [ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/kris_parado.png" id="10_phha8"]
 [ext_resource type="Script" uid="uid://ofsti44t46jk" path="res://scripts/idle.gd" id="12_yyqby"]
@@ -472,11 +473,18 @@ shape = SubResource("RectangleShape2D_p5ndd")
 debug_color = Color(0.99591, 0, 0.19757634, 0.81960785)
 
 [node name="bunker" type="AudioStreamPlayer2D" parent="Bunker" unique_id=547880905]
-position = Vector2(579, 370)
+position = Vector2(579, 463)
 stream = ExtResource("7_edcp2")
 pitch_scale = 0.15
 autoplay = true
-max_distance = 734.0
+max_distance = 250.0
+parameters/looping = true
+
+[node name="impact" type="AudioStreamPlayer2D" parent="Bunker" unique_id=1111394366]
+position = Vector2(578, 367)
+stream = ExtResource("8_rvdk3")
+pitch_scale = 1.08
+parameters/looping = false
 
 [node name="kris" type="CharacterBody2D" parent="." unique_id=761743697]
 z_index = 1
@@ -522,12 +530,15 @@ position = Vector2(571, -127)
 shape = SubResource("RectangleShape2D_eewm5")
 debug_color = Color(0.3695353, 0.47837073, 1, 0.41960785)
 
-[node name="Birds" type="AudioStreamPlayer" parent="." unique_id=243786989]
+[node name="birds" type="AudioStreamPlayer2D" parent="." unique_id=1656122728]
+position = Vector2(567, -92)
 stream = ExtResource("14_yyqby")
 autoplay = true
+max_distance = 889.0
 parameters/looping = true
 
 [connection signal="body_entered" from="Bunker/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]
 [connection signal="body_entered" from="Bunker/teleporte" to="." method="_on_teleporte_body_entered"]
+[connection signal="body_entered" from="Anim" to="." method="_on_anim_body_entered"]
 [connection signal="body_entered" from="Anim" to="kris" method="_on_anim_body_entered"]

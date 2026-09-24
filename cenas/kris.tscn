@@ -173,7 +173,7 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ri44r")
-animation = &"andando_lado"
+animation = &"andadno_cima"
 autoplay = "default"
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=187602717]
@@ -185,6 +185,9 @@ one_way_collision_direction = Vector2(0, -1)
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ls2uy")
-animation = &"direita"
+animation = &"esquerda"
 autoplay = "default"
 script = ExtResource("6_uo6dj")
+
+[node name="ouvidos" type="AudioListener2D" parent="." unique_id=1527910565]
+current = true

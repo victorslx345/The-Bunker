@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-var mover = true
+@export var mover = true
 const SPEED = 200.0
-var anim = false
 func _ready() -> void:
-	$idle.play("direita")
+	pass
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
@@ -38,19 +37,3 @@ func _physics_process(delta: float) -> void:
 			$idle.visible = false
 			$kris_sprites.visible = true
 	move_and_slide()
-
-#ANIMAÇAO~INICIAL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	if position.y != 120 and anim == true:
-		mover = false
-		move_local_y(1)
-		$kris_sprites.visible = true
-		$idle.visible = false
-		$kris_sprites.play("default")
-	if position.y == 120:
-		mover = true
-		anim = false
-		$"../cenario/teto".disabled = false
-		
-func _on_anim_body_entered(body: Node2D) -> void:
-	anim = true

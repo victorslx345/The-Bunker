@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://db7pr2r14npka" path="res://assets/breu/Papeis_anim.png" id="4_riypj"]
 [ext_resource type="Texture2D" uid="uid://dj62hdf1ropci" path="res://assets/breu/Papeis_parado.png" id="5_jrtru"]
 [ext_resource type="Script" uid="uid://ddbqsc6gc1poo" path="res://scripts/papeis/papeis.gd" id="6_wfpk7"]
+[ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="7_jrtru"]
+[ext_resource type="AudioStream" uid="uid://chxxxofnok06l" path="res://sfx/rumble.ogg" id="8_wfpk7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
 bg_color = Color(0, 0, 0, 1)
@@ -148,12 +150,20 @@ shape = SubResource("RectangleShape2D_sncfd")
 
 [node name="papeis" type="AnimatedSprite2D" parent="cenario" unique_id=1018818824]
 texture_filter = 1
-position = Vector2(286, 430.00003)
+position = Vector2(282, 426)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_2hl1l")
 autoplay = "default"
-frame_progress = 0.7437995
+frame_progress = 0.0889161
 script = ExtResource("6_wfpk7")
+
+[node name="porta" type="AudioStreamPlayer2D" parent="cenario" unique_id=148516674]
+stream = ExtResource("7_jrtru")
+volume_db = 9.84
+
+[node name="rumble" type="AudioStreamPlayer2D" parent="cenario" unique_id=1898661267]
+stream = ExtResource("8_wfpk7")
+parameters/looping = true
 
 [node name="brilho" type="Area2D" parent="." unique_id=682440831]
 position = Vector2(-481, -21)
@@ -170,7 +180,6 @@ position = Vector2(1280, 370)
 shape = SubResource("RectangleShape2D_aj4ri")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1873300089]
-visible = false
 
 [node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=388681034]
 texture_filter = 1
@@ -178,4 +187,20 @@ position = Vector2(576, 323.99994)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_iqvn8")
 
+[node name="Timer" type="Timer" parent="." unique_id=1611431157]
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=1882507825]
+wait_time = 0.1
+
+[node name="cair" type="Timer" parent="." unique_id=160098945]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]
+[connection signal="body_entered" from="brilho" to="cenario/papeis" method="_on_brilho_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="cenario/papeis" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="cair" to="." method="_on_cair_timeout"]
+[connection signal="timeout" from="cair" to="cenario/papeis" method="_on_cair_timeout"]
