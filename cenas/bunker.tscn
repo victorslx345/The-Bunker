@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dbmox668v02qa" path="res://assets/kris/kris_andando.png" id="4_tn21j"]
 [ext_resource type="Texture2D" uid="uid://dvu7jmgsnn7tw" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png" id="4_xj1bx"]
 [ext_resource type="Script" uid="uid://crjhhfiqc52ou" path="res://scripts/kris.gd" id="5_phha8"]
-[ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/shelter/border_lw_town_0.png" id="5_qafao"]
+[ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/bordas/border_lw_town_0.png" id="5_qafao"]
 [ext_resource type="AudioStream" uid="uid://36o41qn3m1df" path="res://sfx/snd_smile.ogg" id="7_edcp2"]
 [ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/kris_andando_up.png" id="7_jmpd3"]
 [ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="8_rvdk3"]

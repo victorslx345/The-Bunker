@@ -1,6 +1,7 @@
 extends Node2D
 var flag = false
 var anim = true
+var cair = false
 func _ready() -> void:
 	pass
 
@@ -22,7 +23,8 @@ func _process(delta: float) -> void:
 		$brilho/brilho_sprite.visible = false
 		$brilho/CollisionShape2D.disabled = true
 		flag = false
-		
+	if cair == true:
+		$kris.move_local_y(10)
 		
 
 
@@ -40,4 +42,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_cair_timeout() -> void:
-	pass
+	$kris.mover = false
+	$kris/kris_sprites.play("caindo")
+	$kris/kris_sprites.flip_h = true
+	cair = true
+	$cenario/chao.disabled = true
+	$kris/fall.play()
+	await $kris/fall.finished
+	$kris/impacto.play()

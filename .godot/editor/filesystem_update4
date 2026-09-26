@@ -1,9 +1,6 @@
-res://scripts/bunker.gd
-res://cenas/bunker.tscn
-res://scripts/kris.gd
-res://cenas/kris.tscn
 res://scripts/breu.gd
+res://cenas/kris.tscn
 res://cenas/breu.tscn
-res://scripts/papeis/papeis.gd
-res://cenas/menu.tscn
 res://scripts/menu.gd
+res://cenas/bunker.tscn
+res://cenas/menu.tscn

@@ -1,7 +1,8 @@
 extends AnimatedSprite2D
 
-var flag = false
-var treme = 0
+@export var flag = false
+@export var treme = 0
+@export var cair = false
 func _ready() -> void:
 	pass
 
@@ -13,11 +14,14 @@ func _process(delta: float) -> void:
 		treme = 0.5
 		$"../rumble".play()
 		$"../../cair".start()
-	
-	if treme == 0.5:
+
+	if treme == 0.5 and cair == false:
 		move_local_x(0.5)
-	if treme == -0.5:
+	if treme == -0.5 and cair == false:
 		move_local_x(-0.5)
+	if cair == true:
+		play("caindo")
+		move_local_y(1*randi_range(1,2))
 
 
 
@@ -26,9 +30,9 @@ func _on_brilho_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_2_timeout() -> void:
-	
 	treme *= -1
 
-
 func _on_cair_timeout() -> void:
-	pass
+	cair = true
+	$"../rumble".stream_paused = true
+	$"../caindo".play()

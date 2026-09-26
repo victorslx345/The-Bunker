@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp28s2thdim3a"
-path="res://.godot/imported/border_lw_town_0.png-d70485a925d4dd63d8630ae00cf970f3.ctex"
+path="res://.godot/imported/border_lw_town_0.png-6396cc3157285c8ea98c98b54b9324aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/shelter/border_lw_town_0.png"
-dest_files=["res://.godot/imported/border_lw_town_0.png-d70485a925d4dd63d8630ae00cf970f3.ctex"]
+source_file="res://assets/bordas/border_lw_town_0.png"
+dest_files=["res://.godot/imported/border_lw_town_0.png-6396cc3157285c8ea98c98b54b9324aa.ctex"]
 
 [params]
 

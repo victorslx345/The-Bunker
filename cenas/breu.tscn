@@ -4,12 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://sop3gb45qo7p" path="res://assets/breu/porta_breu.png" id="1_ph2t0"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="2_2jcy5"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="2_iqvn8"]
+[ext_resource type="AudioStream" uid="uid://cp67ph7ft5vlx" path="res://sfx/fall.ogg" id="3_1rnst"]
 [ext_resource type="Texture2D" uid="uid://kps4va7wrsop" path="res://assets/breu/brilho.png" id="3_2jcy5"]
+[ext_resource type="AudioStream" uid="uid://25kh382xup5v" path="res://sfx/impact-fall.ogg" id="4_figga"]
 [ext_resource type="Texture2D" uid="uid://db7pr2r14npka" path="res://assets/breu/Papeis_anim.png" id="4_riypj"]
 [ext_resource type="Texture2D" uid="uid://dj62hdf1ropci" path="res://assets/breu/Papeis_parado.png" id="5_jrtru"]
 [ext_resource type="Script" uid="uid://ddbqsc6gc1poo" path="res://scripts/papeis/papeis.gd" id="6_wfpk7"]
-[ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="7_jrtru"]
-[ext_resource type="AudioStream" uid="uid://chxxxofnok06l" path="res://sfx/rumble.ogg" id="8_wfpk7"]
+[ext_resource type="AudioStream" uid="uid://cdynbdm1jqvxn" path="res://sfx/snd_paper_rumble.ogg" id="8_wfpk7"]
+[ext_resource type="AudioStream" uid="uid://dhwy28t7844pu" path="res://sfx/snd_paper_rise.ogg" id="9_7gn68"]
+[ext_resource type="AudioStream" uid="uid://c02k5d28g5k07" path="res://sfx/snd_locker.ogg" id="11_7i78g"]
+[ext_resource type="Script" uid="uid://cf88i2nabgchd" path="res://scripts/papeis/papeis_2.gd" id="12_figga"]
+[ext_resource type="Script" uid="uid://dp22ogyog8m0v" path="res://scripts/papeis/papeis_3.gd" id="13_7gn68"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
 bg_color = Color(0, 0, 0, 1)
@@ -122,12 +127,36 @@ script = ExtResource("1_5ok8l")
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("2_2jcy5")]
 position = Vector2(275, 353)
 
+[node name="fall" type="AudioStreamPlayer2D" parent="kris" unique_id=1084238366]
+position = Vector2(-275, -353)
+stream = ExtResource("3_1rnst")
+volume_db = 3.852
+
+[node name="impacto" type="AudioStreamPlayer2D" parent="kris" unique_id=208153351]
+stream = ExtResource("4_figga")
+volume_db = -2.889
+
+[node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=1873300089]
+
+[node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=388681034]
+texture_filter = 1
+position = Vector2(576, 323.99994)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_iqvn8")
+
+[node name="camera" type="Camera2D" parent="kris" unique_id=953421937]
+limit_left = 0
+limit_top = 0
+limit_right = 1652
+limit_bottom = 648
+position_smoothing_enabled = true
+
 [node name="cenario" type="StaticBody2D" parent="." unique_id=1562946742]
 
 [node name="Panel" type="Panel" parent="cenario" unique_id=1285901744]
 texture_filter = 1
-offset_right = 1158.0
-offset_bottom = 608.0
+offset_right = 1997.0
+offset_bottom = 625.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
 
 [node name="Porta" type="Sprite2D" parent="cenario" unique_id=585449198]
@@ -148,25 +177,86 @@ shape = SubResource("RectangleShape2D_2hl1l")
 position = Vector2(214.5, 309)
 shape = SubResource("RectangleShape2D_sncfd")
 
+[node name="rumble" type="AudioStreamPlayer2D" parent="cenario" unique_id=1898661267]
+stream = ExtResource("8_wfpk7")
+parameters/looping = true
+
+[node name="caindo" type="AudioStreamPlayer2D" parent="cenario" unique_id=78887226]
+position = Vector2(282, 426)
+scale = Vector2(3, 3)
+stream = ExtResource("9_7gn68")
+
+[node name="porta" type="AudioStreamPlayer2D" parent="cenario" unique_id=148516674]
+stream = ExtResource("11_7i78g")
+volume_db = 3.852
+
 [node name="papeis" type="AnimatedSprite2D" parent="cenario" unique_id=1018818824]
 texture_filter = 1
-position = Vector2(282, 426)
+position = Vector2(266, 428)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_2hl1l")
 autoplay = "default"
 frame_progress = 0.0889161
 script = ExtResource("6_wfpk7")
 
-[node name="porta" type="AudioStreamPlayer2D" parent="cenario" unique_id=148516674]
-stream = ExtResource("7_jrtru")
-volume_db = 9.84
+[node name="papeis4" type="AnimatedSprite2D" parent="cenario" unique_id=1313053059]
+texture_filter = 1
+position = Vector2(340, 406)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
 
-[node name="rumble" type="AudioStreamPlayer2D" parent="cenario" unique_id=1898661267]
-stream = ExtResource("8_wfpk7")
-parameters/looping = true
+[node name="papeis2" type="AnimatedSprite2D" parent="cenario" unique_id=85912389]
+texture_filter = 1
+position = Vector2(294, 410)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
+
+[node name="papeis3" type="AnimatedSprite2D" parent="cenario" unique_id=2047015997]
+texture_filter = 1
+position = Vector2(317, 420)
+scale = Vector2(2.8, 2.8)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("13_7gn68")
+
+[node name="papeis5" type="AnimatedSprite2D" parent="cenario" unique_id=1134316896]
+texture_filter = 1
+position = Vector2(400, 425.00003)
+scale = Vector2(3.1, 3.1)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
+
+[node name="papeis6" type="AnimatedSprite2D" parent="cenario" unique_id=161966965]
+texture_filter = 1
+position = Vector2(462.00006, 408)
+scale = Vector2(2.9, 2.9)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
+
+[node name="papeis7" type="AnimatedSprite2D" parent="cenario" unique_id=377979093]
+texture_filter = 1
+position = Vector2(576, 415)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
+
+[node name="papeis8" type="AnimatedSprite2D" parent="cenario" unique_id=227121268]
+texture_filter = 1
+position = Vector2(765.00006, 397)
+scale = Vector2(2.9, 2.9)
+sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
+script = ExtResource("12_figga")
 
 [node name="brilho" type="Area2D" parent="." unique_id=682440831]
-position = Vector2(-481, -21)
+position = Vector2(-38, -16)
 
 [node name="brilho_sprite" type="AnimatedSprite2D" parent="brilho" unique_id=1504047156]
 texture_filter = 1
@@ -178,14 +268,6 @@ frame_progress = 0.68519664
 [node name="CollisionShape2D" type="CollisionShape2D" parent="brilho" unique_id=1556413703]
 position = Vector2(1280, 370)
 shape = SubResource("RectangleShape2D_aj4ri")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1873300089]
-
-[node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=388681034]
-texture_filter = 1
-position = Vector2(576, 323.99994)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_iqvn8")
 
 [node name="Timer" type="Timer" parent="." unique_id=1611431157]
 one_shot = true
@@ -201,6 +283,7 @@ one_shot = true
 [connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]
 [connection signal="body_entered" from="brilho" to="cenario/papeis" method="_on_brilho_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="cenario/papeis" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="cenario/papeis" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="cair" to="." method="_on_cair_timeout"]
 [connection signal="timeout" from="cair" to="cenario/papeis" method="_on_cair_timeout"]
