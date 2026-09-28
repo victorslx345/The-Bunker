@@ -1,9 +1,9 @@
+TileMapLayer
 AudioStreamPlayer2D
 Camera2D
 CanvasLayer
 AnimatedSprite2D
 StaticBody2D
-TileMapLayer
 Timer
 AudioListener2D
 Panel

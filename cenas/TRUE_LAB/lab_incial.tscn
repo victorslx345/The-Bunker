@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://r3jf8ksa47ec"]
+
+[ext_resource type="Texture2D" uid="uid://d4ml7sgdduedw" path="res://assets/LAB/true_lab_shelt.png" id="1_tutdc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_herae"]
+texture = ExtResource("1_tutdc")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+3:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ls2uy"]
+sources/1 = SubResource("TileSetAtlasSource_herae")
+
+[node name="lab_incial" type="Node2D" unique_id=590810613]
+
+[node name="Chao" type="TileMapLayer" parent="." unique_id=1696684969]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_ls2uy")
