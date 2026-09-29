@@ -2,13 +2,17 @@ extends CharacterBody2D
 
 @export var mover = true
 const SPEED = 200.0
+@export var darkworld = false
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
-	if mover == true:
+	if mover == true and darkworld == false:
+		$darkworld.visible = false
+		$darkworld_idle.visible = false
+		
 		if velocity.x == 0 and velocity.y == 0:
 			$idle.visible = true
 			$kris_sprites.visible = false
@@ -36,4 +40,39 @@ func _physics_process(delta: float) -> void:
 			$kris_sprites.flip_h = true
 			$idle.visible = false
 			$kris_sprites.visible = true
+			
+			
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	if mover == true and darkworld == true:
+		$kris_sprites.visible = false
+		$idle.visible = false
+		
+		if velocity.x == 0 and velocity.y == 0:
+			$darkworld_idle.visible = true
+			$darkworld.visible = false
+		if Input.is_action_pressed('ui_up'):
+			velocity.y = -1*SPEED
+			$darkworld.flip_h = false
+			$darkworld_idle.visible = false
+			$darkworld.visible = true
+			$darkworld.play("up")
+		if Input.is_action_pressed('ui_down'):
+			velocity.y = SPEED
+			$darkworld.play("default")
+			$darkworld.flip_h = false
+			$darkworld_idle.visible = false
+			$darkworld.visible = true
+		if Input.is_action_pressed('ui_right'):
+			velocity.x = SPEED
+			$darkworld.play("right")
+			$darkworld.flip_h = false
+			$darkworld_idle.visible = false
+			$darkworld.visible = true
+		if Input.is_action_pressed('ui_left'):
+			velocity.x = -1*SPEED
+			$darkworld.play("right")
+			$darkworld.flip_h = true
+			$darkworld_idle.visible = false
+			$darkworld.visible = true
 	move_and_slide()

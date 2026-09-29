@@ -1,1 +1,10 @@
+res://cenas/kris.tscn
 res://cenas/TRUE_LAB/lab_incial.tscn
+res://cenas/breu.tscn
+res://scripts/breu.gd
+res://scripts/detector.gd
+res://scripts/menu.gd
+res://cenas/bunker.tscn
+res://cenas/menu.tscn
+res://scripts/darkworld_idle.gd
+res://scripts/kris.gd

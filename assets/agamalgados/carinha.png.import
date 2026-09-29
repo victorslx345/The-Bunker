@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lum1ao1in2dj"
-path="res://.godot/imported/carinha.png-a190f8a18e0c3473fe5e6b23b3a340c5.ctex"
+path="res://.godot/imported/carinha.png-2714a56d10c3b13bb3856a9b9250b4d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/amalgamados/carinha.png"
-dest_files=["res://.godot/imported/carinha.png-a190f8a18e0c3473fe5e6b23b3a340c5.ctex"]
+source_file="res://assets/agamalgados/carinha.png"
+dest_files=["res://.godot/imported/carinha.png-2714a56d10c3b13bb3856a9b9250b4d6.ctex"]
 
 [params]
 

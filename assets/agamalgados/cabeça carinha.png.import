@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyidn0uttsydu"
-path="res://.godot/imported/cabeça carinha.png-5e975ff3976abf8c324f9b1c9e8c31f2.ctex"
+path="res://.godot/imported/cabeça carinha.png-16d5cd814c4bfd91e5446867a4781b11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/amalgamados/cabeça carinha.png"
-dest_files=["res://.godot/imported/cabeça carinha.png-5e975ff3976abf8c324f9b1c9e8c31f2.ctex"]
+source_file="res://assets/agamalgados/cabeça carinha.png"
+dest_files=["res://.godot/imported/cabeça carinha.png-16d5cd814c4bfd91e5446867a4781b11.ctex"]
 
 [params]
 

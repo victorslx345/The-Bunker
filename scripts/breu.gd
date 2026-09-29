@@ -50,3 +50,6 @@ func _on_cair_timeout() -> void:
 	$kris/fall.play()
 	await $kris/fall.finished
 	$kris/impacto.play()
+	$kris/idle.visible = false
+	
+	

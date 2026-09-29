@@ -1,10 +1,10 @@
+Timer
 TileMapLayer
+AnimatedSprite2D
 AudioStreamPlayer2D
 Camera2D
 CanvasLayer
-AnimatedSprite2D
 StaticBody2D
-Timer
 AudioListener2D
 Panel
 CollisionShape2D

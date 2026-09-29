@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtm3dp3xjab65"
-path="res://.godot/imported/Memory Head.png-c1253618ef49316254d8b9e6f3167db1.ctex"
+path="res://.godot/imported/Memory Head.png-10fc9a3da74caf7e452ca0b927fe5c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/amalgamados/Memory Head.png"
-dest_files=["res://.godot/imported/Memory Head.png-c1253618ef49316254d8b9e6f3167db1.ctex"]
+source_file="res://assets/agamalgados/Memory Head.png"
+dest_files=["res://.godot/imported/Memory Head.png-10fc9a3da74caf7e452ca0b927fe5c55.ctex"]
 
 [params]
 

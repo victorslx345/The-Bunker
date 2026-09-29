@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cssqyqyfjq4kj"
-path="res://.godot/imported/bicho esquisito.png-6d3c68e0cb7aa82f23230699b3b9ba7d.ctex"
+path="res://.godot/imported/bicho esquisito.png-25124f734677722ee99e468aeb3842dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/amalgamados/bicho esquisito.png"
-dest_files=["res://.godot/imported/bicho esquisito.png-6d3c68e0cb7aa82f23230699b3b9ba7d.ctex"]
+source_file="res://assets/agamalgados/bicho esquisito.png"
+dest_files=["res://.godot/imported/bicho esquisito.png-25124f734677722ee99e468aeb3842dd.ctex"]
 
 [params]
 
