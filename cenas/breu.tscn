@@ -287,6 +287,10 @@ wait_time = 0.1
 wait_time = 3.0
 one_shot = true
 
+[node name="troca_cena" type="Timer" parent="." unique_id=731075780]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]
 [connection signal="body_entered" from="brilho" to="cenario/papeis" method="_on_brilho_body_entered"]
 [connection signal="body_exited" from="brilho" to="." method="_on_brilho_body_exited"]
@@ -296,3 +300,4 @@ one_shot = true
 [connection signal="timeout" from="Timer2" to="cenario/papeis" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="cair" to="." method="_on_cair_timeout"]
 [connection signal="timeout" from="cair" to="cenario/papeis" method="_on_cair_timeout"]
+[connection signal="timeout" from="troca_cena" to="." method="_on_troca_cena_timeout"]

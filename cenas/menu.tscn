@@ -16,6 +16,8 @@ bg_color = Color(0, 0, 0, 0.40392157)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncfd"]
 bg_color = Color(0, 0, 0, 0.15686275)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aj4ri"]
+
 [node name="Menu" type="Control" unique_id=426771093]
 layout_mode = 3
 anchors_preset = 15
@@ -60,9 +62,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.5
+offset_left = -150.5
 offset_top = -46.0
-offset_right = 116.5
+offset_right = 550.0
 offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -102,6 +104,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
 text = "Creditos"
 
+[node name="Debug" type="Button" parent="BoxContainer/botoes" unique_id=1324428697]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nxpqr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Debug
+"
+
 [node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
 position = Vector2(565, 350)
 stream = ExtResource("6_nxpqr")
@@ -111,3 +124,4 @@ parameters/looping = true
 [connection signal="pressed" from="BoxContainer/botoes/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/Debug" to="." method="_on_debug_pressed"]

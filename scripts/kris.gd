@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var mover = true
-const SPEED = 200.0
+@export var SPEED = 200.0
 @export var darkworld = false
 func _ready() -> void:
 	pass
@@ -22,19 +22,19 @@ func _physics_process(delta: float) -> void:
 			$idle.visible = false
 			$kris_sprites.visible = true
 			$kris_sprites.play("andadno_cima")
-		if Input.is_action_pressed('ui_down'):
+		elif Input.is_action_pressed('ui_down'):
 			velocity.y = SPEED
 			$kris_sprites.play("default")
 			$kris_sprites.flip_h = false
 			$idle.visible = false
 			$kris_sprites.visible = true
-		if Input.is_action_pressed('ui_right'):
+		elif Input.is_action_pressed('ui_right'):
 			velocity.x = SPEED
 			$kris_sprites.play("andando_lado")
 			$kris_sprites.flip_h = false
 			$idle.visible = false
 			$kris_sprites.visible = true
-		if Input.is_action_pressed('ui_left'):
+		elif Input.is_action_pressed('ui_left'):
 			velocity.x = -1*SPEED
 			$kris_sprites.play("andando_lado")
 			$kris_sprites.flip_h = true
@@ -71,8 +71,8 @@ func _physics_process(delta: float) -> void:
 			$darkworld.visible = true
 		if Input.is_action_pressed('ui_left'):
 			velocity.x = -1*SPEED
-			$darkworld.play("right")
-			$darkworld.flip_h = true
+			$darkworld.play("left")
+			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
 	move_and_slide()

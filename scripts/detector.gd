@@ -29,3 +29,8 @@ func _on_timer_timeout() -> void:
 	$kris/darkworld_idle.frame = 1
 	levanta += 1
 	$Timer.one_shot = true
+
+
+func _on_teleporte_body_entered(body: Node2D) -> void:
+	pass
+	#get_tree().change_scene_to_file()

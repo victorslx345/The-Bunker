@@ -11,9 +11,9 @@ func _process(delta: float) -> void:
 	if $"..".mover == true:
 		if Input.is_action_pressed('ui_down'):
 			play("default")
-		if Input.is_action_pressed('ui_up'):
+		elif Input.is_action_pressed('ui_up'):
 			play("cima")
-		if Input.is_action_pressed('ui_right'):
+		elif Input.is_action_pressed('ui_right'):
 			play("direita")
-		if Input.is_action_pressed('ui_left'):
+		elif Input.is_action_pressed('ui_left'):
 			play("esquerda")

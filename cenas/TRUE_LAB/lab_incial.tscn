@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blwohex3g1maq" path="res://scripts/detector.gd" id="1_40qwv"]
 [ext_resource type="Texture2D" uid="uid://d4ml7sgdduedw" path="res://assets/LAB/true_lab_shelt.png" id="1_tutdc"]
+[ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="2_2wlug"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="2_cs80u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
@@ -65,13 +66,21 @@ sources/0 = SubResource("TileSetAtlasSource_tutdc")
 size = Vector2(1137, 671)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
-size = Vector2(438, 422)
+size = Vector2(441, 423)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(1023, 176)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
+size = Vector2(20, 491)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
+size = Vector2(184, 341)
+
 [node name="lab_incial" type="Node2D" unique_id=590810613]
 script = ExtResource("1_40qwv")
+
+[node name="nevoa" parent="." unique_id=1502976648 instance=ExtResource("2_2wlug")]
 
 [node name="fundo" type="Panel" parent="." unique_id=619549407]
 offset_right = 3960.0
@@ -97,7 +106,7 @@ position = Vector2(145, 320)
 limit_left = 0
 limit_top = 0
 limit_right = 1982
-limit_bottom = 840
+limit_bottom = 850
 
 [node name="Timer" type="Timer" parent="." unique_id=779130028]
 wait_time = 2.0
@@ -110,11 +119,23 @@ position = Vector2(568.5, 755.5)
 shape = SubResource("RectangleShape2D_eewm5")
 
 [node name="parede2" type="CollisionShape2D" parent="paredes" unique_id=1706329916]
-position = Vector2(1542, 271)
+position = Vector2(1540.5, 271.5)
 shape = SubResource("RectangleShape2D_2hl1l")
 
 [node name="parede3" type="CollisionShape2D" parent="paredes" unique_id=2133368658]
 position = Vector2(1649.5, 931)
 shape = SubResource("RectangleShape2D_aj4ri")
 
+[node name="parede4" type="CollisionShape2D" parent="paredes" unique_id=1300821193]
+position = Vector2(-10, 235.5)
+shape = SubResource("RectangleShape2D_sncfd")
+
+[node name="teleporte" type="Area2D" parent="." unique_id=1497373276]
+
+[node name="hitbox" type="CollisionShape2D" parent="teleporte" unique_id=1541201426]
+position = Vector2(2057, 701.5)
+shape = SubResource("RectangleShape2D_cf16f")
+debug_color = Color(0.9330707, 0.26000133, 0, 0.41960785)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="teleporte" to="." method="_on_teleporte_body_entered"]

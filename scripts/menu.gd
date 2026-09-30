@@ -19,3 +19,9 @@ func _on_sair_pressed() -> void:
 
 func _on_creditos_pressed() -> void:
 	pass 
+
+
+
+func _on_debug_pressed() -> void:
+	troca_cena("res://cenas/debug.tscn")
+	

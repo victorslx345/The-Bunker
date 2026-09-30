@@ -53,6 +53,7 @@ func _on_cair_timeout() -> void:
 	await $kris/fall.finished
 	$kris/impacto.play()
 	$kris/idle.visible = false
+	$troca_cena.start()
 	
 	
 
@@ -60,3 +61,7 @@ func _on_cair_timeout() -> void:
 func _on_brilho_body_exited(body: Node2D) -> void:
 	flag = false
 	print(flag)
+
+
+func _on_troca_cena_timeout() -> void:
+	get_tree().change_scene_to_file("res://cenas/TRUE_LAB/lab_incial.tscn")

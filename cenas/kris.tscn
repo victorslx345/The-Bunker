@@ -430,7 +430,7 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_eewm5")
-animation = &"up"
+animation = &"left"
 
 [node name="darkworld_idle" type="AnimatedSprite2D" parent="." unique_id=45392325]
 texture_filter = 1

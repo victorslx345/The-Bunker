@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://to6yiogtkuft"]
 
+[ext_resource type="Script" uid="uid://byvqsy7n28t8q" path="res://scripts/nevoa.gd" id="1_stl13"]
+[ext_resource type="Texture2D" uid="uid://cuh8nvt82q7qn" path="res://assets/LAB/true_lab_nevoa.png" id="2_u8orl"]
+
 [node name="nevoa" type="ParallaxBackground" unique_id=1502976648]
+layer = 0
+script = ExtResource("1_stl13")
 
 [node name="sprite_paralax" type="ParallaxLayer" parent="." unique_id=485662173]
+position = Vector2(5, 2)
+motion_mirroring = Vector2(1856, 1024)
 
 [node name="sprite" type="Sprite2D" parent="sprite_paralax" unique_id=134358010]
+modulate = Color(1, 1, 1, 0.41568628)
+position = Vector2(576, 324)
+scale = Vector2(4, 4)
+texture = ExtResource("2_u8orl")

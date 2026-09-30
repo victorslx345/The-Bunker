@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dw1mhxcm136d1"]
+
+[ext_resource type="Script" uid="uid://bcxcxfyay4wca" path="res://scripts/debug.gd" id="1_dkll0"]
+[ext_resource type="Script" uid="uid://cyw2mq7r4m8sq" path="res://scripts/parallax_background.gd" id="2_jgule"]
+[ext_resource type="Texture2D" uid="uid://d3gt5kms5v1wf" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png" id="3_2teg6"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="4_eeoj2"]
+[ext_resource type="AudioStream" uid="uid://bcoqpl38ewrcs" path="res://musicas/AUDIO_ANOTHERHIM.ogg" id="5_32men"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aj4ri"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf16f"]
+bg_color = Color(0, 0, 0, 0.40392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncfd"]
+bg_color = Color(0, 0, 0, 0.15686275)
+
+[node name="debug" type="Control" unique_id=426771093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dkll0")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=250972565]
+script = ExtResource("2_jgule")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1875197593]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="fundo menu" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=292806821]
+texture_filter = 1
+position = Vector2(576.00006, 324)
+scale = Vector2(3.657143, 2.722689)
+texture = ExtResource("3_2teg6")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=175384694]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -269.0
+offset_right = -206.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="botoes" type="VBoxContainer" parent="BoxContainer" unique_id=1825152990]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="bunker" type="Button" parent="BoxContainer/botoes" unique_id=1278824027]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eeoj2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Bunker
+
+"
+
+[node name="Breu" type="Button" parent="BoxContainer/botoes" unique_id=1617865183]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eeoj2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Breu
+"
+
+[node name="Lab_Inicial" type="Button" parent="BoxContainer/botoes" unique_id=1795701489]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eeoj2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "Lab_Inicial
+"
+
+[node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
+position = Vector2(565, 350)
+stream = ExtResource("5_32men")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="BoxContainer/botoes/bunker" to="." method="_on_bunker_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/Breu" to="." method="_on_breu_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/Lab_Inicial" to="." method="_on_lab_inicial_pressed"]
