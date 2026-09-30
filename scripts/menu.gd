@@ -11,8 +11,8 @@ func _process(delta: float) -> void:
 
 
 func _on_jogar_pressed() -> void:
-	#get_tree().change_scene_to_file("res://cenas/bunker.tscn") 
-	troca_cena("res://cenas/TRUE_LAB/lab_incial.tscn")
+	#get_tree().change_scene_to_file("res://cenas/breu.tscn") 
+	troca_cena("res://cenas/bunker.tscn")
 func _on_sair_pressed() -> void:
 	get_tree().quit() 
 

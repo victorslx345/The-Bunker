@@ -15,13 +15,14 @@ func _process(delta: float) -> void:
 		$kris/idle.visible = false
 		$kris/kris_sprites.visible = true
 
-	if flag == true and Input.is_action_pressed("interagir"):
+	if flag == true and Input.is_action_just_pressed("interagir"):
 		$cenario/Porta.visible = false
 		$cenario/porta.playing = true
 		$kris/idle.animation = 'esquerda'
 		$kris/idle.frame = 0
 		$brilho/brilho_sprite.visible = false
 		$brilho/CollisionShape2D.disabled = true
+		$brilho.queue_free()
 		flag = false
 	if cair == true:
 		$kris.move_local_y(10)
@@ -30,7 +31,8 @@ func _process(delta: float) -> void:
 
 
 func _on_brilho_body_entered(body: Node2D) -> void:
-	flag = true # Replace with function body.
+	flag = true
+	print(flag) # Replace with function body.
 
 
 func _on_timer_timeout() -> void:
@@ -53,3 +55,8 @@ func _on_cair_timeout() -> void:
 	$kris/idle.visible = false
 	
 	
+
+
+func _on_brilho_body_exited(body: Node2D) -> void:
+	flag = false
+	print(flag)

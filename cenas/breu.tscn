@@ -28,6 +28,9 @@ size = Vector2(1458, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
 size = Vector2(41, 274)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
+size = Vector2(61, 200)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pxkv0"]
 atlas = ExtResource("4_riypj")
 region = Rect2(0, 0, 19, 12)
@@ -177,6 +180,10 @@ shape = SubResource("RectangleShape2D_2hl1l")
 position = Vector2(214.5, 309)
 shape = SubResource("RectangleShape2D_sncfd")
 
+[node name="parede_r" type="CollisionShape2D" parent="cenario" unique_id=683932879]
+position = Vector2(1292, 346)
+shape = SubResource("RectangleShape2D_cf16f")
+
 [node name="rumble" type="AudioStreamPlayer2D" parent="cenario" unique_id=1898661267]
 stream = ExtResource("8_wfpk7")
 parameters/looping = true
@@ -282,6 +289,8 @@ one_shot = true
 
 [connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]
 [connection signal="body_entered" from="brilho" to="cenario/papeis" method="_on_brilho_body_entered"]
+[connection signal="body_exited" from="brilho" to="." method="_on_brilho_body_exited"]
+[connection signal="body_exited" from="brilho" to="cenario/papeis" method="_on_brilho_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="cenario/papeis" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="cenario/papeis" method="_on_timer_2_timeout"]

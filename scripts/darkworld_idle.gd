@@ -8,11 +8,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed('ui_down'):
-		play("default")
-	if Input.is_action_pressed('ui_up'):
-		play("up")
-	if Input.is_action_pressed('ui_right'):
-		play("right")
-	if Input.is_action_pressed('ui_left'):
-		play("left")
+	if $"..".mover == true:
+		if Input.is_action_pressed('ui_down'):
+			play("default")
+		if Input.is_action_pressed('ui_up'):
+			play("up")
+		if Input.is_action_pressed('ui_right'):
+			play("right")
+		if Input.is_action_pressed('ui_left'):
+			play("left")

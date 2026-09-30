@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 	if levanta == 2:
 		$kris/darkworld_idle.play("wake_up")
 		levanta = 3
+		await $kris/darkworld_idle.animation_finished
 		$kris.mover = true
 
 

@@ -5,16 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://dcc478mpj0ded" path="res://assets/shelter/bunker_abrido_down.png" id="2_xj1bx"]
 [ext_resource type="Texture2D" uid="uid://b4s1k1gnbtmj8" path="res://assets/shelter/bunker_up.png" id="3_qafao"]
 [ext_resource type="Texture2D" uid="uid://w3j221ttbfdw" path="res://assets/shelter/bunker_down.png" id="4_jmpd3"]
-[ext_resource type="Texture2D" uid="uid://dbmox668v02qa" path="res://assets/kris/kris_andando.png" id="4_tn21j"]
 [ext_resource type="Texture2D" uid="uid://dvu7jmgsnn7tw" path="res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png" id="4_xj1bx"]
-[ext_resource type="Script" uid="uid://crjhhfiqc52ou" path="res://scripts/kris.gd" id="5_phha8"]
 [ext_resource type="Texture2D" uid="uid://bp28s2thdim3a" path="res://assets/bordas/border_lw_town_0.png" id="5_qafao"]
 [ext_resource type="AudioStream" uid="uid://36o41qn3m1df" path="res://sfx/snd_smile.ogg" id="7_edcp2"]
-[ext_resource type="Texture2D" uid="uid://dri37eega1reu" path="res://assets/kris/kris_andando_up.png" id="7_jmpd3"]
 [ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="8_rvdk3"]
-[ext_resource type="Texture2D" uid="uid://d2w5jcm8oqorg" path="res://assets/kris/kris_andando_lado.png" id="9_yyqby"]
-[ext_resource type="Texture2D" uid="uid://da2j242t4oiqb" path="res://assets/kris/kris_parado.png" id="10_phha8"]
-[ext_resource type="Script" uid="uid://ofsti44t46jk" path="res://scripts/idle.gd" id="12_yyqby"]
+[ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="9_phha8"]
 [ext_resource type="AudioStream" uid="uid://bdylrruwv4h50" path="res://musicas/birds.ogg" id="14_yyqby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
@@ -79,162 +74,6 @@ size = Vector2(250, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ndd"]
 size = Vector2(228, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_edcp2"]
-atlas = ExtResource("7_jmpd3")
-region = Rect2(0, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rvdk3"]
-atlas = ExtResource("7_jmpd3")
-region = Rect2(24, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnh55"]
-atlas = ExtResource("7_jmpd3")
-region = Rect2(48, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbscf"]
-atlas = ExtResource("7_jmpd3")
-region = Rect2(72, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_43kmc"]
-atlas = ExtResource("9_yyqby")
-region = Rect2(0, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mm4sy"]
-atlas = ExtResource("9_yyqby")
-region = Rect2(24, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sooru"]
-atlas = ExtResource("9_yyqby")
-region = Rect2(48, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gof4i"]
-atlas = ExtResource("9_yyqby")
-region = Rect2(72, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5cs4p"]
-atlas = ExtResource("4_tn21j")
-region = Rect2(0, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xj1bx"]
-atlas = ExtResource("4_tn21j")
-region = Rect2(24, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qafao"]
-atlas = ExtResource("4_tn21j")
-region = Rect2(48, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t0d5f"]
-atlas = ExtResource("4_tn21j")
-region = Rect2(72, 0, 19, 38)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ri44r"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_edcp2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rvdk3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnh55")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lbscf")
-}],
-"loop": 1,
-"name": &"andadno_cima",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_43kmc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mm4sy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sooru")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gof4i")
-}],
-"loop": 1,
-"name": &"andando_lado",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5cs4p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xj1bx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qafao")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t0d5f")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
-size = Vector2(77, 148.5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6osoy"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 132, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxv4j"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 0, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s1dmj"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 88, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xva2t"]
-atlas = ExtResource("10_phha8")
-region = Rect2(0, 44, 19, 38)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6osoy")
-}],
-"loop": 0,
-"name": &"cima",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yxv4j")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s1dmj")
-}],
-"loop": 0,
-"name": &"direita",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xva2t")
-}],
-"loop": 0,
-"name": &"esquerda",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(124, 170)
@@ -486,30 +325,8 @@ stream = ExtResource("8_rvdk3")
 pitch_scale = 1.08
 parameters/looping = false
 
-[node name="kris" type="CharacterBody2D" parent="." unique_id=761743697]
-z_index = 1
-position = Vector2(571, -122)
-script = ExtResource("5_phha8")
-
-[node name="kris_sprites" type="AnimatedSprite2D" parent="kris" unique_id=1756349172]
-visible = false
-texture_filter = 1
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_ri44r")
-animation = &"andando_lado"
-autoplay = "default"
-
-[node name="hitbox" type="CollisionShape2D" parent="kris" unique_id=1020780036]
-shape = SubResource("RectangleShape2D_2hl1l")
-one_way_collision = true
-one_way_collision_direction = Vector2(0, -1)
-
-[node name="idle" type="AnimatedSprite2D" parent="kris" unique_id=489887236]
-texture_filter = 1
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_ls2uy")
-autoplay = "default"
-script = ExtResource("12_yyqby")
+[node name="kris" parent="." unique_id=462716732 instance=ExtResource("9_phha8")]
+position = Vector2(571, -127)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062801181]
 
@@ -541,4 +358,3 @@ parameters/looping = true
 [connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]
 [connection signal="body_entered" from="Bunker/teleporte" to="." method="_on_teleporte_body_entered"]
 [connection signal="body_entered" from="Anim" to="." method="_on_anim_body_entered"]
-[connection signal="body_entered" from="Anim" to="kris" method="_on_anim_body_entered"]

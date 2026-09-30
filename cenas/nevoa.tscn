@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://to6yiogtkuft"]
+
+[node name="nevoa" type="ParallaxBackground" unique_id=1502976648]
+
+[node name="sprite_paralax" type="ParallaxLayer" parent="." unique_id=485662173]
+
+[node name="sprite" type="Sprite2D" parent="sprite_paralax" unique_id=134358010]
