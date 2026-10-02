@@ -1,17 +1,10 @@
 extends Node2D
 
+var flag = false
 var levanta = 0
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	#$kris/darkworld_idle.frame = 0
-	#$Timer.wait_time = 3
-	#$Timer.start()
-	#await $Timer.is_stopped()
-	#$kris/darkworld_idle.frame = 0
-	#$Timer.start()
-	#$Timer.wait_time = 1
-	#await $Timer.is_stopped()
-	#$kris/darkworld_idle.play("wake_up")
+	
 	$kris.darkworld = true
 	$kris.mover = false
 
@@ -23,8 +16,9 @@ func _process(delta: float) -> void:
 		levanta = 3
 		await $kris/darkworld_idle.animation_finished
 		$kris.mover = true
-
-
+	
+	
+#	;~~~~~~~~~~~~~~~TEXTO DA ENTRADA!~~~~~~~~~~~~~~~~~~
 func _on_timer_timeout() -> void:
 	$kris/darkworld_idle.frame = 1
 	levanta += 1
@@ -32,5 +26,5 @@ func _on_timer_timeout() -> void:
 
 
 func _on_teleporte_body_entered(body: Node2D) -> void:
-	pass
-	#get_tree().change_scene_to_file()
+	if body.name == 'kris':
+		pass

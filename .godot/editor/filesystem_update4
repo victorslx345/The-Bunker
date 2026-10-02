@@ -1,14 +1,3 @@
-res://cenas/nevoa.tscn
-res://scripts/nevoa.gd
 res://cenas/TRUE_LAB/lab_incial.tscn
-res://scripts/menu.gd
-res://cenas/menu.tscn
-res://cenas/kris.tscn
-res://scripts/kris.gd
 res://scripts/detector.gd
-res://cenas/bunker.tscn
-res://cenas/breu.tscn
-res://scripts/breu.gd
-res://scripts/idle.gd
-res://cenas/debug.tscn
-res://scripts/debug.gd
+res://scripts/textos/lab_inicial_txt.gd

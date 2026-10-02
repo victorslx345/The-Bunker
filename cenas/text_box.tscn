@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cm4uo64j7tqq6"]
+
+[ext_resource type="Script" uid="uid://v6mabv3mc0cr" path="res://scripts/text_box.gd" id="1_rr0en"]
+[ext_resource type="Texture2D" uid="uid://bg8pitpmj11ed" path="res://assets/HUD/text_box.png" id="2_n3tdb"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="3_jd87h"]
+[ext_resource type="AudioStream" uid="uid://bond8gc4xoi04" path="res://sfx/snd_text.wav" id="4_n3tdb"]
+
+[node name="text_box" type="Node2D" unique_id=2086050303]
+z_index = 4096
+position = Vector2(582, 494)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_rr0en")
+tempo = 0.04
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=716386181]
+texture_filter = 1
+texture = ExtResource("2_n3tdb")
+
+[node name="texto" type="RichTextLabel" parent="." unique_id=1557005077]
+texture_filter = 1
+offset_left = -242.0
+offset_top = -57.0
+offset_right = 270.0
+offset_bottom = 57.0
+theme_override_fonts/normal_font = ExtResource("3_jd87h")
+theme_override_font_sizes/normal_font_size = 27
+scroll_active = false
+
+[node name="simbolo" type="Label" parent="." unique_id=1153618696]
+texture_filter = 1
+offset_left = -268.0
+offset_top = -62.0
+offset_right = -228.0
+offset_bottom = -26.0
+theme_override_fonts/font = ExtResource("3_jd87h")
+theme_override_font_sizes/font_size = 27
+text = "*"
+
+[node name="snd_text" type="AudioStreamPlayer2D" parent="." unique_id=325846873]
+stream = ExtResource("4_n3tdb")
+volume_db = 6.367

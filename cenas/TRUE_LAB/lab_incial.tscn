@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d4ml7sgdduedw" path="res://assets/LAB/true_lab_shelt.png" id="1_tutdc"]
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="2_2wlug"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="2_cs80u"]
+[ext_resource type="Script" uid="uid://c0g4nkrbf8w50" path="res://scripts/textos/lab_inicial_txt.gd" id="5_irngh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
 bg_color = Color(0, 0, 0, 1)
@@ -77,6 +78,45 @@ size = Vector2(20, 491)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
 size = Vector2(184, 341)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wlug"]
+atlas = ExtResource("1_tutdc")
+region = Rect2(1, 190, 34, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irngh"]
+atlas = ExtResource("1_tutdc")
+region = Rect2(36, 190, 34, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2w0v"]
+atlas = ExtResource("1_tutdc")
+region = Rect2(71, 190, 34, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcvpc"]
+atlas = ExtResource("1_tutdc")
+region = Rect2(106, 190, 34, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wlug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irngh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2w0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcvpc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
+size = Vector2(101, 70)
+
 [node name="lab_incial" type="Node2D" unique_id=590810613]
 script = ExtResource("1_40qwv")
 
@@ -137,5 +177,23 @@ position = Vector2(2057, 701.5)
 shape = SubResource("RectangleShape2D_cf16f")
 debug_color = Color(0.9330707, 0.26000133, 0, 0.41960785)
 
+[node name="Entrada1" type="Area2D" parent="." unique_id=698588937]
+
+[node name="sprite" type="AnimatedSprite2D" parent="Entrada1" unique_id=386659258]
+texture_filter = 1
+position = Vector2(643, 142)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+
+[node name="hitbox" type="CollisionShape2D" parent="Entrada1" unique_id=673556441]
+position = Vector2(642.5, 142)
+shape = SubResource("RectangleShape2D_5hqy4")
+debug_color = Color(0.66935, 0.51009, 7.70092e-07, 0.41960785)
+
+[node name="labInicial_txt" type="Node2D" parent="." unique_id=1530489814]
+script = ExtResource("5_irngh")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="teleporte" to="." method="_on_teleporte_body_entered"]
+[connection signal="body_entered" from="Entrada1" to="labInicial_txt" method="_on_entrada_1_body_entered"]
+[connection signal="body_exited" from="Entrada1" to="labInicial_txt" method="_on_entrada_1_body_exited"]
