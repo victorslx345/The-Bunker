@@ -15,3 +15,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if end == true and Input.is_action_just_pressed("interagir"):
 		$".".queue_free()
+		

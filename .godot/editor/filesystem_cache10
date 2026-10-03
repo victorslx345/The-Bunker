@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790980868
+::res://::1790986139
 icon.svg::CompressedTexture2D::364685189568326866::1790383784::1790383844::1::::<><><>0<>0<>e2aef5ed285df076cca5e3162386a3de<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1790383784::0::1::::<><><>0<>0<><>::
 ::res://assets/::1790976740
@@ -51,21 +51,21 @@ kris.tscn::PackedScene::2468170841822517969::1790976076::0::1::::<><><>0<>0<><>:
 menu.tscn::PackedScene::2774097041828862089::1790976076::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bcoqpl38ewrcs::::res://musicas/AUDIO_ANOTHERHIM.ogg
 nevoa.tscn::PackedScene::1364414845621412301::1790976076::0::1::::<><><>0<>0<><>::uid://byvqsy7n28t8q::::res://scripts/nevoa.gd<>uid://cuh8nvt82q7qn::::res://assets/LAB/true_lab_nevoa.png
 text_box.tscn::PackedScene::5676215460355951991::1790980588::0::1::::<><><>0<>0<><>::uid://v6mabv3mc0cr::::res://scripts/text_box.gd<>uid://bg8pitpmj11ed::::res://assets/HUD/text_box.png<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bond8gc4xoi04::::res://sfx/snd_text.wav
-::res://cenas/TRUE_LAB/::1790980728
-lab_incial.tscn::PackedScene::1251570050402260402::1790980728::0::1::::<><><>0<>0<><>::uid://blwohex3g1maq::::res://scripts/detector.gd<>uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png<>uid://to6yiogtkuft::::res://cenas/nevoa.tscn<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn
+::res://cenas/TRUE_LAB/::1790981034
+lab_incial.tscn::PackedScene::1251570050402260402::1790981034::0::1::::<><><>0<>0<><>::uid://blwohex3g1maq::::res://scripts/detector.gd<>uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png<>uid://to6yiogtkuft::::res://cenas/nevoa.tscn<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://c0g4nkrbf8w50::::res://scripts/textos/lab_inicial_txt.gd
 ::res://fontes/::1790589063
 deltarune.ttf::FontFile::2074942729051609623::1790383784::1790383843::1::::<><><>0<>0<>7f212d010f130bd60018a3183d2778ad<>res://.godot/imported/deltarune.ttf-da3746d619aa9b28bca5b2535f2f763f.fontdata::
 determination.ttf::FontFile::7114663273726971162::1790383784::1790383843::1::::<><><>0<>0<>a0c1fb9923dd33006a375088cad0a5e8<>res://.godot/imported/determination.ttf-a1d74d5246280621ac0d6f2e4be4a8f6.fontdata::
 ::res://musicas/::1790589063
 AUDIO_ANOTHERHIM.ogg::AudioStreamOggVorbis::2556698540835813546::1790383784::1790383844::1::::<><><>0<>0<>1c3ab6c4c4c994a95f9b1a1b7e9734a2<>res://.godot/imported/AUDIO_ANOTHERHIM.ogg-8440d73ff12c038579d8216a92f5acb7.oggvorbisstr::
 birds.ogg::AudioStreamOggVorbis::2647231450943279273::1790383784::1790383844::1::::<><><>0<>0<>4fe803ebc2d70f8b35e68162ce81cfb1<>res://.godot/imported/birds.ogg-d39ddfb94ba0fed0b14a74a1a6afc936.oggvorbisstr::
-::res://scripts/::1790980752
+::res://scripts/::1790980964
 breu.gd::GDScript::2672020602285132213::1790976076::0::1::::<>Node2D<><>0<>0<><>::
 bunker.gd::GDScript::4646230332085781357::1790976073::0::1::::<>Node2D<><>0<>0<><>::
 character_body_2d.gd::GDScript::3188693829963863294::1790383784::0::1::::<>CharacterBody2D<><>0<>0<><>::
 darkworld_idle.gd::GDScript::4740703092590233282::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 debug.gd::GDScript::2574441866283180292::1790977746::0::1::::<>Control<><>0<>0<><>::
-detector.gd::GDScript::3204777059661984944::1790980728::0::1::::<>Node2D<><>0<>0<><>::
+detector.gd::GDScript::3204777059661984944::1790980963::0::1::::<>Node2D<><>0<>0<><>::
 idle.gd::GDScript::994093001987064496::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 kris.gd::GDScript::5985068904232026476::1790976076::0::1::::<>CharacterBody2D<><>0<>0<><>::
 menu.gd::GDScript::8470510003384268546::1790976076::0::1::::<>Control<><>0<>0<><>::
@@ -79,6 +79,8 @@ caixa_de_dialogo.gd::GDScript::1453158811659146548::1790980761::0::1::::<>Node2D
 papeis.gd::GDScript::7372896729133973782::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 papeis_2.gd::GDScript::5193929436787355129::1790383784::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 papeis_3.gd::GDScript::8269497617789598527::1790383784::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+::res://scripts/textos/::1790981029
+lab_inicial_txt.gd::GDScript::6541733284520978597::1790981028::0::1::::<>Node2D<><>0<>0<><>::
 ::res://sfx/::1790979301
 fall.ogg::AudioStreamOggVorbis::5891639880360604833::1790383784::1790383844::1::::<><><>0<>0<>e9799c218223bd8be50b1f2df6e583a8<>res://.godot/imported/fall.ogg-eeb560b2836830d5b8417c536c1e28ec.oggvorbisstr::
 impact-fall.ogg::AudioStreamOggVorbis::1957651304224312957::1790383784::1790383844::1::::<><><>0<>0<>1a6d52ef8c8878b286c53846349a0b8a<>res://.godot/imported/impact-fall.ogg-5b8700a9ce063d621f8c1a903a4f7814.oggvorbisstr::
