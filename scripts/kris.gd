@@ -3,8 +3,15 @@ extends CharacterBody2D
 @export var mover = true
 @export var SPEED = 200.0
 @export var darkworld = false
+
+func pode_mover():
+	if mover == true:
+		mover = false
+	else:
+		mover = true
+
 func _ready() -> void:
-	pass
+	SingnalManager.mover.connect(pode_mover)
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0

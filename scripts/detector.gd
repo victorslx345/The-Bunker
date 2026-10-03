@@ -14,17 +14,19 @@ func _process(delta: float) -> void:
 	if levanta == 2:
 		$kris/darkworld_idle.play("wake_up")
 		levanta = 3
+		$kris/wing.play()
 		await $kris/darkworld_idle.animation_finished
 		$kris.mover = true
+
 	
 	
-#	;~~~~~~~~~~~~~~~TEXTO DA ENTRADA!~~~~~~~~~~~~~~~~~~
 func _on_timer_timeout() -> void:
 	$kris/darkworld_idle.frame = 1
 	levanta += 1
 	$Timer.one_shot = true
+	$kris/bump.play()
 
 
 func _on_teleporte_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
-		pass
+		get_tree().change_scene_to_file("res://cenas/TRUE_LAB/lab_area_1.tscn")

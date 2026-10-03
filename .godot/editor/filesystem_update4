@@ -1,6 +1,8 @@
-res://cenas/TRUE_LAB/lab_incial.tscn
-res://scripts/textos/lab_inicial_txt.gd
-res://scripts/text_box.gd
 res://cenas/text_box.tscn
-res://scripts/dialogos/control.gd
+res://scripts/text_box.gd
+res://cenas/TRUE_LAB/lab_incial.tscn
 res://scripts/dialogos/gerador_dialogo.gd
+res://scripts/sigletons/SingnalManager.gd
+res://scripts/kris.gd
+res://cenas/TRUE_LAB/lab_area_1.tscn
+res://scripts/detector.gd
