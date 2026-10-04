@@ -4,9 +4,13 @@ var flag = false
 var levanta = 0
 
 func _ready() -> void:
-	$kris/darkworld_idle.animation = 'wake_up'
+	if ScriptsGlobais.anim == true:
+		$kris/darkworld_idle.animation = 'wake_up'
+		$kris.mover = false
+		$Timer.start()
 	$kris.darkworld = true
-	$kris.mover = false
+	if ScriptsGlobais.msc_tempo > 0:
+		$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,8 +29,3 @@ func _on_timer_timeout() -> void:
 	levanta += 1
 	$Timer.one_shot = true
 	$kris/bump.play()
-
-
-func _on_teleporte_body_entered(body: Node2D) -> void:
-	if body.name == 'kris':
-		get_tree().change_scene_to_file("res://cenas/TRUE_LAB/lab_area_1.tscn")

@@ -1,7 +1,8 @@
 CollisionShape2D
+Area2D
+Node
 StaticBody2D
 Node2D
-Area2D
 AudioStreamPlayer2D
 TileMapLayer
 Control
@@ -11,4 +12,3 @@ RichTextLabel
 Sprite2D
 Button
 VBoxContainer
-Timer

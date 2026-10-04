@@ -5,15 +5,13 @@ func troca_cena(cena):
 	
 
 func _ready() -> void:
-	$kris/HeWeAre.play()
+	if ScriptsGlobais.msc_tempo == 0:
+		$kris/HeWeAre.play()
+	else:
+		$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
 	$kris/darkworld_idle.animation = 'right'
 	$kris.darkworld = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_lab_inicial_body_entered(body: Node2D) -> void:
-	if body.name == 'kris':
-		troca_cena("res://cenas/TRUE_LAB/lab_incial.tscn")

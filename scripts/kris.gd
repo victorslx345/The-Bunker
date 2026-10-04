@@ -12,6 +12,9 @@ func pode_mover():
 
 func _ready() -> void:
 	SingnalManager.mover.connect(pode_mover)
+	if MudarDeSala.ativar:
+		global_position = MudarDeSala.JogadorPos
+	MudarDeSala.ativar = false
 
 func _physics_process(delta: float) -> void:
 	velocity.x = 0

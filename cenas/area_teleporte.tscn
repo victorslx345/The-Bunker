@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ntyf6s7xsitn"]
+
+[ext_resource type="Script" uid="uid://c2m6oh0sfmnp6" path="res://scripts/area_teleporte.gd" id="1_lyetv"]
+
+[node name="AREA_TELEPORTE" type="Area2D" unique_id=1834485037]
+script = ExtResource("1_lyetv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

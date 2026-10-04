@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SingnalManager="*uid://wt1bcn3y05r6"
+MudarDeSala="*uid://n2671rcnf7d4"
+ScriptsGlobais="*uid://bkkmfsu22f6mc"
 
 [display]
 

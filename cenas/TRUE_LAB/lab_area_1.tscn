@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="6_aunaf"]
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="7_vx0t4"]
 [ext_resource type="Script" uid="uid://ckl00ys8ag276" path="res://scripts/dialogos/dialogos_area_1.gd" id="8_3u7sy"]
+[ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="9_0ljpt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6k4a"]
 bg_color = Color(0, 0, 0, 1)
@@ -103,7 +104,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aldxx")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
-size = Vector2(137, 279)
+size = Vector2(56, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn30n"]
+size = Vector2(61, 243)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
 size = Vector2(990, 52)
@@ -164,7 +168,6 @@ limit_right = 1537
 limit_bottom = 650
 
 [node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=298697191]
-visible = false
 
 [node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=1439473494]
 texture_filter = 1
@@ -179,16 +182,24 @@ position = Vector2(571, 494)
 
 [node name="nevoa" parent="." unique_id=1502976648 instance=ExtResource("7_vx0t4")]
 
-[node name="lab_inicial" type="Area2D" parent="." unique_id=1241034166]
-
-[node name="hitbox" type="CollisionShape2D" parent="lab_inicial" unique_id=1405297735]
-position = Vector2(-39.5, 363.5)
-shape = SubResource("RectangleShape2D_ls2uy")
-one_way_collision = true
-debug_color = Color(0.9999996, 0.0016009732, 0.07089255, 0.62352943)
-
 [node name="dialogos_area1" type="Node2D" parent="." unique_id=1079451344]
 script = ExtResource("8_3u7sy")
+
+[node name="Plantas" type="Area2D" parent="dialogos_area1" unique_id=1212784204]
+
+[node name="hitbox" type="CollisionShape2D" parent="dialogos_area1/Plantas" unique_id=405733678]
+position = Vector2(329, -230)
+shape = SubResource("RectangleShape2D_ls2uy")
+debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
+
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("9_0ljpt")]
+Sala = "res://cenas/TRUE_LAB/lab_incial.tscn"
+JogadorPos = Vector2(1836, 699)
+
+[node name="hitbox" type="CollisionShape2D" parent="AREA_TELEPORTE" unique_id=135964657]
+position = Vector2(-13.5, 360.5)
+shape = SubResource("RectangleShape2D_nn30n")
+debug_color = Color(0.8934639, 0.3218813, 0, 0.41960785)
 
 [node name="paredes" type="StaticBody2D" parent="." unique_id=1784504460]
 
@@ -216,4 +227,6 @@ shape = SubResource("RectangleShape2D_ckrqy")
 position = Vector2(689.5, -1095.5)
 shape = SubResource("RectangleShape2D_iyccb")
 
-[connection signal="body_entered" from="lab_inicial" to="." method="_on_lab_inicial_body_entered"]
+[connection signal="dialogo_acabo" from="kris/CanvasLayer/text_box" to="dialogos_area1" method="_on_text_box_dialogo_acabo"]
+[connection signal="body_entered" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_entered"]
+[connection signal="body_exited" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_exited"]
