@@ -99,6 +99,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
 text = "text_box
 "
 
+[node name="lab_area1" type="Button" parent="BoxContainer/botoes" unique_id=780731452]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_eeoj2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+text = "lab_area1
+"
+
 [node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
 position = Vector2(565, 350)
 stream = ExtResource("5_32men")
@@ -109,3 +120,4 @@ parameters/looping = true
 [connection signal="pressed" from="BoxContainer/botoes/Breu" to="." method="_on_breu_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Lab_Inicial" to="." method="_on_lab_inicial_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/text_box" to="." method="_on_text_box_pressed"]
+[connection signal="pressed" from="BoxContainer/botoes/lab_area1" to="." method="_on_lab_area_1_pressed"]

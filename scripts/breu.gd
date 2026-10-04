@@ -31,8 +31,9 @@ func _process(delta: float) -> void:
 
 
 func _on_brilho_body_entered(body: Node2D) -> void:
-	flag = true
-	print(flag) # Replace with function body.
+	if body.name == 'kris':
+		flag = true
+		print(flag) # Replace with function body.
 
 
 func _on_timer_timeout() -> void:

@@ -5,14 +5,14 @@
 
 [node name="nevoa" type="ParallaxBackground" unique_id=1502976648]
 layer = 0
+scroll_ignore_camera_zoom = true
 script = ExtResource("1_stl13")
 
 [node name="sprite_paralax" type="ParallaxLayer" parent="." unique_id=485662173]
-position = Vector2(5, 2)
 motion_mirroring = Vector2(1856, 1024)
 
 [node name="sprite" type="Sprite2D" parent="sprite_paralax" unique_id=134358010]
 modulate = Color(1, 1, 1, 0.41568628)
-position = Vector2(576, 324)
+position = Vector2(928, 512)
 scale = Vector2(4, 4)
 texture = ExtResource("2_u8orl")

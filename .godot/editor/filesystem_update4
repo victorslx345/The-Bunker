@@ -1,8 +1,9 @@
-res://cenas/text_box.tscn
-res://scripts/text_box.gd
-res://cenas/TRUE_LAB/lab_incial.tscn
-res://scripts/dialogos/gerador_dialogo.gd
-res://scripts/sigletons/SingnalManager.gd
-res://scripts/kris.gd
+res://cenas/nevoa.tscn
 res://cenas/TRUE_LAB/lab_area_1.tscn
+res://scripts/LAB/lab_area_1.gd
+res://cenas/kris.tscn
+res://cenas/TRUE_LAB/lab_incial.tscn
 res://scripts/detector.gd
+res://cenas/bunker.tscn
+res://cenas/breu.tscn
+res://scripts/breu.gd

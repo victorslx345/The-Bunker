@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="5_k2w0v"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="5_qcvpc"]
 [ext_resource type="AudioStream" uid="uid://bqwllgjhcqbco" path="res://sfx/snd_bump.ogg" id="7_ly41c"]
+[ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="9_ljhon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
 bg_color = Color(0, 0, 0, 1)
@@ -37,6 +38,7 @@ margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 texture_region_size = Vector2i(20, 20)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 0:1/0 = 0
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
@@ -44,7 +46,9 @@ texture_region_size = Vector2i(20, 20)
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 1:1/0 = 0
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 2:1/0 = 0
 2:0/0 = 0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
@@ -52,7 +56,9 @@ texture_region_size = Vector2i(20, 20)
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 3:1/0 = 0
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 4:1/0 = 0
 4:0/0 = 0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
@@ -60,6 +66,7 @@ texture_region_size = Vector2i(20, 20)
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 5:1/0 = 0
 5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 2.3381639, 10, 2.3381634, 10, -10, -10, -10)
 
 [sub_resource type="TileSet" id="TileSet_eewm5"]
 tile_size = Vector2i(20, 20)
@@ -122,7 +129,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
-size = Vector2(101, 70)
+size = Vector2(101, 116)
 
 [node name="lab_incial" type="Node2D" unique_id=590810613]
 script = ExtResource("1_40qwv")
@@ -150,6 +157,9 @@ tile_set = SubResource("TileSet_eewm5")
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("2_cs80u")]
 position = Vector2(193, 310)
 
+[node name="HeWeAre" parent="kris" unique_id=402198000 instance=ExtResource("9_ljhon")]
+position = Vector2(-193, -310)
+
 [node name="Camera" type="Camera2D" parent="kris" unique_id=808861991]
 limit_left = -246
 limit_top = -2
@@ -160,7 +170,7 @@ limit_bottom = 1085
 
 [node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=548214161]
 texture_filter = 1
-position = Vector2(571, 324)
+position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_qcvpc")
 
@@ -211,9 +221,10 @@ texture_filter = 1
 position = Vector2(643, 142)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_ls2uy")
+autoplay = "default"
 
 [node name="hitbox" type="CollisionShape2D" parent="Entrada1" unique_id=673556441]
-position = Vector2(642.5, 142)
+position = Vector2(642.5, 165)
 shape = SubResource("RectangleShape2D_5hqy4")
 debug_color = Color(0.66935, 0.51009, 7.70092e-07, 0.41960785)
 

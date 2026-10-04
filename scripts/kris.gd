@@ -64,19 +64,19 @@ func _physics_process(delta: float) -> void:
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
 			$darkworld.play("up")
-		if Input.is_action_pressed('ui_down'):
+		elif Input.is_action_pressed('ui_down'):
 			velocity.y = SPEED
 			$darkworld.play("default")
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
-		if Input.is_action_pressed('ui_right'):
+		elif Input.is_action_pressed('ui_right'):
 			velocity.x = SPEED
 			$darkworld.play("right")
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
-		if Input.is_action_pressed('ui_left'):
+		elif Input.is_action_pressed('ui_left'):
 			velocity.x = -1*SPEED
 			$darkworld.play("left")
 			$darkworld.flip_h = false

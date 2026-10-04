@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://r8wlyobsnf7h"]
+
+[ext_resource type="AudioStream" uid="uid://c5y1reqlss2eg" path="res://musicas/083.-Here-We-Are-_UNDERTALE-Soundtrack_-Toby-Fox_MP3_160K_.ogg" id="1_kn1l2"]
+
+[node name="HeWeAre" type="AudioStreamPlayer2D" unique_id=402198000]
+stream = ExtResource("1_kn1l2")
+parameters/looping = true

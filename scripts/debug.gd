@@ -26,3 +26,7 @@ func _on_lab_inicial_pressed() -> void:
 
 func _on_text_box_pressed() -> void:
 	troca_cena("res://cenas/text_box.tscn")
+
+
+func _on_lab_area_1_pressed() -> void:
+	troca_cena("res://cenas/TRUE_LAB/lab_area_1.tscn")

@@ -20,7 +20,7 @@
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
-size = Vector2(1372, 64)
+size = Vector2(1371, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
 size = Vector2(1458, 20)
@@ -128,7 +128,7 @@ size = Vector2(22, 20)
 script = ExtResource("1_5ok8l")
 
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("2_2jcy5")]
-position = Vector2(275, 353)
+position = Vector2(289, 350)
 
 [node name="fall" type="AudioStreamPlayer2D" parent="kris" unique_id=1084238366]
 position = Vector2(-275, -353)
@@ -169,7 +169,7 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_ph2t0")
 
 [node name="htibox" type="CollisionShape2D" parent="cenario" unique_id=1700973995]
-position = Vector2(954, 213)
+position = Vector2(954.5, 268.5)
 shape = SubResource("RectangleShape2D_eewm5")
 
 [node name="chao" type="CollisionShape2D" parent="cenario" unique_id=2088408632]

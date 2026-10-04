@@ -10,16 +10,21 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
+	if Input.is_action_pressed('menu'):
+		tempo = 0.0001
+	else:
+		tempo = 0.04
 	if can_play == true and Input.is_action_just_pressed('interagir'):
 		$".".visible = true
 		SingnalManager.mover.emit()
 		can_play = false
+		$texto.visible = true
 		for i in texto:
 			$texto.text += i
 			await get_tree().create_timer(tempo).timeout
 			$snd_text.play()
 		end = true
-		print('Terminou')
+	print('Terminou')
 	
 	if end == true and Input.is_action_just_pressed("interagir"):
 		$".".visible = false

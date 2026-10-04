@@ -4,7 +4,7 @@ var flag = false
 var levanta = 0
 
 func _ready() -> void:
-	
+	$kris/darkworld_idle.animation = 'wake_up'
 	$kris.darkworld = true
 	$kris.mover = false
 

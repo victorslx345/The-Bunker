@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791058759
+::res://::1791117207
 icon.svg::CompressedTexture2D::364685189568326866::1790383784::1790383844::1::::<><><>0<>0<>e2aef5ed285df076cca5e3162386a3de<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1790383784::0::1::::<><><>0<>0<><>::
 ::res://assets/::1790976740
@@ -43,39 +43,44 @@ PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (1).png::Compresse
 PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png::CompressedTexture2D::8676474978857636500::1790383784::1790383845::1::::<><><>0<>0<>8078aeccf291b908513ad4283bdb485b<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png-f813a91d22be27a1a384e52e76cf5019.ctex::
 PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png::CompressedTexture2D::4510736484943131314::1790383784::1790383844::1::::<><><>0<>0<>2107cdd64b05408c1931e3f11f8ea3af<>res://.godot/imported/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior).png-bb40b02cb66b44baeab8c7c33e15edc6.ctex::
 Shelter_location.png::CompressedTexture2D::9153129205824563953::1790383784::1790383844::1::::<><><>0<>0<>e55fe7996537e8818a25cc70cd11795c<>res://.godot/imported/Shelter_location.png-4c582b752226fb667c56fd30313fc729.ctex::
-::res://cenas/::1791059649
+::res://cenas/::1791117131
 breu.tscn::PackedScene::1876457302270072446::1791036696::0::1::::<><><>0<>0<><>::uid://becl13ag7qnnh::::res://scripts/breu.gd<>uid://sop3gb45qo7p::::res://assets/breu/porta_breu.png<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://dpoqxgpt0awbu::::res://assets/bordas/Borcda_breu.png<>uid://cp67ph7ft5vlx::::res://sfx/fall.ogg<>uid://kps4va7wrsop::::res://assets/breu/brilho.png<>uid://25kh382xup5v::::res://sfx/impact-fall.ogg<>uid://db7pr2r14npka::::res://assets/breu/Papeis_anim.png<>uid://dj62hdf1ropci::::res://assets/breu/Papeis_parado.png<>uid://ddbqsc6gc1poo::::res://scripts/papeis/papeis.gd<>uid://cdynbdm1jqvxn::::res://sfx/snd_paper_rumble.ogg<>uid://dhwy28t7844pu::::res://sfx/snd_paper_rise.ogg<>uid://c02k5d28g5k07::::res://sfx/snd_locker.ogg<>uid://cf88i2nabgchd::::res://scripts/papeis/papeis_2.gd<>uid://dp22ogyog8m0v::::res://scripts/papeis/papeis_3.gd
 bunker.tscn::PackedScene::1723068483571408678::1790976076::0::1::::<><><>0<>0<><>::uid://d3n3x3bsc5ey8::::res://assets/shelter/Shelter_location.png<>uid://b7gwy8mqqd2sf::::res://scripts/bunker.gd<>uid://dcc478mpj0ded::::res://assets/shelter/bunker_abrido_down.png<>uid://b4s1k1gnbtmj8::::res://assets/shelter/bunker_up.png<>uid://w3j221ttbfdw::::res://assets/shelter/bunker_down.png<>uid://dvu7jmgsnn7tw::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Hometown (Exterior) (2).png<>uid://bp28s2thdim3a::::res://assets/bordas/border_lw_town_0.png<>uid://36o41qn3m1df::::res://sfx/snd_smile.ogg<>uid://drw51eg1vu1ay::::res://sfx/impact.ogg<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://bdylrruwv4h50::::res://musicas/birds.ogg
-debug.tscn::PackedScene::8757832748899870076::1790977746::0::1::::<><><>0<>0<><>::uid://bcxcxfyay4wca::::res://scripts/debug.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bcoqpl38ewrcs::::res://musicas/AUDIO_ANOTHERHIM.ogg
-kris.tscn::PackedScene::2468170841822517969::1790976076::0::1::::<><><>0<>0<><>::uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://dri37eega1reu::::res://assets/kris/kris_andando_up.png<>uid://d2w5jcm8oqorg::::res://assets/kris/kris_andando_lado.png<>uid://dbmox668v02qa::::res://assets/kris/kris_andando.png<>uid://heonlaf15fvj::::res://assets/kris/Kris_caindo.png<>uid://da2j242t4oiqb::::res://assets/kris/kris_parado.png<>uid://ofsti44t46jk::::res://scripts/idle.gd<>uid://bdflyh27qi0ni::::res://assets/kris/kris_spriteshelt.png<>uid://b8soxmsar1upu::::res://scripts/darkworld_idle.gd
+debug.tscn::PackedScene::8757832748899870076::1791069989::0::1::::<><><>0<>0<><>::uid://bcxcxfyay4wca::::res://scripts/debug.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bcoqpl38ewrcs::::res://musicas/AUDIO_ANOTHERHIM.ogg
+he_we_are.tscn::PackedScene::1262691507562011779::1791070317::0::1::::<><><>0<>0<><>::uid://c5y1reqlss2eg::::res://musicas/083.-Here-We-Are-_UNDERTALE-Soundtrack_-Toby-Fox_MP3_160K_.ogg
+kris.tscn::PackedScene::2468170841822517969::1791066341::0::1::::<><><>0<>0<><>::uid://crjhhfiqc52ou::::res://scripts/kris.gd<>uid://dri37eega1reu::::res://assets/kris/kris_andando_up.png<>uid://d2w5jcm8oqorg::::res://assets/kris/kris_andando_lado.png<>uid://dbmox668v02qa::::res://assets/kris/kris_andando.png<>uid://heonlaf15fvj::::res://assets/kris/Kris_caindo.png<>uid://da2j242t4oiqb::::res://assets/kris/kris_parado.png<>uid://ofsti44t46jk::::res://scripts/idle.gd<>uid://bdflyh27qi0ni::::res://assets/kris/kris_spriteshelt.png<>uid://b8soxmsar1upu::::res://scripts/darkworld_idle.gd
 menu.tscn::PackedScene::2774097041828862089::1790976076::0::1::::<><><>0<>0<><>::uid://d3gt5kms5v1wf::::res://assets/shelter/PC _ Computer - Deltarune - Backgrounds - Depths.png<>uid://dsxgcd5wodi2u::::res://scripts/menu.gd<>uid://cyw2mq7r4m8sq::::res://scripts/parallax_background.gd<>uid://4teaefjsb4p4::::res://fontes/deltarune.ttf<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bcoqpl38ewrcs::::res://musicas/AUDIO_ANOTHERHIM.ogg
-nevoa.tscn::PackedScene::1364414845621412301::1790976076::0::1::::<><><>0<>0<><>::uid://byvqsy7n28t8q::::res://scripts/nevoa.gd<>uid://cuh8nvt82q7qn::::res://assets/LAB/true_lab_nevoa.png
-text_box.tscn::PackedScene::5676215460355951991::1791059649::0::1::::<><><>0<>0<><>::uid://v6mabv3mc0cr::::res://scripts/text_box.gd<>uid://bg8pitpmj11ed::::res://assets/HUD/text_box.png<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bond8gc4xoi04::::res://sfx/snd_text.wav
-::res://cenas/TRUE_LAB/::1791059925
-lab_area_1.tscn::PackedScene::4433633917444189051::1791059412::0::1::::<><><>0<>0<><>::uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png
-lab_incial.tscn::PackedScene::1251570050402260402::1791059925::0::1::::<><><>0<>0<><>::uid://blwohex3g1maq::::res://scripts/detector.gd<>uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png<>uid://to6yiogtkuft::::res://cenas/nevoa.tscn<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://cjv3kbsinelms::::res://scripts/dialogos/gerador_dialogo.gd<>uid://cm4uo64j7tqq6::::res://cenas/text_box.tscn<>uid://dpoqxgpt0awbu::::res://assets/bordas/Borcda_breu.png
+nevoa.tscn::PackedScene::1364414845621412301::1791117131::0::1::::<><><>0<>0<><>::uid://byvqsy7n28t8q::::res://scripts/nevoa.gd<>uid://cuh8nvt82q7qn::::res://assets/LAB/true_lab_nevoa.png
+text_box.tscn::PackedScene::5676215460355951991::1791067892::0::1::::<><><>0<>0<><>::uid://v6mabv3mc0cr::::res://scripts/text_box.gd<>uid://bg8pitpmj11ed::::res://assets/HUD/text_box.png<>uid://c8mnp2eyqx8kk::::res://fontes/determination.ttf<>uid://bond8gc4xoi04::::res://sfx/snd_text.wav
+::res://cenas/TRUE_LAB/::1791116233
+lab_area_1.tscn::PackedScene::4433633917444189051::1791116233::0::1::::<><><>0<>0<><>::uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png<>uid://7jxxlmqap5tf::::res://scripts/LAB/lab_area_1.gd<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://dpoqxgpt0awbu::::res://assets/bordas/Borcda_breu.png<>uid://cm4uo64j7tqq6::::res://cenas/text_box.tscn<>uid://r8wlyobsnf7h::::res://cenas/he_we_are.tscn<>uid://to6yiogtkuft::::res://cenas/nevoa.tscn
+lab_incial.tscn::PackedScene::1251570050402260402::1791070356::0::1::::<><><>0<>0<><>::uid://blwohex3g1maq::::res://scripts/detector.gd<>uid://d4ml7sgdduedw::::res://assets/LAB/true_lab_shelt.png<>uid://to6yiogtkuft::::res://cenas/nevoa.tscn<>uid://bbfuobu4kq02x::::res://cenas/kris.tscn<>uid://cjv3kbsinelms::::res://scripts/dialogos/gerador_dialogo.gd<>uid://cm4uo64j7tqq6::::res://cenas/text_box.tscn<>uid://dpoqxgpt0awbu::::res://assets/bordas/Borcda_breu.png<>uid://bqwllgjhcqbco::::res://sfx/snd_bump.ogg<>uid://r8wlyobsnf7h::::res://cenas/he_we_are.tscn
 ::res://fontes/::1790589063
 deltarune.ttf::FontFile::2074942729051609623::1790383784::1790383843::1::::<><><>0<>0<>7f212d010f130bd60018a3183d2778ad<>res://.godot/imported/deltarune.ttf-da3746d619aa9b28bca5b2535f2f763f.fontdata::
 determination.ttf::FontFile::7114663273726971162::1790383784::1790383843::1::::<><><>0<>0<>a0c1fb9923dd33006a375088cad0a5e8<>res://.godot/imported/determination.ttf-a1d74d5246280621ac0d6f2e4be4a8f6.fontdata::
-::res://musicas/::1790589063
+::res://musicas/::1791070276
+083.-Here-We-Are-_UNDERTALE-Soundtrack_-Toby-Fox_MP3_160K_.ogg::AudioStreamOggVorbis::6929660978267773322::1791070276::1791070276::1::::<><><>0<>0<>f71487ad71488048f546777c7e11f924<>res://.godot/imported/083.-Here-We-Are-_UNDERTALE-Soundtrack_-Toby-Fox_MP3_160K_.ogg-eb91098e74a42a8d42a0dd44dd8f4e7f.oggvorbisstr::
+Amalgam_MP3_160K_.ogg::AudioStreamOggVorbis::2203970861492169882::1791070272::1791070273::1::::<><><>0<>0<>f56f4d0f431f8d0e4c92c863b43bd451<>res://.godot/imported/Amalgam_MP3_160K_.ogg-3f397101b0c3fb0a42fa010c829c45c0.oggvorbisstr::
 AUDIO_ANOTHERHIM.ogg::AudioStreamOggVorbis::2556698540835813546::1790383784::1790383844::1::::<><><>0<>0<>1c3ab6c4c4c994a95f9b1a1b7e9734a2<>res://.godot/imported/AUDIO_ANOTHERHIM.ogg-8440d73ff12c038579d8216a92f5acb7.oggvorbisstr::
 birds.ogg::AudioStreamOggVorbis::2647231450943279273::1790383784::1790383844::1::::<><><>0<>0<>4fe803ebc2d70f8b35e68162ce81cfb1<>res://.godot/imported/birds.ogg-d39ddfb94ba0fed0b14a74a1a6afc936.oggvorbisstr::
-::res://scripts/::1791059728
+::res://scripts/::1791117039
 breu.gd::GDScript::2672020602285132213::1790976076::0::1::::<>Node2D<><>0<>0<><>::
 bunker.gd::GDScript::4646230332085781357::1790976073::0::1::::<>Node2D<><>0<>0<><>::
 character_body_2d.gd::GDScript::3188693829963863294::1790383784::0::1::::<>CharacterBody2D<><>0<>0<><>::
 darkworld_idle.gd::GDScript::4740703092590233282::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-debug.gd::GDScript::2574441866283180292::1790977746::0::1::::<>Control<><>0<>0<><>::
-detector.gd::GDScript::3204777059661984944::1791059727::0::1::::<>Node2D<><>0<>0<><>::
+debug.gd::GDScript::2574441866283180292::1791069989::0::1::::<>Control<><>0<>0<><>::
+detector.gd::GDScript::3204777059661984944::1791060746::0::1::::<>Node2D<><>0<>0<><>::
 idle.gd::GDScript::994093001987064496::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-kris.gd::GDScript::5985068904232026476::1791059410::0::1::::<>CharacterBody2D<><>0<>0<><>::
+kris.gd::GDScript::5985068904232026476::1791066341::0::1::::<>CharacterBody2D<><>0<>0<><>::
 menu.gd::GDScript::8470510003384268546::1790976076::0::1::::<>Control<><>0<>0<><>::
-nevoa.gd::GDScript::4115309790637891606::1790976076::0::1::::<>ParallaxBackground<><>0<>0<><>::
+nevoa.gd::GDScript::4115309790637891606::1791117039::0::1::::<>ParallaxBackground<><>0<>0<><>::
 parallax_background.gd::GDScript::6504451604238857672::1790383784::0::1::::<>ParallaxBackground<><>0<>0<><>::
 shelter.gd::GDScript::5588138989462019956::1790383784::0::1::::<>StaticBody2D<><>0<>0<><>::
-text_box.gd::GDScript::1538690116940309065::1791059479::0::1::::<>Node2D<><>0<>0<><>::
-::res://scripts/dialogos/::1791059593
-gerador_dialogo.gd::GDScript::5449610907411114566::1791059592::0::1::::<>Node2D<><>0<>0<><>::
+text_box.gd::GDScript::1538690116940309065::1791067892::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/dialogos/::1791067525
+gerador_dialogo.gd::GDScript::5449610907411114566::1791067525::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/LAB/::1791115743
+lab_area_1.gd::GDScript::2266060557319111803::1791115743::0::1::::<>Node2D<><>0<>0<><>::
 ::res://scripts/papeis/::1790976076
 papeis.gd::GDScript::7372896729133973782::1790976076::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 papeis_2.gd::GDScript::5193929436787355129::1790383784::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
@@ -84,14 +89,13 @@ papeis_3.gd::GDScript::8269497617789598527::1790383784::0::1::::<>AnimatedSprite
 SingnalManager.gd::GDScript::1584958291404120673::1791059072::0::1::::<>Node<><>0<>0<><>::
 ::res://scripts/textos/::1790987881
 lab_inicial_txt.gd::GDScript::6541733284520978597::1790987881::0::1::::<>Node2D<><>0<>0<><>::
-::res://sfx/::1791060575
+::res://sfx/::1791060589
 fall.ogg::AudioStreamOggVorbis::5891639880360604833::1790383784::1790383844::1::::<><><>0<>0<>e9799c218223bd8be50b1f2df6e583a8<>res://.godot/imported/fall.ogg-eeb560b2836830d5b8417c536c1e28ec.oggvorbisstr::
 impact-fall.ogg::AudioStreamOggVorbis::1957651304224312957::1790383784::1790383844::1::::<><><>0<>0<>1a6d52ef8c8878b286c53846349a0b8a<>res://.godot/imported/impact-fall.ogg-5b8700a9ce063d621f8c1a903a4f7814.oggvorbisstr::
 impact.ogg::AudioStreamOggVorbis::8399756864512117296::1790383784::1790383844::1::::<><><>0<>0<>a58dcc709f473bfbc0d8981c2be03738<>res://.godot/imported/impact.ogg-10583bc060842cd4bd81e431b5c367a1.oggvorbisstr::
 rumble.ogg::AudioStreamOggVorbis::5313082268949961245::1790383784::1790383844::1::::<><><>0<>0<>6786d6f1e29872804fbbb6b56b8c1d1c<>res://.godot/imported/rumble.ogg-9850094435a18bd8af594470e03d0823.oggvorbisstr::
 sink_noise.ogg::AudioStreamOggVorbis::2603726384387052402::1791060563::1791060452::1::::<><><>0<>0<>5ce56bf153563af59acf18b09e64b116<>res://.godot/imported/sink_noise.ogg-d317a102d9474763672398976b12b4b1.oggvorbisstr::
 snd_bump.ogg::AudioStreamOggVorbis::3555546352509010582::1791060575::1791060575::1::::<><><>0<>0<>61c0a0b5c42a5eb21a2d1dfd00d0f6e5<>res://.godot/imported/snd_bump.ogg-e717786db38ec18764e209beace01712.oggvorbisstr::
-snd_bump.wav::AudioStreamWAV::1997423451588022549::1791060451::1791060452::1::::<><><>0<>0<>0daed8e4db18e8ea9043c88c0d9150dd<>res://.godot/imported/snd_bump.wav-67146d88c49541daaed332bf1add3b88.sample::
 snd_locker.ogg::AudioStreamOggVorbis::6583961602229785418::1790383784::1790383844::1::::<><><>0<>0<>ff1725cf2f5c29f2d48873c2c1e97550<>res://.godot/imported/snd_locker.ogg-341672a92fcbf86f7de9ff1a519383a8.oggvorbisstr::
 snd_paper_rise.ogg::AudioStreamOggVorbis::7697507455517717438::1790383784::1790383843::1::::<><><>0<>0<>0bae902866c41f471e6d6c40e6221635<>res://.godot/imported/snd_paper_rise.ogg-97bd276299bb402ffd12dd203cb935b9.oggvorbisstr::
 snd_paper_rumble.ogg::AudioStreamOggVorbis::5033744248399308223::1790383784::1790383844::1::::<><><>0<>0<>abc2db762d556759af670c928470c576<>res://.godot/imported/snd_paper_rumble.ogg-f2f7a1d3125af5be8c6f0bed3ab9f94f.oggvorbisstr::
@@ -99,6 +103,5 @@ snd_paper_surf.ogg::AudioStreamOggVorbis::1339768435886354242::1790383784::17903
 snd_smile.ogg::AudioStreamOggVorbis::2030186549115286419::1790383784::1790383843::1::::<><><>0<>0<>f33ed8ea9d0dab47e9fc72b15581735a<>res://.godot/imported/snd_smile.ogg-405df68689cfe552f6f38ccdfbf2027e.oggvorbisstr::
 snd_text.wav::AudioStreamWAV::3396142807184125583::1790979300::1790979301::1::::<><><>0<>0<>99a335701df37ccf4760212889b7dbc3<>res://.godot/imported/snd_text.wav-87dd0f319b6d0bd2476d5bf09af4caeb.sample::
 snd_wing.ogg::AudioStreamOggVorbis::1533464313372674314::1791060569::1791060570::1::::<><><>0<>0<>abd46dd25232c7b6027a7a8cc31fc370<>res://.godot/imported/snd_wing.ogg-cf3a7ec4fde0836657a078f47883213b.oggvorbisstr::
-snd_wing.wav::AudioStreamWAV::6456952153844709123::1791060451::1791060452::1::::<><><>0<>0<>652120d91fc276a5747b267025ba8a4d<>res://.godot/imported/snd_wing.wav-d2db6c116c9aa7de103326326a5ed618.sample::
 step1.ogg::AudioStreamOggVorbis::1992035700567642915::1790383784::1790383843::1::::<><><>0<>0<>c81a6ababc541abb1338902ed179b71a<>res://.godot/imported/step1.ogg-d888ba6deff9f207b5800d846bb10a59.oggvorbisstr::
 step2.ogg::AudioStreamOggVorbis::3966391688348829995::1790383784::1790383843::1::::<><><>0<>0<>49e5f5b245609f2b588cbaa7bda70a49<>res://.godot/imported/step2.ogg-f523a9f040e859c6e57ead494a868f74.oggvorbisstr::
