@@ -263,7 +263,7 @@ autoplay = "default"
 script = ExtResource("12_figga")
 
 [node name="brilho" type="Area2D" parent="." unique_id=682440831]
-position = Vector2(-38, -16)
+position = Vector2(-34, 30)
 
 [node name="brilho_sprite" type="AnimatedSprite2D" parent="brilho" unique_id=1504047156]
 texture_filter = 1

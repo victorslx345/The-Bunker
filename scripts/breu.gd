@@ -17,8 +17,6 @@ func _process(delta: float) -> void:
 
 	if flag == true and Input.is_action_just_pressed("interagir"):
 		$cenario/Porta.visible = false
-		$cenario/porta.playing = true
-		$kris/idle.animation = 'esquerda'
 		$kris/idle.frame = 0
 		$brilho/brilho_sprite.visible = false
 		$brilho/CollisionShape2D.disabled = true
@@ -26,7 +24,9 @@ func _process(delta: float) -> void:
 		flag = false
 	if cair == true:
 		$kris.move_local_y(10)
-		
+		$kris/kris_sprites.animation = 'caindo'
+		$kris/idle.visible = false
+		$kris/kris_sprites.visible = true
 
 
 

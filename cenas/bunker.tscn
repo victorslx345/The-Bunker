@@ -79,7 +79,7 @@ size = Vector2(32, 107)
 size = Vector2(250, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ndd"]
-size = Vector2(228, 14)
+size = Vector2(228, 151)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(124, 170)
@@ -321,7 +321,7 @@ debug_color = Color(4.428029e-06, 0.6508084, 0.08838285, 0.41960785)
 [node name="teleporte" type="Area2D" parent="Bunker" unique_id=1294863547]
 
 [node name="hitbox" type="CollisionShape2D" parent="Bunker/teleporte" unique_id=2080142517]
-position = Vector2(579, 276)
+position = Vector2(579, 344.5)
 shape = SubResource("RectangleShape2D_p5ndd")
 debug_color = Color(0.99591, 0, 0.19757634, 0.81960785)
 

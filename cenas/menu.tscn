@@ -118,6 +118,7 @@ text = "Debug
 [node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
 position = Vector2(565, 350)
 stream = ExtResource("6_nxpqr")
+volume_db = -10.0
 autoplay = true
 parameters/looping = true
 

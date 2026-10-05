@@ -406,6 +406,7 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ri44r")
+animation = &"caindo"
 autoplay = "default"
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=187602717]
@@ -419,7 +420,6 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ls2uy")
-animation = &"esquerda"
 autoplay = "default"
 script = ExtResource("6_uo6dj")
 

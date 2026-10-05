@@ -49,3 +49,4 @@ text = "*"
 
 [node name="snd_text" type="AudioStreamPlayer2D" parent="." unique_id=325846873]
 stream = ExtResource("4_n3tdb")
+volume_db = 2.0

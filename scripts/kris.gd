@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var mover = true
-@export var SPEED = 200.0
+@export var velocidade = 200.0
 @export var darkworld = false
 
 func pode_mover():
@@ -19,6 +19,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
+	print(velocidade)
+	if Input.is_action_pressed("voltar"):
+		velocidade = 270
+	else:
+		velocidade = 200
 	if mover == true and darkworld == false:
 		$darkworld.visible = false
 		$darkworld_idle.visible = false
@@ -27,25 +32,25 @@ func _physics_process(delta: float) -> void:
 			$idle.visible = true
 			$kris_sprites.visible = false
 		if Input.is_action_pressed('ui_up'):
-			velocity.y = -1*SPEED
+			velocity.y = -1*velocidade
 			$kris_sprites.flip_h = false
 			$idle.visible = false
 			$kris_sprites.visible = true
 			$kris_sprites.play("andadno_cima")
 		elif Input.is_action_pressed('ui_down'):
-			velocity.y = SPEED
+			velocity.y = velocidade
 			$kris_sprites.play("default")
 			$kris_sprites.flip_h = false
 			$idle.visible = false
 			$kris_sprites.visible = true
 		elif Input.is_action_pressed('ui_right'):
-			velocity.x = SPEED
+			velocity.x = velocidade
 			$kris_sprites.play("andando_lado")
 			$kris_sprites.flip_h = false
 			$idle.visible = false
 			$kris_sprites.visible = true
 		elif Input.is_action_pressed('ui_left'):
-			velocity.x = -1*SPEED
+			velocity.x = -1*velocidade
 			$kris_sprites.play("andando_lado")
 			$kris_sprites.flip_h = true
 			$idle.visible = false
@@ -62,25 +67,25 @@ func _physics_process(delta: float) -> void:
 			$darkworld_idle.visible = true
 			$darkworld.visible = false
 		if Input.is_action_pressed('ui_up'):
-			velocity.y = -1*SPEED
+			velocity.y = -1*velocidade
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
 			$darkworld.play("up")
 		elif Input.is_action_pressed('ui_down'):
-			velocity.y = SPEED
+			velocity.y = velocidade
 			$darkworld.play("default")
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
 		elif Input.is_action_pressed('ui_right'):
-			velocity.x = SPEED
+			velocity.x = velocidade
 			$darkworld.play("right")
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
 			$darkworld.visible = true
 		elif Input.is_action_pressed('ui_left'):
-			velocity.x = -1*SPEED
+			velocity.x = -1*velocidade
 			$darkworld.play("left")
 			$darkworld.flip_h = false
 			$darkworld_idle.visible = false
