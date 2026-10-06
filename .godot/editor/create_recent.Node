@@ -1,10 +1,10 @@
 CollisionShape2D
 Area2D
-Panel
 AnimatedSprite2D
+StaticBody2D
+Panel
 TileMapLayer
 Sprite2D
-StaticBody2D
 Node
 Node2D
 AudioStreamPlayer2D

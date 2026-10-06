@@ -28,3 +28,17 @@ func _on_plantas_body_exited(body: Node2D) -> void:
 func _on_text_box_dialogo_acabo() -> void:
 	$kris.mover = true
 	$"../kris/CanvasLayer/text_box".can_play = true
+
+
+func _on_porta_body_entered(body: Node2D) -> void:
+	if body.name == 'kris':
+		$"../kris/CanvasLayer/text_box".can_play = true
+		$"../kris/CanvasLayer/text_box".texto = 'Uma porta de metal com quatro luzes'
+		if Input.is_action_just_pressed("interagir"):
+			$"../kris".mover = false
+
+
+
+func _on_porta_body_exited(body: Node2D) -> void:
+	if body.name == 'kris':
+		$"../kris/CanvasLayer/text_box".can_play = false

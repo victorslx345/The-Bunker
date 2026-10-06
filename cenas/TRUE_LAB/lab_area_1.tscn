@@ -14,7 +14,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6k4a"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tg36i"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn30n"]
 texture = ExtResource("1_aldxx")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -31,7 +31,7 @@ texture_region_size = Vector2i(20, 20)
 
 [sub_resource type="TileSet" id="TileSet_2jvlg"]
 tile_size = Vector2i(20, 20)
-sources/1 = SubResource("TileSetAtlasSource_tg36i")
+sources/1 = SubResource("TileSetAtlasSource_nn30n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmnt1"]
 texture = ExtResource("1_aldxx")
@@ -112,7 +112,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aldxx")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
-size = Vector2(48, 40)
+size = Vector2(54, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
+size = Vector2(119, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nn30n"]
 size = Vector2(61, 243)
@@ -277,11 +280,20 @@ position = Vector2(571, 494)
 script = ExtResource("8_3u7sy")
 
 [node name="Plantas" type="Area2D" parent="dialogos_area1" unique_id=1212784204]
+collision_layer = 128
 
 [node name="hitbox" type="CollisionShape2D" parent="dialogos_area1/Plantas" unique_id=405733678]
-position = Vector2(390, -231)
+position = Vector2(391, -231.5)
 shape = SubResource("RectangleShape2D_ls2uy")
 debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
+
+[node name="Porta" type="Area2D" parent="dialogos_area1" unique_id=771053449]
+
+[node name="hitbox" type="CollisionShape2D" parent="dialogos_area1/Porta" unique_id=1429542839]
+z_index = 1
+position = Vector2(720.5, -673.5)
+shape = SubResource("RectangleShape2D_cf16f")
+debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
 
 [node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("9_0ljpt")]
 Sala = "res://cenas/TRUE_LAB/lab_incial.tscn"
@@ -382,3 +394,5 @@ debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 [connection signal="dialogo_acabo" from="kris/CanvasLayer/text_box" to="dialogos_area1" method="_on_text_box_dialogo_acabo"]
 [connection signal="body_entered" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_entered"]
 [connection signal="body_exited" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_exited"]
+[connection signal="body_entered" from="dialogos_area1/Porta" to="dialogos_area1" method="_on_porta_body_entered"]
+[connection signal="body_exited" from="dialogos_area1/Porta" to="dialogos_area1" method="_on_porta_body_exited"]
