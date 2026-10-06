@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(tempo).timeout
 			$snd_text.play()
 		end = true
-	print('Terminou')
+		print('Terminou')
 	
 	if end == true and Input.is_action_just_pressed("interagir"):
 		$".".visible = false

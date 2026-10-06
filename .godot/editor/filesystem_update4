@@ -1,10 +1,11 @@
-res://cenas/menu.tscn
-res://cenas/breu.tscn
-res://scripts/breu.gd
 res://cenas/TRUE_LAB/lab_area_1.tscn
-res://cenas/bunker.tscn
-res://scripts/papeis/papeis.gd
-res://cenas/TRUE_LAB/lab_incial.tscn
+res://cenas/TRUE_LAB/espelhos.tscn
+res://scripts/teleporte_especial.gd
+res://cenas/teleporte_especial.tscn
+res://cenas/ovo.tscn
 res://cenas/text_box.tscn
+res://scripts/text_box.gd
 res://cenas/kris.tscn
 res://scripts/kris.gd
+res://scripts/sigletons/ScriptsGlobais.gd
+res://scripts/LAB/espelhos.gd

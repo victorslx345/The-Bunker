@@ -10,10 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bdflyh27qi0ni" path="res://assets/kris/kris_spriteshelt.png" id="8_srd57"]
 [ext_resource type="Script" uid="uid://b8soxmsar1upu" path="res://scripts/darkworld_idle.gd" id="9_ibwex"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_edcp2"]
-atlas = ExtResource("2_n07v0")
-region = Rect2(0, 0, 19, 38)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvdk3"]
 atlas = ExtResource("2_n07v0")
 region = Rect2(24, 0, 19, 38)
@@ -26,8 +22,8 @@ region = Rect2(48, 0, 19, 38)
 atlas = ExtResource("2_n07v0")
 region = Rect2(72, 0, 19, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43kmc"]
-atlas = ExtResource("3_srd57")
+[sub_resource type="AtlasTexture" id="AtlasTexture_edcp2"]
+atlas = ExtResource("2_n07v0")
 region = Rect2(0, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mm4sy"]
@@ -42,8 +38,8 @@ region = Rect2(48, 0, 19, 38)
 atlas = ExtResource("3_srd57")
 region = Rect2(72, 0, 19, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5cs4p"]
-atlas = ExtResource("4_ibwex")
+[sub_resource type="AtlasTexture" id="AtlasTexture_43kmc"]
+atlas = ExtResource("3_srd57")
 region = Rect2(0, 0, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xj1bx"]
@@ -58,12 +54,13 @@ region = Rect2(48, 0, 19, 38)
 atlas = ExtResource("4_ibwex")
 region = Rect2(72, 0, 19, 38)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cs4p"]
+atlas = ExtResource("4_ibwex")
+region = Rect2(0, 0, 19, 38)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ri44r"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_edcp2")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rvdk3")
 }, {
@@ -72,15 +69,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lbscf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edcp2")
 }],
 "loop": 1,
 "name": &"andadno_cima",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_43kmc")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mm4sy")
 }, {
@@ -89,6 +86,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gof4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43kmc")
 }],
 "loop": 1,
 "name": &"andando_lado",
@@ -104,9 +104,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5cs4p")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_xj1bx")
 }, {
 "duration": 1.0,
@@ -114,6 +111,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t0d5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cs4p")
 }],
 "loop": 1,
 "name": &"default",
@@ -174,10 +174,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ibwex"]
-atlas = ExtResource("8_srd57")
-region = Rect2(103, 24, 19, 38)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ji3gv"]
 atlas = ExtResource("8_srd57")
 region = Rect2(127, 24, 19, 38)
@@ -189,10 +185,6 @@ region = Rect2(151, 24, 19, 38)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jr87s"]
 atlas = ExtResource("8_srd57")
 region = Rect2(175, 24, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pp8dm"]
-atlas = ExtResource("8_srd57")
-region = Rect2(103, 68, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7mox"]
 atlas = ExtResource("8_srd57")
@@ -206,10 +198,6 @@ region = Rect2(151, 68, 19, 38)
 atlas = ExtResource("8_srd57")
 region = Rect2(175, 68, 19, 38)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5cda"]
-atlas = ExtResource("8_srd57")
-region = Rect2(103, 112, 19, 38)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1c5d0"]
 atlas = ExtResource("8_srd57")
 region = Rect2(127, 112, 19, 38)
@@ -221,10 +209,6 @@ region = Rect2(151, 112, 19, 38)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj68p"]
 atlas = ExtResource("8_srd57")
 region = Rect2(175, 112, 19, 38)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mpkqv"]
-atlas = ExtResource("8_srd57")
-region = Rect2(103, 156, 19, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_malef"]
 atlas = ExtResource("8_srd57")
@@ -242,9 +226,6 @@ region = Rect2(175, 156, 19, 38)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ibwex")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ji3gv")
 }, {
 "duration": 1.0,
@@ -258,9 +239,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pp8dm")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o7mox")
 }, {
@@ -276,9 +254,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q5cda")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_1c5d0")
 }, {
 "duration": 1.0,
@@ -292,9 +267,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mpkqv")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_malef")
 }, {
@@ -406,7 +378,7 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_ri44r")
-animation = &"caindo"
+animation = &"andadno_cima"
 autoplay = "default"
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=187602717]
@@ -431,7 +403,6 @@ visible = false
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_eewm5")
-animation = &"left"
 
 [node name="darkworld_idle" type="AnimatedSprite2D" parent="." unique_id=45392325]
 texture_filter = 1

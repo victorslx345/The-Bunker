@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="7_vx0t4"]
 [ext_resource type="Script" uid="uid://ckl00ys8ag276" path="res://scripts/dialogos/dialogos_area_1.gd" id="8_3u7sy"]
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="9_0ljpt"]
+[ext_resource type="PackedScene" uid="uid://ba3gjsv3jpkwf" path="res://cenas/teleporte_especial.tscn" id="10_nn30n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6k4a"]
 bg_color = Color(0, 0, 0, 1)
@@ -207,6 +208,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxg3i"]
 size = Vector2(19.999992, 60)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
+size = Vector2(204.5, 213.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
+size = Vector2(141, 215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
+size = Vector2(81, 290)
+
 [node name="Lab_area1" type="Node2D" unique_id=1194467128]
 script = ExtResource("1_tg36i")
 
@@ -343,6 +353,31 @@ sprite_frames = SubResource("SpriteFrames_aj4ri")
 position = Vector2(250.33334, -249)
 shape = SubResource("RectangleShape2D_bxg3i")
 debug_color = Color(0.2627451, 0.5019608, 1, 0.41960785)
+
+[node name="AREA_TELEPORTE2" parent="." unique_id=1747700604 instance=ExtResource("9_0ljpt")]
+Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
+JogadorPos = Vector2(1110, 150)
+
+[node name="Espelhos" type="CollisionShape2D" parent="AREA_TELEPORTE2" unique_id=1264651336]
+position = Vector2(-540, -1028)
+shape = SubResource("RectangleShape2D_2hl1l")
+debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
+
+[node name="teleporte_especial" parent="." unique_id=702850900 instance=ExtResource("10_nn30n")]
+Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
+JogadorPos = Vector2(1110, 150)
+
+[node name="Espelhos" type="CollisionShape2D" parent="teleporte_especial" unique_id=168704627]
+position = Vector2(-48.5, -1003.5)
+shape = SubResource("RectangleShape2D_sncfd")
+debug_color = Color(0.8698587, 0.3516115, 3.85046e-07, 0.41960785)
+
+[node name="AREA_TELEPORTE3" parent="." unique_id=1558876048 instance=ExtResource("9_0ljpt")]
+
+[node name="laboratorio_principal" type="CollisionShape2D" parent="AREA_TELEPORTE3" unique_id=500189747]
+position = Vector2(1523.5, -1046)
+shape = SubResource("RectangleShape2D_aj4ri")
+debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
 [connection signal="dialogo_acabo" from="kris/CanvasLayer/text_box" to="dialogos_area1" method="_on_text_box_dialogo_acabo"]
 [connection signal="body_entered" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_entered"]

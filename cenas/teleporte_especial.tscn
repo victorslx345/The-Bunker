@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ba3gjsv3jpkwf"]
+
+[ext_resource type="Script" uid="uid://dm4bs87sleg72" path="res://scripts/teleporte_especial.gd" id="1_6417d"]
+
+[node name="teleporte_especial" type="Area2D" unique_id=702850900]
+script = ExtResource("1_6417d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

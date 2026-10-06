@@ -19,7 +19,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
-	print(velocidade)
 	if Input.is_action_pressed("voltar"):
 		velocidade = 270
 	else:

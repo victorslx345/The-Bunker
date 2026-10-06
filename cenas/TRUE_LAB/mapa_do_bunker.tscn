@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b1mtao7p3if7m"]
+
+[ext_resource type="Texture2D" uid="uid://dp5ut6mkprxhg" path="res://assets/LAB/Planta_do_bunker.jpeg" id="1_s1wdm"]
+
+[node name="Mapa do bunker" type="Sprite2D" unique_id=1199623390]
+texture = ExtResource("1_s1wdm")
