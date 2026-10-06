@@ -1,3 +1,201 @@
-[gd_scene format=3 uid="uid://diquuukpb3jp4"]
+[gd_scene format=4 uid="uid://diquuukpb3jp4"]
+
+[ext_resource type="Texture2D" uid="uid://d3y603d8j2l0v" path="res://assets/egg/EggRoom1.png" id="1_1jl2f"]
+[ext_resource type="Texture2D" uid="uid://5qravvm712fj" path="res://assets/egg/Tronco.png" id="2_8hvuj"]
+[ext_resource type="Texture2D" uid="uid://bjkrvx3pnlhf1" path="res://assets/egg/Folhas_Fundo.png" id="3_unjpp"]
+[ext_resource type="Texture2D" uid="uid://drg2a6efvo62x" path="res://assets/egg/Folha.png" id="4_81tii"]
+[ext_resource type="Texture2D" uid="uid://dyl6nct4qvede" path="res://assets/egg/Folhas_frente.png" id="5_pgycx"]
+[ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="6_81tii"]
+[ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="7_pgycx"]
+[ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="8_eprbv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jl2f"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eprbv"]
+texture = ExtResource("1_1jl2f")
+margins = Vector2i(1, 15)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(20, 20)
+10:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ls2uy"]
+tile_size = Vector2i(20, 20)
+sources/0 = SubResource("TileSetAtlasSource_eprbv")
+
+[sub_resource type="Animation" id="Animation_tygsk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Folhas_fundo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(564.6279, 11.488372)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Folha_Frente:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(564, 6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("folha:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(577, -6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("folha:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.23137255)]
+}
+
+[sub_resource type="Animation" id="Animation_fshvg"]
+resource_name = "fundo"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Folhas_fundo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(564.6279, 11.488372), Vector2(572, 19), Vector2(580, 15), Vector2(568, 5), Vector2(564.628, 11.488)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Folha_Frente:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(564, 6), Vector2(564, 4), Vector2(573, 3), Vector2(573, 7)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("folha:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.89, 2.42, 4),
+"transitions": PackedFloat32Array(1.1486971, 1.4142137, 1, 1),
+"update": 0,
+"values": [Vector2(577, -6), Vector2(591, 75), Vector2(682, 101), Vector2(772, 119)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("folha:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.8333334, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.41960785), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4v4fg"]
+_data = {
+&"RESET": SubResource("Animation_tygsk"),
+&"fundo": SubResource("Animation_fshvg")
+}
 
 [node name="ovo" type="Node2D" unique_id=1420228191]
+
+[node name="fundo" type="Panel" parent="." unique_id=1338253040]
+offset_left = -138.0
+offset_top = -389.0
+offset_right = 1305.0
+offset_bottom = 743.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1jl2f")
+
+[node name="chao" type="TileMapLayer" parent="." unique_id=581510225]
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAJAAkAAAAKAAEAAAAJAAMAAAAKAAEAAAAJAAQAAAAKAAEAAAAJAAUAAAAKAAEAAAAJAAYAAAAKAAEAAAAJAAcAAAAKAAEAAAAJAAgAAAAKAAEAAAAJAAoAAAAKAAEAAAAIAAMAAAAKAAEAAAAIAAQAAAAKAAEAAAAIAAUAAAAKAAEAAAAIAAYAAAAKAAEAAAAIAAcAAAAKAAEAAAAIAAgAAAAKAAEAAAAIAAkAAAAKAAEAAAAIAAoAAAAKAAEAAAAHAAMAAAAKAAEAAAAHAAIAAAAKAAEAAAAGAAIAAAAKAAEAAAAGAAEAAAAKAAEAAAAGAAAAAAAKAAEAAAAHAP//AAAKAAEAAAAHAAAAAAAKAAEAAAAHAAEAAAAKAAEAAAAIAAIAAAAKAAEAAAAKAAMAAAAKAAEAAAAKAAIAAAAKAAEAAAALAAIAAAAKAAEAAAALAAEAAAAKAAEAAAALAAAAAAAKAAEAAAAKAAAAAAAKAAEAAAAKAP//AAAKAAEAAAAJAP//AAAKAAEAAAAIAP//AAAKAAEAAAAIAAAAAAAKAAEAAAAJAAAAAAAKAAEAAAAJAAEAAAAKAAEAAAAJAAIAAAAKAAEAAAAIAAEAAAAKAAEAAAAKAAEAAAAKAAEAAAA=")
+tile_set = SubResource("TileSet_ls2uy")
+
+[node name="Arvore" type="StaticBody2D" parent="." unique_id=1539380575]
+
+[node name="tronco" type="Sprite2D" parent="Arvore" unique_id=1766493392]
+texture_filter = 1
+position = Vector2(572, 8)
+scale = Vector2(3, 3)
+texture = ExtResource("2_8hvuj")
+
+[node name="Folhas_fundo" type="Sprite2D" parent="Arvore" unique_id=1696987237]
+texture_filter = 1
+position = Vector2(564.6279, 11.488372)
+scale = Vector2(3, 3)
+texture = ExtResource("3_unjpp")
+
+[node name="folha_fundo" type="AnimationPlayer" parent="Arvore" unique_id=1576607009]
+libraries/ = SubResource("AnimationLibrary_4v4fg")
+autoplay = &"fundo"
+
+[node name="folha" type="Sprite2D" parent="Arvore" unique_id=1692057355]
+modulate = Color(1, 1, 1, 0.23137255)
+texture_filter = 1
+position = Vector2(577, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("4_81tii")
+
+[node name="Folha_Frente" type="Sprite2D" parent="Arvore" unique_id=2019826321]
+texture_filter = 1
+position = Vector2(564, 6)
+scale = Vector2(3, 3)
+texture = ExtResource("5_pgycx")
+
+[node name="kris" parent="." unique_id=462716732 instance=ExtResource("6_81tii")]
+position = Vector2(542, 518)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=1590651176]
+
+[node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=42600965]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_pgycx")
+
+[node name="text_box" parent="kris/CanvasLayer" unique_id=2086050303 instance=ExtResource("8_eprbv")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+
+[node name="Camera2D" type="Camera2D" parent="kris" unique_id=1790481381]
+limit_left = 0
+limit_top = -391
+limit_right = 1152
+limit_bottom = 648
