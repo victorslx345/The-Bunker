@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://diquuukpb3jp4"]
 
 [ext_resource type="Texture2D" uid="uid://d3y603d8j2l0v" path="res://assets/egg/EggRoom1.png" id="1_1jl2f"]
+[ext_resource type="Script" uid="uid://cr2dy418rkk6a" path="res://scripts/ovo.gd" id="1_fshvg"]
 [ext_resource type="Texture2D" uid="uid://5qravvm712fj" path="res://assets/egg/Tronco.png" id="2_8hvuj"]
 [ext_resource type="Texture2D" uid="uid://bjkrvx3pnlhf1" path="res://assets/egg/Folhas_Fundo.png" id="3_unjpp"]
 [ext_resource type="Texture2D" uid="uid://drg2a6efvo62x" path="res://assets/egg/Folha.png" id="4_81tii"]
@@ -8,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="6_81tii"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="7_pgycx"]
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="8_eprbv"]
+[ext_resource type="Script" uid="uid://chiokb6va4va3" path="res://scripts/dialogos/dialogo_tree.gd" id="9_pgycx"]
+[ext_resource type="AudioStream" uid="uid://bld7s451c4ocx" path="res://musicas/man.ogg" id="10_4v4fg"]
+[ext_resource type="AudioStream" uid="uid://bov6lg4wr6fis" path="res://musicas/deltarune_piano_collections_by_trevor_alan_gomes.ogg" id="11_rbpqp"]
+[ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="13_4v4fg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jl2f"]
 bg_color = Color(0, 0, 0, 1)
@@ -133,7 +138,26 @@ _data = {
 &"fundo": SubResource("Animation_fshvg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
+size = Vector2(129, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
+size = Vector2(136, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
+size = Vector2(465, 422)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
+size = Vector2(147, 456)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
+size = Vector2(917, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0nor"]
+size = Vector2(121, 48)
+
 [node name="ovo" type="Node2D" unique_id=1420228191]
+script = ExtResource("1_fshvg")
 
 [node name="fundo" type="Panel" parent="." unique_id=1338253040]
 offset_left = -138.0
@@ -152,13 +176,13 @@ tile_set = SubResource("TileSet_ls2uy")
 [node name="tronco" type="Sprite2D" parent="Arvore" unique_id=1766493392]
 texture_filter = 1
 position = Vector2(572, 8)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_8hvuj")
 
 [node name="Folhas_fundo" type="Sprite2D" parent="Arvore" unique_id=1696987237]
 texture_filter = 1
 position = Vector2(564.6279, 11.488372)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("3_unjpp")
 
 [node name="folha_fundo" type="AnimationPlayer" parent="Arvore" unique_id=1576607009]
@@ -169,14 +193,18 @@ autoplay = &"fundo"
 modulate = Color(1, 1, 1, 0.23137255)
 texture_filter = 1
 position = Vector2(577, -6)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("4_81tii")
 
 [node name="Folha_Frente" type="Sprite2D" parent="Arvore" unique_id=2019826321]
 texture_filter = 1
 position = Vector2(564, 6)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("5_pgycx")
+
+[node name="tronco_hitbox" type="CollisionShape2D" parent="Arvore" unique_id=84883523]
+position = Vector2(547.5, 159)
+shape = SubResource("RectangleShape2D_cf16f")
 
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("6_81tii")]
 position = Vector2(542, 518)
@@ -196,6 +224,58 @@ position = Vector2(571, 494)
 
 [node name="Camera2D" type="Camera2D" parent="kris" unique_id=1790481381]
 limit_left = 0
-limit_top = -391
+limit_top = -216
 limit_right = 1152
 limit_bottom = 648
+
+[node name="Man" type="AudioStreamPlayer" parent="kris" unique_id=559446558]
+stream = ExtResource("10_4v4fg")
+parameters/looping = true
+
+[node name="DeltarunePianoCollectionsByTrevorAlanGomes" type="AudioStreamPlayer" parent="kris" unique_id=1515026509]
+stream = ExtResource("11_rbpqp")
+parameters/looping = true
+
+[node name="dialogo_tree" type="Node2D" parent="." unique_id=164358784]
+script = ExtResource("9_pgycx")
+
+[node name="arvore" type="Area2D" parent="dialogo_tree" unique_id=2021410244]
+
+[node name="hitbox" type="CollisionShape2D" parent="dialogo_tree/arvore" unique_id=1042348579]
+position = Vector2(547, 158.5)
+shape = SubResource("RectangleShape2D_eewm5")
+debug_color = Color(0.7240737, 0.4776789, 0, 0.41960785)
+
+[node name="paredes" type="StaticBody2D" parent="." unique_id=192385641]
+
+[node name="hitbox1" type="CollisionShape2D" parent="paredes" unique_id=34100253]
+position = Vector2(246.5, 452)
+shape = SubResource("RectangleShape2D_2hl1l")
+
+[node name="hitbox2" type="CollisionShape2D" parent="paredes" unique_id=905544502]
+position = Vector2(118, 12)
+shape = SubResource("RectangleShape2D_aj4ri")
+
+[node name="hitbox3" type="CollisionShape2D" parent="paredes" unique_id=456009705]
+position = Vector2(833, 452)
+shape = SubResource("RectangleShape2D_2hl1l")
+
+[node name="hitbox4" type="CollisionShape2D" parent="paredes" unique_id=351916236]
+position = Vector2(1034, 13)
+shape = SubResource("RectangleShape2D_aj4ri")
+
+[node name="hitbox5" type="CollisionShape2D" parent="paredes" unique_id=835181247]
+position = Vector2(604.5, -209)
+shape = SubResource("RectangleShape2D_sncfd")
+
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("13_4v4fg")]
+Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
+JogadorPos = Vector2(109, 380)
+
+[node name="hitbox" type="CollisionShape2D" parent="AREA_TELEPORTE" unique_id=2095953532]
+position = Vector2(539.5, 639)
+shape = SubResource("RectangleShape2D_n0nor")
+debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
+
+[connection signal="body_entered" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_entered"]
+[connection signal="body_exited" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_exited"]

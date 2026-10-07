@@ -12,7 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		ScriptsGlobais.anim = false
 		fun_value = randi_range(1,50)
 		if fun_value == 13:
-			MudarDeSala.JogadorPos = Vector2(0,0)
+			MudarDeSala.JogadorPos = Vector2(542,518)
 			get_tree().call_deferred("change_scene_to_file", "res://cenas/ovo.tscn")
 		else:
 			MudarDeSala.JogadorPos = JogadorPos

@@ -131,6 +131,7 @@ tile_set = SubResource("TileSet_2pdgn")
 [node name="parede" type="TileMapLayer" parent="." unique_id=139339634]
 texture_filter = 1
 scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAPAP3/AAADAAAAAAAPAP7/AAADAAEAAAAPAP//AAADAAIAAAAQAP3/AAAEAAAAAAAQAP7/AAAEAAEAAAAQAP//AAAEAAIAAAARAP3/AAAFAAAAAAARAP7/AAAFAAEAAAARAP//AAAFAAIAAAAOAP3/AAAAAAAAAAAOAP7/AAAAAAEAAAAOAP//AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_3vrq2")
 
 [node name="Banheira" type="StaticBody2D" parent="." unique_id=1959294350]
