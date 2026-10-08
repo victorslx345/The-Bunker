@@ -1,8 +1,6 @@
-res://cenas/kris.tscn
-res://cenas/teleporte_especial.tscn
-res://scripts/teleporte_especial.gd
 res://cenas/ovo.tscn
-res://scripts/dialogos/dialogo_tree.gd
+res://scripts/kris.gd
 res://scripts/ovo.gd
-res://cenas/TRUE_LAB/espelhos.tscn
-res://cenas/TRUE_LAB/banheiro.tscn
+res://scripts/dialogos/dialogo_tree.gd
+res://cenas/text_box.tscn
+res://scripts/text_box.gd

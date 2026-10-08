@@ -144,6 +144,9 @@ size = Vector2(129, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(136, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbp17"]
+size = Vector2(98, 82)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
 size = Vector2(465, 422)
 
@@ -174,12 +177,14 @@ tile_set = SubResource("TileSet_ls2uy")
 [node name="Arvore" type="StaticBody2D" parent="." unique_id=1539380575]
 
 [node name="tronco" type="Sprite2D" parent="Arvore" unique_id=1766493392]
+z_index = 1
 texture_filter = 1
 position = Vector2(572, 8)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_8hvuj")
 
 [node name="Folhas_fundo" type="Sprite2D" parent="Arvore" unique_id=1696987237]
+z_index = 4
 texture_filter = 1
 position = Vector2(564.6279, 11.488372)
 scale = Vector2(3.5, 3.5)
@@ -191,12 +196,14 @@ autoplay = &"fundo"
 
 [node name="folha" type="Sprite2D" parent="Arvore" unique_id=1692057355]
 modulate = Color(1, 1, 1, 0.23137255)
+z_index = 4
 texture_filter = 1
 position = Vector2(577, -6)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("4_81tii")
 
 [node name="Folha_Frente" type="Sprite2D" parent="Arvore" unique_id=2019826321]
+z_index = 4
 texture_filter = 1
 position = Vector2(564, 6)
 scale = Vector2(3.5, 3.5)
@@ -246,6 +253,13 @@ position = Vector2(547, 158.5)
 shape = SubResource("RectangleShape2D_eewm5")
 debug_color = Color(0.7240737, 0.4776789, 0, 0.41960785)
 
+[node name="man" type="Area2D" parent="dialogo_tree" unique_id=2128860644]
+
+[node name="hitbox" type="CollisionShape2D" parent="dialogo_tree/man" unique_id=1872110873]
+position = Vector2(597, -11)
+shape = SubResource("RectangleShape2D_kbp17")
+debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
+
 [node name="paredes" type="StaticBody2D" parent="." unique_id=192385641]
 
 [node name="hitbox1" type="CollisionShape2D" parent="paredes" unique_id=34100253]
@@ -279,3 +293,5 @@ debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
 
 [connection signal="body_entered" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_entered"]
 [connection signal="body_exited" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_exited"]
+[connection signal="body_entered" from="dialogo_tree/man" to="dialogo_tree" method="_on_man_body_entered"]
+[connection signal="body_exited" from="dialogo_tree/man" to="dialogo_tree" method="_on_man_body_exited"]

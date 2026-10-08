@@ -1,6 +1,7 @@
+Node
 CollisionShape2D
-StaticBody2D
 Area2D
+StaticBody2D
 Node2D
 Camera2D
 Sprite2D
@@ -8,7 +9,6 @@ AnimationPlayer
 TileMapLayer
 AnimatedSprite2D
 Panel
-Node
 AudioStreamPlayer2D
 Control
 Label

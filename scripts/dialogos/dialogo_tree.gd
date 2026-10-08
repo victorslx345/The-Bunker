@@ -1,7 +1,9 @@
 extends Node2D
 
+func texto(text: String):
+	$"../kris/CanvasLayer/text_box".can_play = true
+	$"../kris/CanvasLayer/text_box".texto = text
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -22,3 +24,17 @@ func _on_arvore_body_entered(body: Node2D) -> void:
 func _on_arvore_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		$"../kris/CanvasLayer/text_box".can_play = false
+
+
+func _on_man_body_entered(body: Node2D) -> void:
+	if body.name == 'kris':
+		texto('Tem um homem aqui. Ele esta te entregando algo...')
+		if Input.is_action_just_pressed("interagir"):
+			texto('Voce recebeu ovo')
+			if Input.is_action_just_pressed("interagir"):
+				$"../kris".mover = false
+	
+
+
+func _on_man_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
