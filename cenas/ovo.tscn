@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://chiokb6va4va3" path="res://scripts/dialogos/dialogo_tree.gd" id="9_pgycx"]
 [ext_resource type="AudioStream" uid="uid://bld7s451c4ocx" path="res://musicas/man.ogg" id="10_4v4fg"]
 [ext_resource type="AudioStream" uid="uid://bov6lg4wr6fis" path="res://musicas/deltarune_piano_collections_by_trevor_alan_gomes.ogg" id="11_rbpqp"]
+[ext_resource type="AudioStream" uid="uid://df7ijyocx3nxs" path="res://sfx/snd_egg.wav" id="12_rbpqp"]
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="13_4v4fg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jl2f"]
@@ -242,6 +243,9 @@ parameters/looping = true
 [node name="DeltarunePianoCollectionsByTrevorAlanGomes" type="AudioStreamPlayer" parent="kris" unique_id=1515026509]
 stream = ExtResource("11_rbpqp")
 parameters/looping = true
+
+[node name="egg" type="AudioStreamPlayer2D" parent="kris" unique_id=935665839]
+stream = ExtResource("12_rbpqp")
 
 [node name="dialogo_tree" type="Node2D" parent="." unique_id=164358784]
 script = ExtResource("9_pgycx")

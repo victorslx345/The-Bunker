@@ -2,8 +2,10 @@ extends Node2D
 
 @export var texto : String
 @export var tempo : float
-var end = false
+@export var end = false
 @export var can_play : bool
+@export var mais_dia = false
+@export var indice = 0
 signal dialogo_acabo
 
 func _ready() -> void:
@@ -23,12 +25,15 @@ func _process(delta: float) -> void:
 			$texto.text += i
 			await get_tree().create_timer(tempo).timeout
 			$snd_text.play()
+		indice += 1
+		if mais_dia == false:
+			pass
 		end = true
 		print('Terminou')
 	
 	if end == true and Input.is_action_just_pressed("interagir"):
 		$".".visible = false
-		can_play = false
+		can_play = true
 		print('saiu')
 		end = false
 		$texto.text = ''
