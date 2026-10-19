@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="4_sfu1d"]
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="5_sfu1d"]
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="8_23wlg"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="8_svcep"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="9_n3bfp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pri8q"]
 bg_color = Color(0, 0, 0, 1)
@@ -161,21 +163,24 @@ tile_set = SubResource("TileSet_eewm5")
 position = Vector2(20.166668, 27.073338)
 shape = SubResource("RectangleShape2D_sncfd")
 
-[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("2_vbg83")]
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("2_vbg83")]
+cena = NodePath("../transicoes")
 
 [node name="banheiro" type="CollisionShape2D" parent="AREA_TELEPORTE" unique_id=539583764]
 position = Vector2(-1472, 178)
 shape = SubResource("RectangleShape2D_eewm5")
 debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
-[node name="AREA_TELEPORTE2" parent="." unique_id=1976257190 instance=ExtResource("2_vbg83")]
+[node name="AREA_TELEPORTE2" parent="." unique_id=1976257190 node_paths=PackedStringArray("cena") instance=ExtResource("2_vbg83")]
+cena = NodePath("../transicoes")
 
 [node name="dormitorio" type="CollisionShape2D" parent="AREA_TELEPORTE2" unique_id=177656912]
 position = Vector2(777, -325)
 shape = SubResource("RectangleShape2D_2hl1l")
 debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
-[node name="AREA_TELEPORTE3" parent="." unique_id=669097640 instance=ExtResource("2_vbg83")]
+[node name="AREA_TELEPORTE3" parent="." unique_id=669097640 node_paths=PackedStringArray("cena") instance=ExtResource("2_vbg83")]
+cena = NodePath("../transicoes")
 Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
 JogadorPos = Vector2(63, -1036)
 
@@ -210,6 +215,8 @@ visible = false
 texture_filter = 1
 position = Vector2(571, 494)
 
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("8_svcep")]
+
 [node name="nevoa" parent="." unique_id=1502976648 instance=ExtResource("8_23wlg")]
 
 [node name="kris2" parent="." unique_id=1271233003 instance=ExtResource("3_vax6m")]
@@ -217,3 +224,21 @@ modulate = Color(1, 1, 1, 0.60784316)
 z_index = -1
 z_as_relative = false
 position = Vector2(1110, 28)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="kris2" unique_id=763052676]
+visible = false
+
+[node name="borda" type="Sprite2D" parent="kris2/CanvasLayer" unique_id=1147981861]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_kln8s")
+
+[node name="text_box" parent="kris2/CanvasLayer" unique_id=1483899676 instance=ExtResource("5_sfu1d")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+
+[node name="Menu_Stats" parent="kris2/CanvasLayer" unique_id=2139347602 instance=ExtResource("8_svcep")]
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("9_n3bfp")]

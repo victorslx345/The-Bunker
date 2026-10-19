@@ -1,6 +1,6 @@
-res://cenas/ovo.tscn
-res://scripts/dialogos/dialogo_tree.gd
-res://scripts/text_box.gd
-res://cenas/text_box.tscn
+res://cenas/bunker.tscn
+res://cenas/breu.tscn
+res://cenas/menu_stats.tscn
+res://cenas/TRUE_LAB/lab_area_1.tscn
 res://cenas/TRUE_LAB/espelhos.tscn
-res://scripts/LAB/espelhos.gd
+res://cenas/ovo.tscn

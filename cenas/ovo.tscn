@@ -10,10 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="7_pgycx"]
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="8_eprbv"]
 [ext_resource type="Script" uid="uid://chiokb6va4va3" path="res://scripts/dialogos/dialogo_tree.gd" id="9_pgycx"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="10_4eh7v"]
 [ext_resource type="AudioStream" uid="uid://bld7s451c4ocx" path="res://musicas/man.ogg" id="10_4v4fg"]
 [ext_resource type="AudioStream" uid="uid://bov6lg4wr6fis" path="res://musicas/deltarune_piano_collections_by_trevor_alan_gomes.ogg" id="11_rbpqp"]
 [ext_resource type="AudioStream" uid="uid://df7ijyocx3nxs" path="res://sfx/snd_egg.wav" id="12_rbpqp"]
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="13_4v4fg"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="15_2cqgy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jl2f"]
 bg_color = Color(0, 0, 0, 1)
@@ -230,6 +232,8 @@ visible = false
 texture_filter = 1
 position = Vector2(571, 494)
 
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("10_4eh7v")]
+
 [node name="Camera2D" type="Camera2D" parent="kris" unique_id=1790481381]
 limit_left = 0
 limit_top = -216
@@ -286,7 +290,8 @@ shape = SubResource("RectangleShape2D_aj4ri")
 position = Vector2(604.5, -209)
 shape = SubResource("RectangleShape2D_sncfd")
 
-[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("13_4v4fg")]
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("13_4v4fg")]
+cena = NodePath("../transicoes")
 Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
 JogadorPos = Vector2(109, 380)
 
@@ -294,6 +299,8 @@ JogadorPos = Vector2(109, 380)
 position = Vector2(539.5, 639)
 shape = SubResource("RectangleShape2D_n0nor")
 debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("15_2cqgy")]
 
 [connection signal="body_entered" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_entered"]
 [connection signal="body_exited" from="dialogo_tree/arvore" to="dialogo_tree" method="_on_arvore_body_exited"]

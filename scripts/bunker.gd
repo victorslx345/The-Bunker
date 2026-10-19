@@ -48,6 +48,8 @@ func _on_interacao_body_exited(body: Node2D) -> void:
 
 func _on_teleporte_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
+		$transicoes/anim.play("fade_out")
+		await $transicoes/anim.animation_finished
 		$kris/idle.play("direita")
 		troca_cena("res://cenas/breu.tscn")
 

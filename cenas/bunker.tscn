@@ -10,6 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://36o41qn3m1df" path="res://sfx/snd_smile.ogg" id="7_edcp2"]
 [ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="8_rvdk3"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="9_phha8"]
+[ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="10_edcp2"]
+[ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="11_rvdk3"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="12_nnh55"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="12_t0d5f"]
 [ext_resource type="AudioStream" uid="uid://bdylrruwv4h50" path="res://musicas/birds.ogg" id="14_yyqby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
@@ -342,6 +346,26 @@ parameters/looping = false
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("9_phha8")]
 position = Vector2(571, -127)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=803604742]
+
+[node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=394894479]
+visible = false
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_edcp2")
+
+[node name="text_box" parent="kris/CanvasLayer" unique_id=2086050303 instance=ExtResource("11_rvdk3")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("12_nnh55")]
+visible = false
+z_index = 4096
+offset_right = 214.0
+offset_bottom = 207.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1062801181]
 
 [node name="borda" type="Sprite2D" parent="CanvasLayer" unique_id=1512035764]
@@ -367,6 +391,8 @@ stream = ExtResource("14_yyqby")
 autoplay = true
 max_distance = 889.0
 parameters/looping = true
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("12_t0d5f")]
 
 [connection signal="body_entered" from="Bunker/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Bunker/interacao" to="." method="_on_interacao_body_exited"]

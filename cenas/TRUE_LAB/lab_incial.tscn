@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="5_k2w0v"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="5_qcvpc"]
 [ext_resource type="AudioStream" uid="uid://bqwllgjhcqbco" path="res://sfx/snd_bump.ogg" id="7_ly41c"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="8_xdpr3"]
 [ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="9_ljhon"]
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="10_gud47"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="11_q3g8a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
 bg_color = Color(0, 0, 0, 1)
@@ -186,6 +188,11 @@ visible = false
 texture_filter = 1
 position = Vector2(571, 494)
 
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("8_xdpr3")]
+z_index = 4096
+offset_right = 214.0
+offset_bottom = 207.0
+
 [node name="bump" type="AudioStreamPlayer2D" parent="kris" unique_id=1096636894]
 stream = ExtResource("7_ly41c")
 
@@ -230,7 +237,8 @@ debug_color = Color(0.66935, 0.51009, 7.70092e-07, 0.41960785)
 [node name="gerador dialogo" type="Node2D" parent="." unique_id=1995124944]
 script = ExtResource("5_irngh")
 
-[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 instance=ExtResource("10_gud47")]
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("10_gud47")]
+cena = NodePath("../transicoes")
 Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
 JogadorPos = Vector2(109, 380)
 
@@ -238,6 +246,8 @@ JogadorPos = Vector2(109, 380)
 position = Vector2(2037.5, 720.5)
 shape = SubResource("RectangleShape2D_ls2uy")
 debug_color = Color(0.85314035, 0.37044176, 3.85046e-07, 0.41960785)
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("11_q3g8a")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Entrada1" to="gerador dialogo" method="_on_entrada_1_body_entered"]

@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://kps4va7wrsop" path="res://assets/breu/brilho.png" id="3_2jcy5"]
 [ext_resource type="AudioStream" uid="uid://25kh382xup5v" path="res://sfx/impact-fall.ogg" id="4_figga"]
 [ext_resource type="Texture2D" uid="uid://db7pr2r14npka" path="res://assets/breu/Papeis_anim.png" id="4_riypj"]
+[ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="5_bk8gl"]
 [ext_resource type="Texture2D" uid="uid://dj62hdf1ropci" path="res://assets/breu/Papeis_parado.png" id="5_jrtru"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="6_jg4g3"]
 [ext_resource type="Script" uid="uid://ddbqsc6gc1poo" path="res://scripts/papeis/papeis.gd" id="6_wfpk7"]
 [ext_resource type="AudioStream" uid="uid://cdynbdm1jqvxn" path="res://sfx/snd_paper_rumble.ogg" id="8_wfpk7"]
 [ext_resource type="AudioStream" uid="uid://dhwy28t7844pu" path="res://sfx/snd_paper_rise.ogg" id="9_7gn68"]
@@ -140,6 +142,17 @@ stream = ExtResource("4_figga")
 volume_db = -2.889
 
 [node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=1873300089]
+
+[node name="text_box" parent="kris/CanvasLayer" unique_id=2086050303 instance=ExtResource("5_bk8gl")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("6_jg4g3")]
+z_index = 4096
+offset_right = 214.0
+offset_bottom = 207.0
+metadata/_edit_use_anchors_ = true
 
 [node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=388681034]
 texture_filter = 1

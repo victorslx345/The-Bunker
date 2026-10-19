@@ -14,22 +14,26 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	if $"../kris/CanvasLayer/text_box".indice >= 1 and man == true and ovo == false:
-			$"../kris/CanvasLayer/text_box".texto = 'Voce recebeu o ovo.'
+			$"../kris/CanvasLayer/text_box".texto = '(Voce recebeu o ovo.)'
 			if $"../kris/CanvasLayer/text_box".can_play == true and ovo == false and $"../kris/CanvasLayer/text_box".indice == 2 and Input.is_action_just_pressed("interagir"):
 				$"../kris/egg".play()
-				$man/hitbox.disabled = false
+				ScriptsGlobais.add_item('ovo')
+				print(ScriptsGlobais.inventario)
 				man = false
 				ovo = true
 	if $"../kris/CanvasLayer/text_box".indice >= 1 and man == false and ovo == true:
-			$"../kris/CanvasLayer/text_box".texto = 'Bem..., não tem um homem aqui.'
-	print($"../kris/CanvasLayer/text_box".indice)
+			$"../kris/CanvasLayer/text_box".texto = '(Bem..., não tem um homem aqui.)'
+
 
 
 func _on_arvore_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		$"../kris/CanvasLayer/text_box".can_play = true
 		$"../kris/CanvasLayer/text_box".indice = 0
-		$"../kris/CanvasLayer/text_box".texto = 'Ele está atras da arvore.'
+		if ovo == false:
+			$"../kris/CanvasLayer/text_box".texto = '(Ele está atras da arvore.)'
+		if ovo == true:
+			$"../kris/CanvasLayer/text_box".texto = '(É uma arvore.)'
 
 
 
@@ -44,9 +48,9 @@ func _on_man_body_entered(body: Node2D) -> void:
 		$"../kris/CanvasLayer/text_box".can_play = true
 		man = true
 		if $"../kris/CanvasLayer/text_box".indice == 0 and ovo == false:
-			$"../kris/CanvasLayer/text_box".texto = 'Bem, tem um homem aqui. Ele esta te entregando algo...'
+			$"../kris/CanvasLayer/text_box".texto = '(Bem, tem um homem aqui. Ele esta te entregando algo...)'
 		if $"../kris/CanvasLayer/text_box".indice == 0 and ovo == true:
-			$"../kris/CanvasLayer/text_box".texto = 'Bem..., não tem um homem aqui.'
+			$"../kris/CanvasLayer/text_box".texto = '(Bem... não tem um homem aqui.)'
 
 
 func _on_man_body_exited(body: Node2D) -> void:

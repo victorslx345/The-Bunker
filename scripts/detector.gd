@@ -8,7 +8,12 @@ func _ready() -> void:
 		$kris/darkworld_idle.animation = 'wake_up'
 		$kris.mover = false
 		$Timer.start()
+		$kris/CanvasLayer/Menu_Stats.pode_abrir = false
+	
+	
 	$kris.darkworld = true
+	
+	
 	if ScriptsGlobais.msc_tempo > 0:
 		$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
 
@@ -21,6 +26,7 @@ func _process(delta: float) -> void:
 		$kris/wing.play()
 		await $kris/darkworld_idle.animation_finished
 		$kris.mover = true
+		$kris/CanvasLayer/Menu_Stats.pode_abrir = true
 
 	
 	
