@@ -12,7 +12,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pri8q"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbg83"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23wlg"]
 texture = ExtResource("1_pri8q")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -29,9 +29,9 @@ texture_region_size = Vector2i(20, 20)
 
 [sub_resource type="TileSet" id="TileSet_vax6m"]
 tile_size = Vector2i(20, 20)
-sources/1 = SubResource("TileSetAtlasSource_vbg83")
+sources/1 = SubResource("TileSetAtlasSource_23wlg")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ai2e2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3bfp"]
 texture = ExtResource("1_pri8q")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -94,7 +94,7 @@ texture_region_size = Vector2i(20, 20)
 [sub_resource type="TileSet" id="TileSet_kln8s"]
 tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ai2e2")
+sources/0 = SubResource("TileSetAtlasSource_n3bfp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vax6m"]
 texture = ExtResource("1_pri8q")
@@ -169,6 +169,8 @@ shape = SubResource("RectangleShape2D_eewm5")
 debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
 [node name="AREA_TELEPORTE2" parent="." unique_id=1976257190 instance=ExtResource("2_vbg83")]
+Sala = "res://cenas/TRUE_LAB/quarto.tscn"
+JogadorPos = Vector2(570, 548)
 
 [node name="dormitorio" type="CollisionShape2D" parent="AREA_TELEPORTE2" unique_id=177656912]
 position = Vector2(777, -325)
