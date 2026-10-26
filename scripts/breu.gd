@@ -51,11 +51,12 @@ func _on_cair_timeout() -> void:
 	cair = true
 	$cenario/chao.disabled = true
 	$kris/fall.play()
+	$AnimationPlayer.play("fall")
 	await $kris/fall.finished
 	$kris/impacto.play()
 	$kris/idle.visible = false
 	$troca_cena.start()
-	
+
 	
 
 

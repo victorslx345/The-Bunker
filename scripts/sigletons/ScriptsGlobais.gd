@@ -17,3 +17,5 @@ func add_item(item):
 		if inventario[slot] == '':
 			inventario[slot] = item
 			return
+
+var Banheira_cortina: bool = false

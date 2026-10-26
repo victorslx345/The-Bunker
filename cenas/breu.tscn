@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://c02k5d28g5k07" path="res://sfx/snd_locker.ogg" id="11_7i78g"]
 [ext_resource type="Script" uid="uid://cf88i2nabgchd" path="res://scripts/papeis/papeis_2.gd" id="12_figga"]
 [ext_resource type="Script" uid="uid://dp22ogyog8m0v" path="res://scripts/papeis/papeis_3.gd" id="13_7gn68"]
+[ext_resource type="Texture2D" uid="uid://bwsdqul5q80nt" path="res://assets/kris/kris_fall_cutscene.png" id="18_jg4g3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
 bg_color = Color(0, 0, 0, 1)
@@ -125,6 +126,139 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4ri"]
 size = Vector2(22, 20)
+
+[sub_resource type="Animation" id="Animation_g67l1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animacao_fall/Joao:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animacao_fall/Joao:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animacao_fall/Joao:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animacao_fall/Joao/sprite_fall:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animacao_fall/Joao/sprite_fall:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_835xf"]
+resource_name = "fall"
+length = 3.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animacao_fall/Joao:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animacao_fall/Joao:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(481, 267)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animacao_fall/Joao:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animacao_fall/Joao/sprite_fall:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animacao_fall/Joao/sprite_fall:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jcqt6"]
+_data = {
+&"RESET": SubResource("Animation_g67l1"),
+&"fall": SubResource("Animation_835xf")
+}
 
 [node name="breu" type="Node2D" unique_id=1645734124]
 script = ExtResource("1_5ok8l")
@@ -303,6 +437,28 @@ one_shot = true
 [node name="troca_cena" type="Timer" parent="." unique_id=731075780]
 wait_time = 3.0
 one_shot = true
+
+[node name="animacao_fall" type="CanvasLayer" parent="." unique_id=427109393]
+
+[node name="Joao" type="StaticBody2D" parent="animacao_fall" unique_id=1281318374]
+visible = false
+
+[node name="Panel" type="Panel" parent="animacao_fall/Joao" unique_id=1466205740]
+texture_filter = 1
+offset_left = -8999.999
+offset_top = -6459.9995
+offset_right = 9919.999
+offset_bottom = 6979.9985
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[node name="sprite_fall" type="Sprite2D" parent="animacao_fall/Joao" unique_id=2118398078]
+texture_filter = 1
+position = Vector2(514, 330)
+scale = Vector2(15, 15)
+texture = ExtResource("18_jg4g3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=58818471]
+libraries/ = SubResource("AnimationLibrary_jcqt6")
 
 [connection signal="body_entered" from="brilho" to="." method="_on_brilho_body_entered"]
 [connection signal="body_entered" from="brilho" to="cenario/papeis" method="_on_brilho_body_entered"]

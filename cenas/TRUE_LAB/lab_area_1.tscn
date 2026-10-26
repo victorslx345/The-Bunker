@@ -377,7 +377,7 @@ Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
 JogadorPos = Vector2(1110, 150)
 
 [node name="Espelhos" type="CollisionShape2D" parent="AREA_TELEPORTE2" unique_id=1264651336]
-position = Vector2(-540, -1028)
+position = Vector2(1460, -1744)
 shape = SubResource("RectangleShape2D_2hl1l")
 debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
