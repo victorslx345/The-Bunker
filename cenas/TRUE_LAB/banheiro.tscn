@@ -35,7 +35,7 @@ texture_region_size = Vector2i(20, 20)
 tile_size = Vector2i(20, 20)
 sources/1 = SubResource("TileSetAtlasSource_rj272")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28amm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w265s"]
 texture = ExtResource("1_l4b43")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -98,7 +98,7 @@ texture_region_size = Vector2i(20, 20)
 [sub_resource type="TileSet" id="TileSet_3vrq2"]
 tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_28amm")
+sources/0 = SubResource("TileSetAtlasSource_w265s")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtri8"]
 atlas = ExtResource("1_l4b43")

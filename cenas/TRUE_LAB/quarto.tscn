@@ -205,7 +205,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_sgk6x")
 [node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("2_5ex46")]
 cena = NodePath("../transicoes")
 Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
-JogadorPos = Vector2(776, -269)
+JogadorPos = Vector2(778, -95)
 
 [node name="hitbox" type="CollisionShape2D" parent="AREA_TELEPORTE" unique_id=1069965920]
 z_index = 1
@@ -293,7 +293,6 @@ offset_right = -849.5
 offset_bottom = -115.0
 
 [node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=951311884]
-visible = false
 texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)

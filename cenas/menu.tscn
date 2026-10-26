@@ -11,10 +11,10 @@
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf16f"]
-bg_color = Color(0, 0, 0, 0.40392157)
+bg_color = Color(0, 0, 0, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncfd"]
-bg_color = Color(0, 0, 0, 0.15686275)
+bg_color = Color(0, 0, 0, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aj4ri"]
 
@@ -76,6 +76,8 @@ theme_override_constants/separation = 12
 [node name="Jogar" type="Button" parent="BoxContainer/botoes" unique_id=1748851243]
 texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
@@ -86,6 +88,8 @@ text = "Jogar"
 [node name="Sair" type="Button" parent="BoxContainer/botoes" unique_id=1337747339]
 texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
@@ -97,6 +101,8 @@ text = "Sair
 [node name="Creditos" type="Button" parent="BoxContainer/botoes" unique_id=984352672]
 texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
@@ -107,6 +113,8 @@ text = "Creditos"
 [node name="Debug" type="Button" parent="BoxContainer/botoes" unique_id=1324428697]
 texture_filter = 1
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")

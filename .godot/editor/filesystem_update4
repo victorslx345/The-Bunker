@@ -1,7 +1,12 @@
-res://scripts/LAB/banheiro.gd
-res://cenas/TRUE_LAB/banheiro.tscn
+res://cenas/TRUE_LAB/lab_area_1.tscn
+res://cenas/TRUE_LAB/espelhos.tscn
+res://scripts/area_teleporte.gd
 res://scripts/sigletons/ScriptsGlobais.gd
-res://scripts/planta.gd
-res://cenas/breu.tscn
-res://scripts/breu.gd
 res://cenas/TRUE_LAB/quarto.tscn
+res://cenas/TRUE_LAB/lab_incial.tscn
+res://scripts/kris.gd
+res://cenas/menu.tscn
+res://cenas/menu_stats.tscn
+res://cenas/breu.tscn
+res://cenas/ovo.tscn
+res://cenas/TRUE_LAB/banheiro.tscn

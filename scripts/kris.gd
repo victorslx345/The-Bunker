@@ -18,14 +18,14 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if $CanvasLayer/Menu_Stats.pode_abrir == true and Input.is_action_just_pressed("menu"):
-		$CanvasLayer/Menu_Stats.visible = true
-		$CanvasLayer/Menu_Stats.pode_abrir = false
-		mover = false
-	if $CanvasLayer/Menu_Stats.pode_abrir == false and Input.is_action_just_pressed('voltar'):
-		$CanvasLayer/Menu_Stats.visible = false
-		$CanvasLayer/Menu_Stats.pode_abrir = true
-		mover = true
+	#if $CanvasLayer/Menu_Stats.pode_abrir == true and Input.is_action_just_pressed("menu"):
+		#$CanvasLayer/Menu_Stats.visible = true
+		#$CanvasLayer/Menu_Stats.pode_abrir = false
+		#mover = false
+	#if $CanvasLayer/Menu_Stats.pode_abrir == false and Input.is_action_just_pressed('voltar'):
+		#$CanvasLayer/Menu_Stats.visible = false
+		#$CanvasLayer/Menu_Stats.pode_abrir = true
+		#mover = true
 
 	velocity.x = 0
 	velocity.y = 0

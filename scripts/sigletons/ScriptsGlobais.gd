@@ -5,8 +5,8 @@ var msc_tempo: float
 
 var DarkWorld: bool
 var inventario = {
-	'slot1': 'ovo',
-	'slot2': 'Algebra',
+	'slot1': '',
+	'slot2': '',
 	'slot3': '',
 	'slot4': '',
 	'slot5': '',

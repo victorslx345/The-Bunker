@@ -291,6 +291,21 @@ position = Vector2(391, -231.5)
 shape = SubResource("RectangleShape2D_ls2uy")
 debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
 
+[node name="hitbox2" type="CollisionShape2D" parent="dialogos_area1/Plantas" unique_id=2009063895]
+position = Vector2(1051, -230)
+shape = SubResource("RectangleShape2D_ls2uy")
+debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
+
+[node name="hitbox3" type="CollisionShape2D" parent="dialogos_area1/Plantas" unique_id=530688654]
+position = Vector2(570, -652)
+shape = SubResource("RectangleShape2D_ls2uy")
+debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
+
+[node name="hitbox4" type="CollisionShape2D" parent="dialogos_area1/Plantas" unique_id=1815392442]
+position = Vector2(870, -652)
+shape = SubResource("RectangleShape2D_ls2uy")
+debug_color = Color(0.64195484, 0.5243164, 0, 0.41960785)
+
 [node name="Porta" type="Area2D" parent="dialogos_area1" unique_id=771053449]
 
 [node name="hitbox" type="CollisionShape2D" parent="dialogos_area1/Porta" unique_id=1429542839]
@@ -384,7 +399,7 @@ debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 [node name="teleporte_especial" parent="." unique_id=702850900 node_paths=PackedStringArray("cena") instance=ExtResource("10_nn30n")]
 cena = NodePath("../transicoes")
 Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
-JogadorPos = Vector2(1110, 150)
+JogadorPos = Vector2(1054, 339)
 
 [node name="Espelhos" type="CollisionShape2D" parent="teleporte_especial" unique_id=168704627]
 position = Vector2(-48.5, -1003.5)

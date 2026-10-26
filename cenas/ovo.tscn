@@ -233,6 +233,7 @@ texture_filter = 1
 position = Vector2(571, 494)
 
 [node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("10_4eh7v")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="kris" unique_id=1790481381]
 limit_left = 0
