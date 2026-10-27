@@ -285,6 +285,7 @@ limit_right = 985
 limit_bottom = 660
 
 [node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=692672447]
+visible = false
 
 [node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("7_eunh8")]
 offset_left = 239.5
@@ -364,3 +365,4 @@ texture = ExtResource("12_is270")
 [connection signal="body_exited" from="dialogos_quarto/relogio" to="dialogos_quarto" method="_on_relogio_body_exited"]
 [connection signal="body_entered" from="dialogos_quarto/cama" to="dialogos_quarto" method="_on_cama_body_entered"]
 [connection signal="body_exited" from="dialogos_quarto/cama" to="dialogos_quarto" method="_on_cama_body_exited"]
+[connection signal="body_entered" from="dialogos_quarto/TV" to="dialogos_quarto" method="_on_tv_body_entered"]

@@ -51,9 +51,19 @@ func _process(delta: float) -> void:
 		ScriptsGlobais.Banheira_cortina = true
 		$Banheira/MusDisturbing.stop()
 		$Banheira/bicho.visible = false
+		$kris.pode_mover()
+		await get_tree().create_timer(1).timeout
+		$inimigo/dog.play("default")
+		$inimigo/MusSfxGenerate.play()
+		await get_tree().create_timer(1).timeout
+		$kris.pode_mover()
+
 	if ScriptsGlobais.Banheira_cortina == false and $Banheira/MusDisturbing.playing == false:
 		$Banheira/MusDisturbing.play()
 		$Banheira/bicho.visible = true
+	else:
+		$Banheira/cortina.scale = Vector2(0.217,1)
+		$Banheira/cortina.position = Vector2(273.5,-34.333)
 func _on_pia_1_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		torneira1 = true

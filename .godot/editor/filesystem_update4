@@ -1,2 +1,4 @@
-res://cenas/TRUE_LAB/banheiro.tscn
 res://scripts/LAB/banheiro.gd
+res://cenas/TRUE_LAB/banheiro.tscn
+res://scripts/dialogos/dialogos_quarto.gd
+res://cenas/TRUE_LAB/quarto.tscn

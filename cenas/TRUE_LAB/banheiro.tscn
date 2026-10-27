@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://7q5hh3jfrdtt" path="res://assets/agamalgados/Amalgamados_spritesheelt.png" id="9_3ai83"]
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="9_sxplx"]
 [ext_resource type="AudioStream" uid="uid://c2ofgtqvd5086" path="res://sfx/mus_disturbing.ogg" id="10_447fy"]
-[ext_resource type="Texture2D" uid="uid://heonlaf15fvj" path="res://assets/kris/Kris_caindo.png" id="11_w265s"]
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="12_edjoo"]
 [ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="13_2rns8"]
+[ext_resource type="AudioStream" uid="uid://4ieeytg7yfvm" path="res://sfx/mus_sfx_generate.wav" id="14_ehw2b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4ci5"]
 bg_color = Color(0, 0, 0, 1)
@@ -368,6 +368,56 @@ _data = {
 &"RESET": SubResource("Animation_sxplx")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ai83"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(2, 347, 50, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_447fy"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(54, 347, 50, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co133"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(106, 347, 50, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rig6"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(158, 347, 50, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdkvc"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(210, 347, 50, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfgjw"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(262, 347, 50, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aj4ri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ai83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_447fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co133")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rig6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdkvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfgjw")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 12.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huk1l"]
 size = Vector2(28, 179)
 
@@ -563,10 +613,14 @@ libraries/ = SubResource("AnimationLibrary_hdhjb")
 [node name="inimigo" type="StaticBody2D" parent="." unique_id=1165569179]
 texture_filter = 1
 
-[node name="placeholder" type="Sprite2D" parent="inimigo" unique_id=1209337909]
-position = Vector2(742, 85)
+[node name="dog" type="AnimatedSprite2D" parent="inimigo" unique_id=1375101291]
+texture_filter = 1
+position = Vector2(739, 71)
 scale = Vector2(3, 3)
-texture = ExtResource("11_w265s")
+sprite_frames = SubResource("SpriteFrames_aj4ri")
+
+[node name="MusSfxGenerate" type="AudioStreamPlayer" parent="inimigo" unique_id=380313247]
+stream = ExtResource("14_ehw2b")
 
 [node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("12_edjoo")]
 cena = NodePath("../transicoes")

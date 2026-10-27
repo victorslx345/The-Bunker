@@ -30,3 +30,8 @@ func _on_relogio_body_exited(body: Node2D) -> void:
 func _on_cama_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.texto = ''
+
+
+
+func _on_tv_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
