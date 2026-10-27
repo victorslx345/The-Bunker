@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	velocity.y = 0
 	if Input.is_action_pressed("voltar"):
 		velocidade = 270
+		print(position.x)
 	else:
 		velocidade = 200
 	if mover == true and darkworld == false:

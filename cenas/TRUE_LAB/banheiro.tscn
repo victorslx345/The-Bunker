@@ -8,9 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="4_7p51l"]
 [ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="5_sxplx"]
 [ext_resource type="Script" uid="uid://mv6anhqgg1lh" path="res://scripts/planta.gd" id="8_7p51l"]
+[ext_resource type="Texture2D" uid="uid://bj27we21y28k4" path="res://assets/LAB/coisinho_chuveiro.png" id="8_ehw2b"]
 [ext_resource type="AudioStream" uid="uid://bddi81co73iqs" path="res://sfx/sink_noise.ogg" id="8_hdhjb"]
+[ext_resource type="Texture2D" uid="uid://7q5hh3jfrdtt" path="res://assets/agamalgados/Amalgamados_spritesheelt.png" id="9_3ai83"]
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="9_sxplx"]
+[ext_resource type="AudioStream" uid="uid://c2ofgtqvd5086" path="res://sfx/mus_disturbing.ogg" id="10_447fy"]
 [ext_resource type="Texture2D" uid="uid://heonlaf15fvj" path="res://assets/kris/Kris_caindo.png" id="11_w265s"]
+[ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="12_edjoo"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="13_2rns8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4ci5"]
 bg_color = Color(0, 0, 0, 1)
@@ -128,6 +133,70 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alb7i"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(2, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q28q"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(64, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1d8g"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(126, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfvuj"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(188, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaig2"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(250, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxj0o"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(312, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0ln1"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(374, 803, 60, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iaf4"]
+atlas = ExtResource("9_3ai83")
+region = Rect2(436, 803, 60, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hqy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alb7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q28q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1d8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfvuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaig2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxj0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0ln1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iaf4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn6wj"]
@@ -299,6 +368,9 @@ _data = {
 &"RESET": SubResource("Animation_sxplx")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huk1l"]
+size = Vector2(28, 179)
+
 [node name="banheiro" type="Node2D" unique_id=862211875]
 position = Vector2(-338, 55)
 script = ExtResource("1_w4ci5")
@@ -311,7 +383,7 @@ offset_bottom = 1732.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_w4ci5")
 
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("1_rj272")]
-position = Vector2(1193, 333)
+position = Vector2(1229, 332)
 
 [node name="HeWeAre" parent="kris" unique_id=402198000 instance=ExtResource("2_qtri8")]
 position = Vector2(-136, -349)
@@ -352,10 +424,31 @@ scale = Vector2(3, 3)
 position = Vector2(250, -30)
 sprite_frames = SubResource("SpriteFrames_eewm5")
 
+[node name="coisinho" type="Sprite2D" parent="Banheira" unique_id=2095089736]
+z_index = 2
+position = Vector2(250, -60.333336)
+texture = ExtResource("8_ehw2b")
+
+[node name="coisinho2" type="Sprite2D" parent="Banheira" unique_id=992377834]
+position = Vector2(250, -56.333336)
+texture = ExtResource("8_ehw2b")
+
 [node name="cortina" type="AnimatedSprite2D" parent="Banheira" unique_id=1622544751]
 z_index = 1
 position = Vector2(250, -34.333)
 sprite_frames = SubResource("SpriteFrames_2hl1l")
+
+[node name="bicho" type="AnimatedSprite2D" parent="Banheira" unique_id=2052216871]
+visible = false
+z_index = 1
+position = Vector2(250, -32.5)
+sprite_frames = SubResource("SpriteFrames_5hqy4")
+autoplay = "default"
+frame_progress = 0.04574505
+
+[node name="MusDisturbing" type="AudioStreamPlayer" parent="Banheira" unique_id=1021511603]
+stream = ExtResource("10_447fy")
+parameters/looping = true
 
 [node name="hitbox" type="CollisionShape2D" parent="Banheira" unique_id=196514198]
 position = Vector2(249.83336, -10.3333435)
@@ -474,6 +567,18 @@ texture_filter = 1
 position = Vector2(742, 85)
 scale = Vector2(3, 3)
 texture = ExtResource("11_w265s")
+
+[node name="AREA_TELEPORTE" parent="." unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("12_edjoo")]
+cena = NodePath("../transicoes")
+Sala = "res://cenas/TRUE_LAB/espelhos.tscn"
+JogadorPos = Vector2(-371, 336)
+
+[node name="espelhos" type="CollisionShape2D" parent="AREA_TELEPORTE" unique_id=1610128867]
+position = Vector2(1298, 388.5)
+shape = SubResource("RectangleShape2D_huk1l")
+debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("13_2rns8")]
 
 [connection signal="body_entered" from="Banheira/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Banheira/interacao" to="." method="_on_interacao_body_exited"]

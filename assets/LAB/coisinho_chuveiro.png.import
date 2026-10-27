@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dibr0wx2tjjef"
-path="res://.godot/imported/maquina.png-2b8cec28dd129a1793c29b7d69dc6272.ctex"
+uid="uid://bj27we21y28k4"
+path="res://.godot/imported/coisinho_chuveiro.png-4dfc96d67ec0be8b2661df52cfc6e99e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/agamalgados/maquina.png"
-dest_files=["res://.godot/imported/maquina.png-2b8cec28dd129a1793c29b7d69dc6272.ctex"]
+source_file="res://assets/LAB/coisinho_chuveiro.png"
+dest_files=["res://.godot/imported/coisinho_chuveiro.png-4dfc96d67ec0be8b2661df52cfc6e99e.ctex"]
 
 [params]
 

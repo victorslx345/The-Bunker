@@ -49,6 +49,11 @@ func _process(delta: float) -> void:
 #		aparece um monstro
 		$AnimationPlayer.play("Banheira")
 		ScriptsGlobais.Banheira_cortina = true
+		$Banheira/MusDisturbing.stop()
+		$Banheira/bicho.visible = false
+	if ScriptsGlobais.Banheira_cortina == false and $Banheira/MusDisturbing.playing == false:
+		$Banheira/MusDisturbing.play()
+		$Banheira/bicho.visible = true
 func _on_pia_1_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		torneira1 = true
