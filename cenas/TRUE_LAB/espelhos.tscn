@@ -133,9 +133,9 @@ script = ExtResource("1_n3bfp")
 
 [node name="fundo" type="Panel" parent="cenario" unique_id=719580817]
 offset_left = -1617.0
-offset_top = -764.0
+offset_top = -765.0
 offset_right = 1943.0
-offset_bottom = 1732.0
+offset_bottom = 1731.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vbg83")
 
 [node name="Chao" type="TileMapLayer" parent="cenario" unique_id=311467370]

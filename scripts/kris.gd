@@ -30,10 +30,13 @@ func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
 	if Input.is_action_pressed("voltar"):
-		velocidade = 270
-		print(position.x)
+		velocidade = 280
+		$darkworld.speed_scale = 1.4
+		$kris_sprites.speed_scale = 1.4
 	else:
 		velocidade = 200
+		$darkworld.speed_scale = 1
+		$kris_sprites.speed_scale = 1
 	if mover == true and darkworld == false:
 		$darkworld.visible = false
 		$darkworld_idle.visible = false

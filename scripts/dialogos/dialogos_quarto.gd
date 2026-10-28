@@ -1,5 +1,6 @@
 extends Node2D
 
+var dialogo_tv : bool = false
 @onready var dialogo = $"../kris/CanvasLayer/text_box"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,8 +9,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	if dialogo_tv == true:
+		if Input.is_action_just_pressed("interagir") and dialogo.fim_dial == true:
+			dialogo.texto = ' '
+			print('apagou')
+		if dialogo.indice == 0:
+			dialogo.texto = 'Em cima da televisão possui algumas fitas.\n Deseja ver?'
+		elif dialogo.indice == 1:
+			dialogo.texto = 'dialogo 2'
+			
 
 func _on_relogio_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
@@ -34,4 +42,8 @@ func _on_cama_body_exited(body: Node2D) -> void:
 
 
 func _on_tv_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == 'kris':
+		dialogo.can_play = true
+		dialogo.mais_dia = true
+		dialogo_tv = true
+		

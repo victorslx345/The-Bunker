@@ -1,4 +1,5 @@
 CollisionShape2D
+Node2D
 TileMapLayer
 AnimatedSprite2D
 Sprite2D
@@ -10,5 +11,4 @@ HSlider
 VBoxContainer
 Button
 HBoxContainer
-Node2D
 AudioStreamPlayer2D

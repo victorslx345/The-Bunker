@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var fim_dial : bool
 @export var texto : String
 @export var tempo : float
 @export var end = false
@@ -25,10 +26,16 @@ func _process(delta: float) -> void:
 			$texto.text += i
 			await get_tree().create_timer(tempo).timeout
 			$snd_text.play()
+			fim_dial = false
+		fim_dial = true
 		indice += 1
 		if mais_dia == false:
-			pass
-		end = true
+			end = true
+		else:
+			end = false
+			can_play = true
+		#if mais_dia == true and fim_dial == true and Input.is_action_just_pressed("interagir"):
+			#texto = ''
 		print('Terminou')
 	
 	if end == true and Input.is_action_just_pressed("interagir"):

@@ -1,1 +1,8 @@
 res://cenas/TRUE_LAB/lab_principal.tscn
+res://scripts/kris.gd
+res://cenas/kris.tscn
+res://cenas/TRUE_LAB/espelhos.tscn
+res://scripts/dialogos/dialogos_quarto.gd
+res://cenas/TRUE_LAB/quarto.tscn
+res://scripts/text_box.gd
+res://cenas/text_box.tscn

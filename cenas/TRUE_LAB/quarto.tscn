@@ -285,7 +285,6 @@ limit_right = 985
 limit_bottom = 660
 
 [node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=692672447]
-visible = false
 
 [node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("7_eunh8")]
 offset_left = 239.5
