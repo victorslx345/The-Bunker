@@ -1,4 +1,2 @@
-res://cenas/TRUE_LAB/lab_area_1.tscn
-res://scripts/LAB/lab_principal.gd
-res://cenas/TRUE_LAB/lab_principal.tscn
-res://scripts/dialogos/dialogo_lab_principal.gd
+res://cenas/batalha/batalha_menu.tscn
+res://scripts/batalha_menu/text_container.gd

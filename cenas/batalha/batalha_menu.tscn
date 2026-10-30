@@ -1,0 +1,304 @@
+[gd_scene format=3 uid="uid://dttnaw4frsski"]
+
+[ext_resource type="Texture2D" uid="uid://3l4ys1ql2tr5" path="res://assets/Batalha_hud/fundo_batalhas.png" id="1_fmqwy"]
+[ext_resource type="Texture2D" uid="uid://fp5sh71o4fwf" path="res://assets/Batalha_hud/Botoes_menu_batalha/atacar.png" id="2_lccmy"]
+[ext_resource type="Texture2D" uid="uid://c5lrvttmtbgcb" path="res://assets/Batalha_hud/Botoes_menu_batalha/atacar_hover.png" id="3_s337o"]
+[ext_resource type="Texture2D" uid="uid://clwygibfr1c8j" path="res://assets/HUD/Soul_Menu.png" id="4_lccmy"]
+[ext_resource type="Texture2D" uid="uid://dtouhfu8qtsge" path="res://assets/Batalha_hud/Botoes_menu_batalha/agir.png" id="5_3fku6"]
+[ext_resource type="Texture2D" uid="uid://bk5k1ag8mb00v" path="res://assets/Batalha_hud/Botoes_menu_batalha/agir_hover.png" id="6_jxuka"]
+[ext_resource type="Texture2D" uid="uid://dbftbdq8x5q17" path="res://assets/Batalha_hud/Botoes_menu_batalha/item.png" id="7_v00hv"]
+[ext_resource type="Texture2D" uid="uid://gamlwucf1obs" path="res://assets/Batalha_hud/Botoes_menu_batalha/item_hover.png" id="8_cuclm"]
+[ext_resource type="Texture2D" uid="uid://dih0ph5y7eups" path="res://assets/Batalha_hud/Botoes_menu_batalha/piedade.png" id="9_nlkoe"]
+[ext_resource type="Texture2D" uid="uid://c3ieuig4p12l3" path="res://assets/Batalha_hud/Botoes_menu_batalha/piedade_hover.png" id="10_rc41a"]
+[ext_resource type="Texture2D" uid="uid://bmy6k20o8unux" path="res://assets/Batalha_hud/batalha_text_menu.png" id="11_rc41a"]
+[ext_resource type="Script" uid="uid://c6x1lypice4wy" path="res://scripts/batalha_menu/text_container.gd" id="11_ufyf5"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="12_rhoa8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ls2uy"]
+texture = ExtResource("1_fmqwy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5hqy4"]
+texture = ExtResource("2_lccmy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s337o"]
+texture = ExtResource("3_s337o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jv2bd"]
+content_margin_left = 15.0
+texture = ExtResource("3_s337o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdo5t"]
+texture = ExtResource("5_3fku6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgsbm"]
+content_margin_left = 15.0
+texture = ExtResource("6_jxuka")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckrqy"]
+texture = ExtResource("6_jxuka")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxuka"]
+texture = ExtResource("7_v00hv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkoe"]
+texture = ExtResource("8_cuclm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fku6"]
+content_margin_left = 14.0
+texture = ExtResource("8_cuclm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc41a"]
+texture = ExtResource("9_nlkoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhoa8"]
+texture = ExtResource("10_rc41a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ufyf5"]
+content_margin_left = 13.0
+texture = ExtResource("10_rc41a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyccb"]
+texture = ExtResource("11_rc41a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hqy4"]
+bg_color = Color(0.8579459, 0.7707458, 0, 1)
+
+[node name="batalha_menu" type="Control" unique_id=328500963]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fundo" type="Control" parent="." unique_id=710570619]
+z_index = -7
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fundo_preto" type="Panel" parent="fundo" unique_id=118451657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[node name="fundo_verde" type="Panel" parent="fundo" unique_id=1864993451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ls2uy")
+
+[node name="acts_hud" type="Container" parent="." unique_id=2074386316]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = -94.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="botoes" type="HBoxContainer" parent="acts_hud" unique_id=335522364]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="atacar" type="Button" parent="acts_hud/botoes" unique_id=1806395284]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(-1, 75)
+layout_mode = 2
+focus_neighbor_left = NodePath("../poupar")
+focus_neighbor_right = NodePath("../agir")
+focus_behavior_recursive = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/icon_max_width = 30
+theme_override_constants/align_to_largest_stylebox = 15
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 12
+theme_override_icons/icon = ExtResource("4_lccmy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5hqy4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s337o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jv2bd")
+expand_icon = true
+
+[node name="agir" type="Button" parent="acts_hud/botoes" unique_id=520833423]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(-1, 75)
+layout_mode = 2
+focus_neighbor_left = NodePath("../atacar")
+focus_neighbor_right = NodePath("../item")
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 30
+theme_override_constants/align_to_largest_stylebox = 15
+theme_override_icons/icon = ExtResource("4_lccmy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tdo5t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dgsbm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ckrqy")
+expand_icon = true
+
+[node name="item" type="Button" parent="acts_hud/botoes" unique_id=1900234629]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(-1, 75)
+layout_mode = 2
+focus_neighbor_left = NodePath("../agir")
+focus_neighbor_right = NodePath("../poupar")
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 30
+theme_override_constants/align_to_largest_stylebox = 15
+theme_override_icons/icon = ExtResource("4_lccmy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jxuka")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nlkoe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fku6")
+expand_icon = true
+
+[node name="poupar" type="Button" parent="acts_hud/botoes" unique_id=1253993960]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(-1, 75)
+layout_mode = 2
+focus_neighbor_left = NodePath("../item")
+focus_neighbor_right = NodePath("../atacar")
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 30
+theme_override_constants/align_to_largest_stylebox = 15
+theme_override_icons/icon = ExtResource("4_lccmy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rc41a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rhoa8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ufyf5")
+expand_icon = true
+
+[node name="hud" type="Control" parent="." unique_id=435858918]
+z_index = 1
+custom_minimum_size = Vector2(900, 0)
+custom_maximum_size = Vector2(800, -1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = 3.0
+offset_right = 450.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="text_container" type="Control" parent="hud" unique_id=594545257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_ufyf5")
+
+[node name="sprite" type="Panel" parent="hud/text_container" unique_id=1451439294]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iyccb")
+
+[node name="texto" type="RichTextLabel" parent="hud/text_container" unique_id=1190133252]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = -9.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("12_rhoa8")
+theme_override_font_sizes/normal_font_size = 33
+text = "	*"
+
+[node name="status_hud" type="Control" parent="hud" unique_id=237014583]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 96.5
+offset_right = 155.0
+offset_bottom = 130.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="nome" type="Label" parent="hud/status_hud" unique_id=370858732]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 216.0
+offset_top = -3.0
+offset_right = 286.0
+offset_bottom = 3.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_rhoa8")
+theme_override_font_sizes/font_size = 30
+text = "Kris"
+
+[node name="hp" type="Label" parent="hud/status_hud" unique_id=1258635957]
+layout_mode = 0
+offset_left = 498.0
+offset_top = -3.0
+offset_right = 538.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("12_rhoa8")
+theme_override_font_sizes/font_size = 30
+text = "HP"
+
+[node name="vida" type="Container" parent="hud/status_hud" unique_id=1769939854]
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 538.0
+offset_top = -3.0
+offset_right = 701.0
+offset_bottom = 37.0
+
+[node name="barra_vida" type="Panel" parent="hud/status_hud/vida" unique_id=1699547955]
+custom_maximum_size = Vector2(40, -1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5hqy4")
+
+[node name="vida_display" type="Label" parent="hud/status_hud/vida" unique_id=1096792293]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("12_rhoa8")
+theme_override_font_sizes/font_size = 30
+text = "??/??"
