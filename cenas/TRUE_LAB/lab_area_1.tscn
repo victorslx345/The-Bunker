@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="9_0ljpt"]
 [ext_resource type="PackedScene" uid="uid://ba3gjsv3jpkwf" path="res://cenas/teleporte_especial.tscn" id="10_nn30n"]
 [ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="11_euss7"]
+[ext_resource type="AudioStream" uid="uid://qns1s55i232w" path="res://sfx/snd_elecdoor_open.wav" id="13_cb44w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6k4a"]
 bg_color = Color(0, 0, 0, 1)
@@ -182,6 +183,64 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eewm5"]
 size = Vector2(19.999989, 60)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxg3i"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(43, 283, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njrwt"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(63, 283, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm3ua"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(83, 283, 19, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxg3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njrwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm3ua")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wswcu"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(43, 296, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qega"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(63, 296, 19, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1rvw"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(83, 296, 19, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hqy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wswcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qega")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1rvw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ojlqs"]
 atlas = ExtResource("1_aldxx")
 region = Rect2(22, 359, 20, 60)
@@ -214,6 +273,176 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxg3i"]
 size = Vector2(19.999992, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ua2y"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(43, 309, 17, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8x03"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(61, 309, 17, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53c3w"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(79, 309, 17, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdo5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ua2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8x03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53c3w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b2oq"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(43, 322, 17, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fad8"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(61, 322, 17, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwbwg"]
+atlas = ExtResource("1_aldxx")
+region = Rect2(79, 322, 17, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jv2bd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b2oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fad8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwbwg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_bxg3i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PORTA_FINAL_ESQ:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PORTA_FINAL_DIR:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../sfx/SndElecdoorOpen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../dialogos_area1/Porta/hitbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_njrwt"]
+resource_name = "porta_abrindo"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PORTA_FINAL_ESQ:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-59.875, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PORTA_FINAL_DIR:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(58.91, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../sfx/SndElecdoorOpen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../dialogos_area1/Porta/hitbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pm3ua"]
+_data = {
+&"RESET": SubResource("Animation_bxg3i"),
+&"porta_abrindo": SubResource("Animation_njrwt")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7av5"]
+size = Vector2(221, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hl1l"]
 size = Vector2(204.5, 213.5)
@@ -352,41 +581,85 @@ shape = SubResource("RectangleShape2D_ckrqy")
 position = Vector2(719, -1095.5)
 shape = SubResource("RectangleShape2D_iyccb")
 
-[node name="PORTA_FINAL_ESQ" type="StaticBody2D" parent="." unique_id=320134787]
+[node name="Porta" type="Node2D" parent="." unique_id=1382316687]
+
+[node name="PORTA_FINAL_ESQ" type="StaticBody2D" parent="Porta" unique_id=320134787]
 texture_filter = 1
 texture_repeat = 1
 scale = Vector2(3, 3)
 
-[node name="Porta" type="AnimatedSprite2D" parent="PORTA_FINAL_ESQ" unique_id=1419366565]
+[node name="Porta" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_ESQ" unique_id=1419366565]
 position = Vector2(230, -249)
 sprite_frames = SubResource("SpriteFrames_0ljpt")
 
-[node name="Esquerda_cor" type="AnimatedSprite2D" parent="PORTA_FINAL_ESQ" unique_id=108014112]
+[node name="Esquerda_cor" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_ESQ" unique_id=108014112]
 position = Vector2(230, -260.66666)
 sprite_frames = SubResource("SpriteFrames_eewm5")
 
-[node name="hitbox_esq" type="CollisionShape2D" parent="PORTA_FINAL_ESQ" unique_id=1076628802]
+[node name="hitbox_esq" type="CollisionShape2D" parent="Porta/PORTA_FINAL_ESQ" unique_id=1076628802]
+visible = false
 position = Vector2(230, -249)
 shape = SubResource("RectangleShape2D_eewm5")
 debug_color = Color(0.2627451, 0.5019608, 1, 0.41960785)
 
-[node name="PORTA_FINAL_DIR" type="StaticBody2D" parent="." unique_id=1457126810]
+[node name="vermelho" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_ESQ" unique_id=1624648722]
+visible = false
+position = Vector2(229.5, -261.165)
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+autoplay = "default"
+frame_progress = 0.06078764
+
+[node name="amarelo" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_ESQ" unique_id=233803098]
+visible = false
+position = Vector2(229.5, -248.165)
+sprite_frames = SubResource("SpriteFrames_5hqy4")
+autoplay = "default"
+frame_progress = 0.29310906
+
+[node name="PORTA_FINAL_DIR" type="StaticBody2D" parent="Porta" unique_id=1457126810]
 texture_filter = 1
 texture_repeat = 1
 scale = Vector2(3, 3)
 
-[node name="porta" type="AnimatedSprite2D" parent="PORTA_FINAL_DIR" unique_id=214165504]
+[node name="porta" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_DIR" unique_id=214165504]
 position = Vector2(250.33333, -248.99998)
 sprite_frames = SubResource("SpriteFrames_2hl1l")
 
-[node name="porta_cor" type="AnimatedSprite2D" parent="PORTA_FINAL_DIR" unique_id=683922015]
+[node name="porta_cor" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_DIR" unique_id=683922015]
 position = Vector2(250.33333, -260.33334)
 sprite_frames = SubResource("SpriteFrames_aj4ri")
 
-[node name="hitbox" type="CollisionShape2D" parent="PORTA_FINAL_DIR" unique_id=1290685390]
+[node name="hitbox" type="CollisionShape2D" parent="Porta/PORTA_FINAL_DIR" unique_id=1290685390]
+visible = false
 position = Vector2(250.33334, -249)
 shape = SubResource("RectangleShape2D_bxg3i")
 debug_color = Color(0.2627451, 0.5019608, 1, 0.41960785)
+
+[node name="verde" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_DIR" unique_id=1441265995]
+visible = false
+modulate = Color(1, 1, 1, 0.42745098)
+position = Vector2(251.83, -260.333)
+sprite_frames = SubResource("SpriteFrames_tdo5t")
+autoplay = "default"
+frame_progress = 0.50276756
+
+[node name="azul" type="AnimatedSprite2D" parent="Porta/PORTA_FINAL_DIR" unique_id=890555069]
+visible = false
+modulate = Color(1, 1, 1, 0.48235294)
+position = Vector2(251.83, -247.835)
+sprite_frames = SubResource("SpriteFrames_jv2bd")
+autoplay = "default"
+frame_progress = 0.346574
+
+[node name="animacao_porta" type="AnimationPlayer" parent="Porta" unique_id=147707427]
+libraries/ = SubResource("AnimationLibrary_pm3ua")
+
+[node name="abrir porta" type="Area2D" parent="Porta" unique_id=682718847]
+
+[node name="hitbox" type="CollisionShape2D" parent="Porta/abrir porta" unique_id=1024792596]
+position = Vector2(720.5, -590)
+shape = SubResource("RectangleShape2D_x7av5")
+debug_color = Color(0, 0.74509805, 0.44313726, 0.2)
 
 [node name="AREA_TELEPORTE2" parent="." unique_id=1747700604 node_paths=PackedStringArray("cena") instance=ExtResource("9_0ljpt")]
 cena = NodePath("../transicoes")
@@ -420,8 +693,14 @@ debug_color = Color(0.89411765, 0.32156864, 0, 0.41960785)
 
 [node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("11_euss7")]
 
+[node name="sfx" type="Node" parent="." unique_id=1092738561]
+
+[node name="SndElecdoorOpen" type="AudioStreamPlayer" parent="sfx" unique_id=1890355343]
+stream = ExtResource("13_cb44w")
+
 [connection signal="dialogo_acabo" from="kris/CanvasLayer/text_box" to="dialogos_area1" method="_on_text_box_dialogo_acabo"]
 [connection signal="body_entered" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_entered"]
 [connection signal="body_exited" from="dialogos_area1/Plantas" to="dialogos_area1" method="_on_plantas_body_exited"]
 [connection signal="body_entered" from="dialogos_area1/Porta" to="dialogos_area1" method="_on_porta_body_entered"]
 [connection signal="body_exited" from="dialogos_area1/Porta" to="dialogos_area1" method="_on_porta_body_exited"]
+[connection signal="body_entered" from="Porta/abrir porta" to="." method="_on_abrir_porta_body_entered"]

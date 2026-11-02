@@ -26,7 +26,7 @@ func desativar_botoes(x):
 		poupar.disabled = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	bicho.text = 'Joacir'
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,6 +38,8 @@ func _process(delta: float) -> void:
 		Menu_itens.visible = false
 		$"../hud/text_container".visible = true
 		$botoes/atacar.grab_focus()
+		$"../hud/text_container/texto".visible = true
+
 	if modo == 'agindo' and Input.is_action_just_pressed('voltar'):
 		$"../acoes_hud/agir_hud".visible = false
 		modo = 'escolha'
@@ -46,10 +48,17 @@ func _process(delta: float) -> void:
 		$"../bicho_info".visible = true
 		bicho.disabled = false
 		$"../bicho_info/VBoxContainer/bicho".grab_focus()
+		$"../hud/text_container/texto".visible = true
+
 	if modo == 'item' and Input.is_action_just_pressed('voltar'):
 		modo = 'escolha'
 		$"../bicho_info".visible = true
 		$botoes/item.grab_focus()
+		$"../hud/text_container/texto".visible = true
+	
+	
+	if modo == 'luta':
+		$"../battle_box".comecar_batalha = true
 func _on_atacar_pressed() -> void:
 	desativar_botoes(true)
 	bicho.disabled = false
@@ -57,6 +66,8 @@ func _on_atacar_pressed() -> void:
 	acao = 'atacar'
 	$"../sfx/SndSelect".play()
 	$"../bicho_info/VBoxContainer/bicho".grab_focus()
+	$"../bicho_info".visible = true
+	$"../hud/text_container/texto".hide()
 
 
 func _on_agir_pressed() -> void:
@@ -66,6 +77,8 @@ func _on_agir_pressed() -> void:
 	acao = 'agir'
 	$"../sfx/SndSelect".play()
 	$"../bicho_info/VBoxContainer/bicho".grab_focus()
+	$"../bicho_info".visible = true
+	$"../hud/text_container/texto".hide()
 
 func _on_item_pressed() -> void:
 	desativar_botoes(true)
@@ -74,6 +87,7 @@ func _on_item_pressed() -> void:
 	Menu_itens.visible = true
 	$"../hud/text_container".visible = false
 	$"../sfx/SndSelect".play()
+	$"../hud/text_container/texto".hide()
 	if item1.focus_mode == Control.FOCUS_NONE:
 		item2.grab_focus()
 	if item2.focus_mode == Control.FOCUS_NONE:
@@ -95,3 +109,5 @@ func _on_poupar_pressed() -> void:
 	acao = 'poupar'
 	$"../sfx/SndSelect".play()
 	$"../bicho_info/VBoxContainer/bicho".grab_focus()
+	$"../bicho_info".visible = true
+	$"../hud/text_container/texto".hide()

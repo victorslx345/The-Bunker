@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2oacp2p3o1m2"]
 
 [ext_resource type="Texture2D" uid="uid://5rjclhu52mr1" path="res://assets/agamalgados/Enondogy/enondogy.png" id="1_6w1am"]
+[ext_resource type="Script" uid="uid://cpfdsxwhsgfdt" path="res://scripts/batalha_menu/player_e_inimigos/dog_amalgamate.gd" id="1_t6apd"]
 [ext_resource type="Texture2D" uid="uid://cld7w16wfcoer" path="res://assets/agamalgados/Enondogy/enondogy_cabeca.png" id="2_nnwfw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_peof2"]
@@ -105,8 +106,10 @@ animations = [{
 z_index = -7
 texture_filter = 1
 scale = Vector2(3, 3)
+script = ExtResource("1_t6apd")
 
 [node name="Enondogy" type="Node2D" parent="." unique_id=1345042399]
+position = Vector2(188.66667, 101.333336)
 
 [node name="corpo" type="AnimatedSprite2D" parent="Enondogy" unique_id=927072301]
 sprite_frames = SubResource("SpriteFrames_ls2uy")

@@ -5,6 +5,7 @@ extends Control
 var indice: int = 1
 @export var texto_terminou: bool
 @export var mais_texto: bool
+@export var apagar_texto:bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -20,7 +21,6 @@ func _process(delta: float) -> void:
 		#can_play = true
 		#indice += 1
 	if can_play ==true:
-		$texto.text = '	*'
 		can_play = false
 		for i in texto:
 			texto_terminou = false
@@ -28,6 +28,9 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(tempo).timeout
 			$"../../sfx/SndText".play()
 		texto_terminou = true
+	if apagar_texto == true:
+		apagar_texto = false
+		$texto.text = '	* '
 	#if mais_texto == true and texto_terminou == true:
 		#if Input.is_action_just_pressed("interagir"):
 			#can_play = true

@@ -155,6 +155,38 @@ size = Vector2(61, 152)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
 size = Vector2(14, 128)
 
+[sub_resource type="Animation" id="Animation_34mif"]
+resource_name = "critico"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.88316494, 0.5533271, 1.92523e-07, 1), Color(0.88235295, 0.5529412, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fk1pf"]
+_data = {
+&"critico": SubResource("Animation_34mif")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1r1xw"]
 atlas = ExtResource("13_kmdy6")
 region = Rect2(186, 0, 26, 110)
@@ -737,12 +769,6 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gtv5"]
-size = Vector2(13, 300)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn6wj"]
-size = Vector2(284, 14)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx4x8"]
 atlas = ExtResource("76_7qynl")
 region = Rect2(0, 0, 16, 16)
@@ -800,6 +826,12 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkbli"]
 size = Vector2(22, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gtv5"]
+size = Vector2(13, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn6wj"]
+size = Vector2(284, 14)
 
 [node name="batalha_menu" type="Control" unique_id=328500963]
 texture_filter = 1
@@ -911,7 +943,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("12_rhoa8")
 theme_override_font_sizes/normal_font_size = 35
-text = "	*"
+text = "	* "
 
 [node name="status_hud" type="Control" parent="hud" unique_id=237014583]
 custom_minimum_size = Vector2(10, 0)
@@ -1259,6 +1291,7 @@ alignment = 0
 expand_icon = true
 
 [node name="ataque_hud" type="Control" parent="acoes_hud" unique_id=1139333916]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1312,7 +1345,7 @@ shape = SubResource("RectangleShape2D_ckrqy")
 debug_color = Color(0.3356956, 0.6225352, 1.92523e-07, 0.41960785)
 
 [node name="hitbox2" type="CollisionShape2D" parent="acoes_hud/ataque_hud/medidor_de_dano/hitboxes/boa" unique_id=689743668]
-position = Vector2(591, 411)
+position = Vector2(597, 410)
 shape = SubResource("RectangleShape2D_ckrqy")
 debug_color = Color(0.3356956, 0.6225352, 1.92523e-07, 0.41960785)
 
@@ -1339,6 +1372,9 @@ texture = ExtResource("10_ffrte")
 [node name="hitbox" type="CollisionShape2D" parent="acoes_hud/ataque_hud/barra" unique_id=413270141]
 position = Vector2(198, 403)
 shape = SubResource("RectangleShape2D_5hqy4")
+
+[node name="critico" type="AnimationPlayer" parent="acoes_hud/ataque_hud/barra" unique_id=1287527606]
+libraries/ = SubResource("AnimationLibrary_fk1pf")
 
 [node name="ataque_vfx" type="Node2D" parent="acoes_hud/ataque_hud" unique_id=1121929252]
 
@@ -1548,6 +1584,21 @@ position = Vector2(560, 485)
 sprite_frames = SubResource("SpriteFrames_ls2uy")
 animation = &"abrindo"
 
+[node name="alma" type="CharacterBody2D" parent="battle_box" unique_id=231752474]
+visible = false
+script = ExtResource("76_tx4x8")
+
+[node name="sprite" type="AnimatedSprite2D" parent="battle_box/alma" unique_id=1941517060]
+position = Vector2(563, 338)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5hqy4")
+
+[node name="hitbox" type="CollisionShape2D" parent="battle_box/alma" unique_id=1878115025]
+position = Vector2(563, 338)
+shape = SubResource("RectangleShape2D_mkbli")
+disabled = true
+debug_color = Color(0.4862745, 0.003921569, 0.09411765, 0.41960785)
+
 [node name="hitbox" type="StaticBody2D" parent="battle_box" unique_id=1138467947]
 
 [node name="hitbox" type="CollisionShape2D" parent="battle_box/hitbox" unique_id=2009473838]
@@ -1566,22 +1617,9 @@ shape = SubResource("RectangleShape2D_2gtv5")
 position = Vector2(562, 490)
 shape = SubResource("RectangleShape2D_pn6wj")
 
-[node name="alma" type="CharacterBody2D" parent="battle_box" unique_id=231752474]
-visible = false
-script = ExtResource("76_tx4x8")
-
-[node name="sprite" type="AnimatedSprite2D" parent="battle_box/alma" unique_id=1941517060]
-position = Vector2(563, 338)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_5hqy4")
-
-[node name="hitbox" type="CollisionShape2D" parent="battle_box/alma" unique_id=1878115025]
-position = Vector2(563, 338)
-shape = SubResource("RectangleShape2D_mkbli")
-debug_color = Color(0.4862745, 0.003921569, 0.09411765, 0.41960785)
-
 [node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("31_8d5o3")]
 
+[connection signal="pressed" from="acoes_hud/agir_hud/coluna1/acao1" to="acoes_hud/agir_hud" method="_on_acao_1_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item1" to="acoes_hud/item_hud" method="_on_item_1_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item2" to="acoes_hud/item_hud" method="_on_item_2_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item3" to="acoes_hud/item_hud" method="_on_item_3_pressed"]

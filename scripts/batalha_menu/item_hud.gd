@@ -6,10 +6,12 @@ extends Control
 @onready var item4 = $coluna1/item4
 @onready var item5 = $coluna1/item5
 @onready var item6 = $coluna1/item6
+@onready var terto_terminou = $"../../hud/text_container".texto_terminou
+
 var fechar:bool
 var Inv = ScriptsGlobais.inventario
-var textos = {
-	'ovo' = 'Voce usou o ovo e recuperou 6 HP'
+@export var textos = {
+	'ovo' = '	* Voce usou o ovo e recuperou 6 HP'
 }
 
 func add_vida(N:int):
@@ -17,13 +19,15 @@ func add_vida(N:int):
 	fechar = true
 	if $"../../hud/status_hud/vida".vida > $"../../hud/status_hud/vida".vida_max:
 		$"../../hud/status_hud/vida".vida = $"../../hud/status_hud/vida".vida_max
-		$"../../sfx/SndPower".play()
+	$"../../sfx/SndPower".play()
 
 func ativar_texto(item,texto,mais_texto:bool):
 	item.text = ''
 	item.disabled = true
 	$".".visible = false
 	$"../../hud/text_container".visible = true
+	$"../../hud/text_container".apagar_texto = true
+	$"../../hud/text_container/texto".visible = true
 	$"../../hud/text_container".texto = texto
 	$"../../hud/text_container".can_play = true
 	$"../../hud/text_container".mais_texto = mais_texto
@@ -48,12 +52,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if $"../../hud/text_container".texto_terminou == true and fechar == true and Input.is_action_just_pressed("interagir"):
 		fechar = false
-		$"../../hud/text_container/texto".text = '	*'
+		$"../../hud/text_container".apagar_texto = true
 		$"../../hud/text_container".hide()
+		$"../../acts_hud".modo = 'luta'
 
 func _on_item_1_pressed() -> void:
 	$coluna1/item1.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item1.text == 'ovo':
 		#ScriptsGlobais.inventario_save['slot1'] = item1.text
 #		quando a batalha terminar usa essa linha de codigo pra salvar todos os itens nao usados
@@ -66,14 +70,12 @@ func _on_item_1_pressed() -> void:
 
 func _on_item_2_pressed() -> void:
 	$coluna1/item2.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item2.text == 'ovo':
 		inv['slot2'] = ''
 		ativar_texto(item2,textos['ovo'],false)
 		add_vida(6)
 func _on_item_3_pressed() -> void:
 	$coluna1/item3.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item3.text == 'ovo':
 		inv['slot3'] = ''
 		ativar_texto(item3,textos['ovo'],false)
@@ -81,7 +83,6 @@ func _on_item_3_pressed() -> void:
 
 func _on_item_4_pressed() -> void:
 	$coluna1/item4.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item4.text == 'ovo':
 		inv['slot4'] = ''
 		ativar_texto(item4,textos['ovo'],false)
@@ -89,7 +90,6 @@ func _on_item_4_pressed() -> void:
 
 func _on_item_5_pressed() -> void:
 	$coluna1/item5.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item5.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item5,textos['ovo'],false)
@@ -97,7 +97,6 @@ func _on_item_5_pressed() -> void:
 
 func _on_item_6_pressed() -> void:
 	$coluna1/item6.focus_mode = Control.FOCUS_NONE
-	$"../../acts_hud".modo = 'luta'
 	if item6.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item6,textos['ovo'],false)
