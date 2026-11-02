@@ -3,10 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://d4ml7sgdduedw" path="res://assets/LAB/true_lab_shelt.png" id="1_l4b43"]
 [ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="1_rj272"]
 [ext_resource type="Script" uid="uid://ceidmlxxxp348" path="res://scripts/LAB/banheiro.gd" id="1_w4ci5"]
+[ext_resource type="AudioStream" uid="uid://bkvl6dgq6vnyi" path="res://sfx/snd_noise.wav" id="2_alb7i"]
 [ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="2_qtri8"]
+[ext_resource type="AudioStream" uid="uid://bmnx2o0rmrubo" path="res://sfx/snd_battlefall.wav" id="3_3q28q"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="3_w4ci5"]
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="4_7p51l"]
 [ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="5_sxplx"]
+[ext_resource type="Texture2D" uid="uid://clwygibfr1c8j" path="res://assets/HUD/Soul_Menu.png" id="7_3ai83"]
 [ext_resource type="Script" uid="uid://mv6anhqgg1lh" path="res://scripts/planta.gd" id="8_7p51l"]
 [ext_resource type="Texture2D" uid="uid://bj27we21y28k4" path="res://assets/LAB/coisinho_chuveiro.png" id="8_ehw2b"]
 [ext_resource type="AudioStream" uid="uid://bddi81co73iqs" path="res://sfx/sink_noise.ogg" id="8_hdhjb"]
@@ -361,11 +364,184 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(250, -34.333)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fundo:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("kris:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("kris/Alma:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("kris:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("nevoa:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SndNoise:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SndBattlefall:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_u1d8g"]
+resource_name = "inimigo_encontro"
+length = 0.833
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fundo:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("kris:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("kris/Alma:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.25, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("kris:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("nevoa:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SndNoise:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SndBattlefall:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hdhjb"]
 _data = {
 &"Banheira": SubResource("Animation_7p51l"),
-&"RESET": SubResource("Animation_sxplx")
+&"RESET": SubResource("Animation_sxplx"),
+&"inimigo_encontro": SubResource("Animation_u1d8g")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ai83"]
@@ -422,6 +598,7 @@ animations = [{
 size = Vector2(28, 179)
 
 [node name="banheiro" type="Node2D" unique_id=862211875]
+texture_filter = 1
 position = Vector2(-338, 55)
 script = ExtResource("1_w4ci5")
 
@@ -431,6 +608,12 @@ offset_top = -764.0
 offset_right = 1943.0
 offset_bottom = 1732.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_w4ci5")
+
+[node name="SndNoise" type="AudioStreamPlayer" parent="." unique_id=1286142920]
+stream = ExtResource("2_alb7i")
+
+[node name="SndBattlefall" type="AudioStreamPlayer" parent="." unique_id=931686184]
+stream = ExtResource("3_3q28q")
 
 [node name="kris" parent="." unique_id=462716732 instance=ExtResource("1_rj272")]
 position = Vector2(1229, 332)
@@ -452,6 +635,11 @@ texture_filter = 1
 position = Vector2(571, 494)
 
 [node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("5_sxplx")]
+
+[node name="Alma" type="Sprite2D" parent="kris" unique_id=398142574]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("7_3ai83")
 
 [node name="Chao" type="TileMapLayer" parent="." unique_id=177491916]
 texture_filter = 1

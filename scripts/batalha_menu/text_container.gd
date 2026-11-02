@@ -3,6 +3,8 @@ extends Control
 @export var tempo: int = 0.04
 @export var can_play: bool
 var indice: int = 1
+@export var texto_terminou: bool
+@export var mais_texto: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -10,16 +12,27 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if indice == 1:
-		texto = 'oi ola tudo bem com vc?'
-	elif indice == 2:
-		texto = 'texto mudou'
-	if Input.is_action_just_pressed("interagir"):
-		can_play = true
-		indice += 1
+	#if indice == 1:
+		#texto = 'oi ola tudo bem com vc?'
+	#elif indice == 2:
+		#texto = 'texto mudou'
+	#if Input.is_action_just_pressed("interagir"):
+		#can_play = true
+		#indice += 1
 	if can_play ==true:
 		$texto.text = '	*'
 		can_play = false
 		for i in texto:
+			texto_terminou = false
 			$texto.text += i
 			await get_tree().create_timer(tempo).timeout
+			$"../../sfx/SndText".play()
+		texto_terminou = true
+	#if mais_texto == true and texto_terminou == true:
+		#if Input.is_action_just_pressed("interagir"):
+			#can_play = true
+	#elif mais_texto == false and texto_terminou == true and Input.is_action_just_pressed("interagir"):
+		#$texto.text = '	*'
+		#$".".visible = false
+		#can_play = false
+#		CASO USE UM ITEM E APERTE 'Z' O MENU FECHA INDEPENDENTE DE ONDE ESTEJA

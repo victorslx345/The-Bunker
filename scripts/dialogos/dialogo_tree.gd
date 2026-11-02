@@ -2,6 +2,7 @@ extends Node2D
 
 var man : bool
 var ovo = false
+var item_pego: bool = false
 func texto(text: String, Mais_Dialogos: bool):
 	$"../kris/CanvasLayer/text_box".texto = text
 	$"../kris/CanvasLayer/text_box".mais_dia = Mais_Dialogos
@@ -17,7 +18,9 @@ func _process(delta: float) -> void:
 			$"../kris/CanvasLayer/text_box".texto = '(Voce recebeu o ovo.)'
 			if $"../kris/CanvasLayer/text_box".can_play == true and ovo == false and $"../kris/CanvasLayer/text_box".indice == 2 and Input.is_action_just_pressed("interagir"):
 				$"../kris/egg".play()
-				ScriptsGlobais.add_item('ovo')
+				if item_pego == false:
+					ScriptsGlobais.add_item('ovo')
+					item_pego = true
 				print(ScriptsGlobais.inventario)
 				man = false
 				ovo = true

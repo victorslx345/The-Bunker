@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://c2oacp2p3o1m2"]
+
+[ext_resource type="Texture2D" uid="uid://5rjclhu52mr1" path="res://assets/agamalgados/Enondogy/enondogy.png" id="1_6w1am"]
+[ext_resource type="Texture2D" uid="uid://cld7w16wfcoer" path="res://assets/agamalgados/Enondogy/enondogy_cabeca.png" id="2_nnwfw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peof2"]
+atlas = ExtResource("1_6w1am")
+region = Rect2(0, 0, 132, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj0o6"]
+atlas = ExtResource("1_6w1am")
+region = Rect2(137, 0, 132, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peof2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj0o6")
+}],
+"loop": 1,
+"name": &"feliz",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq03w"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(0, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3v3x"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(94, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhh4y"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(188, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n5cf"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(282, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kdsm"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(376, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t833o"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(470, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkx8p"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(564, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20pf8"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(658, 0, 89, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g13q0"]
+atlas = ExtResource("2_nnwfw")
+region = Rect2(752, 0, 89, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hqy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq03w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3v3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhh4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n5cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kdsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t833o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkx8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20pf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g13q0")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="dog_amalgamate" type="Node2D" unique_id=850022498]
+z_index = -7
+texture_filter = 1
+scale = Vector2(3, 3)
+
+[node name="Enondogy" type="Node2D" parent="." unique_id=1345042399]
+
+[node name="corpo" type="AnimatedSprite2D" parent="Enondogy" unique_id=927072301]
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+
+[node name="cabeca" type="AnimatedSprite2D" parent="Enondogy" unique_id=920147511]
+visible = false
+position = Vector2(-21.5, -28.5)
+sprite_frames = SubResource("SpriteFrames_5hqy4")
+frame = 8
+frame_progress = 1.0

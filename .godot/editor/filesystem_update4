@@ -1,2 +1,10 @@
 res://cenas/batalha/batalha_menu.tscn
+res://scripts/batalha_menu/acts_hud.gd
+res://scripts/batalha_menu/acoes_hud.gd
+res://scripts/batalha_menu/item_hud.gd
 res://scripts/batalha_menu/text_container.gd
+res://scripts/batalha_menu/player_e_inimigos/alma.gd
+res://scripts/batalha_menu/ataque_hud.gd
+res://scripts/batalha_menu/battle_box.gd
+res://scripts/sigletons/SingnalManager.gd
+res://scripts/batalha_menu/batalha_menu.gd

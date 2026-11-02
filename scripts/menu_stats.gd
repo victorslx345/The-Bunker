@@ -7,10 +7,10 @@ var inv = ScriptsGlobais.inventario
 
 func item(item,slots: Button):
 	for slot in ScriptsGlobais.inventario.keys():
-		if ScriptsGlobais.inventario[slot] != '' and ScriptsGlobais.inventario[slot] != 'retirado':
+		if ScriptsGlobais.inventario[slot] != '':
 			slots.text += ScriptsGlobais.inventario[slot]
 			slots.visible = true
-			ScriptsGlobais.inventario[slot] = 'retirado'
+			#ScriptsGlobais.inventario[slot] = 'retirado'
 			return
 
 func _ready() -> void:

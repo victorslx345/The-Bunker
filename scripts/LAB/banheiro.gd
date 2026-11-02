@@ -11,10 +11,10 @@ func _ready() -> void:
 	torneira1ligada = false
 	torneira2ligada = false
 	$kris.z_index = 2
-	if ScriptsGlobais.msc_tempo == 0:
-		$kris/HeWeAre.play()
-	else:
-		$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
+	#if ScriptsGlobais.msc_tempo == 0:
+		#$kris/HeWeAre.play()
+	#else:
+		#$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -46,7 +46,6 @@ func _process(delta: float) -> void:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 	if cortina == true and Input.is_action_just_pressed("interagir") and ScriptsGlobais.Banheira_cortina == false:
-#		aparece um monstro
 		$AnimationPlayer.play("Banheira")
 		ScriptsGlobais.Banheira_cortina = true
 		$Banheira/MusDisturbing.stop()
@@ -55,15 +54,19 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(1).timeout
 		$inimigo/dog.play("default")
 		$inimigo/MusSfxGenerate.play()
-		await get_tree().create_timer(1).timeout
-		$kris.pode_mover()
-
+		await get_tree().create_timer(1.2).timeout
+		$AnimationPlayer.play("inimigo_encontro")
+		await get_tree().create_timer(0.8).timeout
+		MudarDeSala.JogadorPos = $kris.position
+		
+		get_tree().change_scene_to_file("res://cenas/batalha/batalha_menu.tscn")
 	if ScriptsGlobais.Banheira_cortina == false and $Banheira/MusDisturbing.playing == false:
 		$Banheira/MusDisturbing.play()
 		$Banheira/bicho.visible = true
 	else:
 		$Banheira/cortina.scale = Vector2(0.217,1)
 		$Banheira/cortina.position = Vector2(273.5,-34.333)
+
 func _on_pia_1_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		torneira1 = true
