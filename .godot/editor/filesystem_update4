@@ -2,3 +2,4 @@ res://cenas/batalha/batalha_menu.tscn
 res://scripts/batalha_menu/batalha_menu.gd
 res://cenas/batalha/Inimigos/dog_amalgamate.tscn
 res://scripts/batalha_menu/player_e_inimigos/dog_amalgamate.gd
+res://scripts/sigletons/ScriptsGlobais.gd

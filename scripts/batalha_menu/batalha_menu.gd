@@ -24,7 +24,8 @@ func _ready() -> void:
 	$acts_hud/botoes/atacar.grab_focus()
 	guarda_turno = turnos
 	mudar_dialogo = true
-	
+	if ScriptsGlobais.inimigo == 'enondogy':
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

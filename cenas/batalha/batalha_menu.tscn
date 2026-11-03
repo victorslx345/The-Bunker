@@ -842,6 +842,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sj8qt")
+turnos = null
+dialogo_turnos = null
+vida_inimigo = null
 
 [node name="sfx" type="Node" parent="." unique_id=1755136268]
 
