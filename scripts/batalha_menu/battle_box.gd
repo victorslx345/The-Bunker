@@ -3,6 +3,9 @@ extends Control
 @export var comecar_batalha: bool
 @export var terminar_batalha: bool
 @export var tempo: int
+@export var comeca_ataque: bool
+@export var desliga_ataque: bool
+
 #func inicio_batalha(flag:bool):
 	#if flag == true:
 		#flag = false
@@ -23,7 +26,7 @@ extends Control
 #@onready var timer = get_tree().create_timer(tempo)
 @export var timer: int
 func _ready() -> void:
-	timer = 1
+	pass
 
 
 
@@ -36,24 +39,27 @@ func _process(delta: float) -> void:
 		comecar_batalha = false
 		$"../hud".visible = true
 		$"../hud/text_container".hide()
-		
 		visible = true
 		$sprite.play("abrindo")
 		await $sprite.animation_finished
+		comeca_ataque = true
 		$alma.position = Vector2(0,0)
 		$alma/hitbox.disabled = false
 		$alma.Controle = true
 		$alma.visible = true
 		$"../acoes_hud/ataque_hud/barra/hitbox".disabled = true
-		print(get_tree().create_timer(timer))
 		await get_tree().create_timer(timer).timeout
 		terminar_batalha = true
+		comeca_ataque = false
 	if terminar_batalha == true:
+		comeca_ataque = false
+		desliga_ataque = true
 		terminar_batalha = false
 		$alma.visible = false
 		$alma/hitbox.disabled = true
 		$sprite.play("fechando")
 		await $sprite.animation_finished
+		desliga_ataque = false
 		$alma.Controle = false
 		visible = false
 		$"..".turnos += 1

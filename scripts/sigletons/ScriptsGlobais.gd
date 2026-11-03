@@ -3,11 +3,11 @@ extends Node
 var anim: bool = true
 var msc_tempo: float
 var DarkWorld: bool
-var kris_status = {
-	'vida_max' = 20,
-	'vida' = 2,
-	'dano' = 10,
-	'defesa' = 0
+@export var kris_status = {
+	'vida_max' : 20,
+	'vida' : 20,
+	'dano' : 10,
+	'defesa' : 0
 }
 #scrpit para aplicar a defesa
 #dano -= (dano*kris_status['defesa'])

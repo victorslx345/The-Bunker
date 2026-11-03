@@ -3,10 +3,14 @@ extends CharacterBody2D
 
 var velocidade = 100
 @export var Controle: bool = false
-
+func i_frame():
+	$iframe.play()
+	print('foi')
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
+	SingnalManager.dano.connect(i_frame)
+	
 	if Controle == true:
 		if Input.is_action_pressed('voltar'):
 			velocidade = 150

@@ -9,11 +9,11 @@ extends Node2D
 	'turno1' : str('Enondogy apareceu.'),
 	'turno2' : str('Um cheiro esquisito enchi o ar')
 }
-
+@export var liga_padrao1: bool
+@export var desliga_padrao1: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$caixa_teste/alma.Controle = true
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

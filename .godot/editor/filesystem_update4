@@ -1,2 +1,10 @@
 res://scripts/batalha_menu/player_e_inimigos/enondogy/padrao_1.gd
 res://cenas/batalha/Inimigos/dog_amalgamate.tscn
+res://scripts/batalha_menu/player_e_inimigos/dog_amalgamate.gd
+res://scripts/batalha_menu/battle_box.gd
+res://cenas/batalha/Inimigos/batalha_menu_enondogy.tscn
+res://scripts/batalha_menu/player_e_inimigos/intercessor_enondogy.gd
+res://scripts/batalha_menu/vida.gd
+res://scripts/sigletons/ScriptsGlobais.gd
+res://scripts/sigletons/SingnalManager.gd
+res://scripts/batalha_menu/player_e_inimigos/alma.gd
