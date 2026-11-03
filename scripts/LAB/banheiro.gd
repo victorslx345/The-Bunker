@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(0.8).timeout
 		MudarDeSala.JogadorPos = $kris.position
 		
-		get_tree().change_scene_to_file("res://cenas/batalha/batalha_menu.tscn")
+		get_tree().change_scene_to_file("res://cenas/batalha/Inimigos/batalha_menu_enondogy.tscn")
 	if ScriptsGlobais.Banheira_cortina == false and $Banheira/MusDisturbing.playing == false:
 		$Banheira/MusDisturbing.play()
 		$Banheira/bicho.visible = true

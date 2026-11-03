@@ -833,6 +833,17 @@ size = Vector2(13, 300)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn6wj"]
 size = Vector2(284, 14)
 
+[sub_resource type="Animation" id="Animation_fk1pf"]
+resource_name = "fade_in"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uip2b"]
+_data = {
+&"fade_in": SubResource("Animation_fk1pf")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewm5"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="batalha_menu" type="Control" unique_id=328500963]
 texture_filter = 1
 layout_mode = 3
@@ -845,6 +856,8 @@ script = ExtResource("1_sj8qt")
 turnos = null
 dialogo_turnos = null
 vida_inimigo = null
+nome_inimigo = null
+fim = null
 
 [node name="sfx" type="Node" parent="." unique_id=1755136268]
 
@@ -1621,6 +1634,18 @@ position = Vector2(562, 490)
 shape = SubResource("RectangleShape2D_pn6wj")
 
 [node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("31_8d5o3")]
+
+[node name="animacao" type="AnimationPlayer" parent="." unique_id=1710861678]
+libraries/ = SubResource("AnimationLibrary_uip2b")
+
+[node name="Panel" type="Panel" parent="animacao" unique_id=1343925576]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eewm5")
 
 [connection signal="pressed" from="acoes_hud/agir_hud/coluna1/acao1" to="acoes_hud/agir_hud" method="_on_acao_1_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item1" to="acoes_hud/item_hud" method="_on_item_1_pressed"]

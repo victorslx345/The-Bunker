@@ -6,6 +6,7 @@ extends Control
 @export var timing_do_ataque: bool
 @onready var kris_status = ScriptsGlobais.kris_status
 @onready var vida = $"../../hud/status_hud/vida".vida
+@export var animacao_dano: AnimationPlayer
 var critico: bool
 var hit: bool
 var dano_teste: float = 10
@@ -46,6 +47,7 @@ func _process(delta: float) -> void:
 			$ataque_vfx/slash.visible = true
 			$"../../sfx/SndLazC".play()
 			await $ataque_vfx/slash.animation_finished
+			animacao_dano.play('dano')
 			$ataque_vfx/slash.visible = false
 			$"ataque_vfx/indicador de dano".visible = true
 			$"../../sfx/SndDamage".play()
@@ -59,9 +61,17 @@ func _process(delta: float) -> void:
 			$barra.position.x = 0
 			animacao.play("RESET")
 			#$"../../battle_box".comecar_batalha = true
-			$"../../acts_hud".modo = 'luta'
 			$"ataque_vfx/indicador de dano".visible = false
-
+			if $"../..".vida_inimigo > 0:
+				$"../../acts_hud".modo = 'luta'
+			else:
+				$"../../hud".visible = true
+				$"../../hud/text_container/texto".visible = true
+				$"../../dog_amalgamate/AnimationPlayer".play("morte")
+				$"../../hud/text_container".apagar_texto = true
+				$"../../hud/text_container".can_play = true
+				$"../../hud/text_container".texto = '	* Você venceu!\n * O inimigo deixou cair algo.'
+				$"../..".fim = true
 	if timing_do_ataque == true and Input.is_action_just_pressed("interagir"):
 		hit = true
 		timing_do_ataque = false

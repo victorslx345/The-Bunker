@@ -5,18 +5,20 @@ extends Control
 var guarda_turno
 
 @export var dialogo_turnos = {
-	'turno1' : '	* Um amalgamo apareceu',
-	'turno2' : '	* Um cheiro esquisito enche o ar',
+	'turno1' : str('	* '),
+	'turno2' : str('	* ')
 }
 @onready var bicho = $bicho_info/VBoxContainer/bicho
-@export var vida_inimigo:int = 100
+@export var vida_inimigo:int 
 @export var vida_total_inimigo:int = vida_inimigo
-var inimigo_hp:int
-var Status_inimigo = {
-	'vida' : '',
-	'vida_max' : '',
-	'nome' : '',
-}
+@export var nome_inimigo: String
+@export var fim: bool = false
+#var inimigo_hp:int
+#var Status_inimigo = {
+	#'vida' : '',
+	#'vida_max' : '',
+	#'nome' : '',
+#}
 var mudar_dialogo: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,9 +26,6 @@ func _ready() -> void:
 	$acts_hud/botoes/atacar.grab_focus()
 	guarda_turno = turnos
 	mudar_dialogo = true
-	if ScriptsGlobais.inimigo == 'enondogy':
-		
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -44,7 +43,8 @@ func _process(delta: float) -> void:
 		text_cont.apagar_texto = true
 		text_cont.texto = dialogo_turnos['turno2']
 		text_cont.can_play = true
-	bicho.text = str('\n',vida_inimigo,'/',vida_total_inimigo)
-
+	bicho.text = str(nome_inimigo,'\n',vida_inimigo,'/',vida_total_inimigo)
+	if fim == true and $hud/text_container.texto_terminou == true and Input.is_action_just_pressed("interagir"):
+		pass
 func _on_button_pressed() -> void:
 	print('a')
