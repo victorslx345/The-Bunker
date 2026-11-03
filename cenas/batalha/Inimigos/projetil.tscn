@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dl6qcc87hwfml"]
 
+[ext_resource type="Script" uid="uid://ctahy5mqwkst2" path="res://scripts/batalha_menu/player_e_inimigos/enondogy/projetil.gd" id="1_6p12r"]
 [ext_resource type="Texture2D" uid="uid://cyidn0uttsydu" path="res://assets/agamalgados/cabeça carinha.png" id="1_ptty1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6p12r"]
@@ -98,9 +99,11 @@ animations = [{
 
 [node name="projetil" type="Area2D" unique_id=397166928]
 scale = Vector2(0.3, 0.3)
+script = ExtResource("1_6p12r")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=537270241]
 sprite_frames = SubResource("SpriteFrames_2hl1l")
+autoplay = "default"
 frame_progress = 0.03249732
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=629456804]
