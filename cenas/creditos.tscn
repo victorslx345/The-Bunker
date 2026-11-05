@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b5k0x0jipu06f"]
+
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="1_dmlrq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gwrr"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
+
+[node name="creditos" type="Node2D" unique_id=272153932]
+
+[node name="fundo" type="Panel" parent="." unique_id=1886396843]
+offset_right = 1152.0
+offset_bottom = 5656.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gwrr")
+
+[node name="textos" type="Control" parent="." unique_id=814349993]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="textos" unique_id=1817261621]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 324.0
+offset_top = 134.0
+offset_right = 780.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 50
+text = "Game Director
+Victor"
+horizontal_alignment = 1
