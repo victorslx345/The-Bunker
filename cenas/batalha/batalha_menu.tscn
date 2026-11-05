@@ -1664,7 +1664,6 @@ script = ExtResource("76_tx4x8")
 position = Vector2(563, 338)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5hqy4")
-frame_progress = 0.4047762
 
 [node name="hitbox" type="CollisionShape2D" parent="battle_box/alma" unique_id=1878115025]
 position = Vector2(563, 338)
