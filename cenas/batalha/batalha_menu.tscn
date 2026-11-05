@@ -819,13 +819,74 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_34mif")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"i_frame",
 "speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkbli"]
 size = Vector2(22, 22)
+
+[sub_resource type="Animation" id="Animation_uip2b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hitbox:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_1uvj2"]
+resource_name = "iframe"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hitbox:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"i_frame", &"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_40kis"]
+_data = {
+&"RESET": SubResource("Animation_uip2b"),
+&"iframe": SubResource("Animation_1uvj2")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gtv5"]
 size = Vector2(13, 300)
@@ -853,11 +914,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sj8qt")
-turnos = null
-dialogo_turnos = null
-vida_inimigo = null
-nome_inimigo = null
-fim = null
 
 [node name="sfx" type="Node" parent="." unique_id=1755136268]
 
@@ -1608,12 +1664,15 @@ script = ExtResource("76_tx4x8")
 position = Vector2(563, 338)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5hqy4")
+frame_progress = 0.4047762
 
 [node name="hitbox" type="CollisionShape2D" parent="battle_box/alma" unique_id=1878115025]
 position = Vector2(563, 338)
 shape = SubResource("RectangleShape2D_mkbli")
-disabled = true
 debug_color = Color(0.4862745, 0.003921569, 0.09411765, 0.41960785)
+
+[node name="i_frame" type="AnimationPlayer" parent="battle_box/alma" unique_id=1497231153]
+libraries/ = SubResource("AnimationLibrary_40kis")
 
 [node name="hitbox" type="StaticBody2D" parent="battle_box" unique_id=1138467947]
 

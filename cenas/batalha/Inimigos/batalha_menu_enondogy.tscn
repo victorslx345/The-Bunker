@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://bn3s7ldyqu1g3" path="res://sfx/snd_laz_c.wav" id="6_ncy0n"]
 [ext_resource type="AudioStream" uid="uid://bond8gc4xoi04" path="res://sfx/snd_text.wav" id="7_fnk8g"]
 [ext_resource type="Texture2D" uid="uid://3l4ys1ql2tr5" path="res://assets/Batalha_hud/fundo_batalhas.png" id="8_8kg2f"]
+[ext_resource type="AudioStream" uid="uid://bgt3d284dpwq3" path="res://sfx/snd_hurt1_c.wav" id="8_c5qcm"]
+[ext_resource type="AudioStream" uid="uid://b0dv52aafp4fa" path="res://sfx/snd_hurtloox.wav" id="9_hsl13"]
 [ext_resource type="Script" uid="uid://c6x1lypice4wy" path="res://scripts/batalha_menu/text_container.gd" id="9_xr2w4"]
 [ext_resource type="Texture2D" uid="uid://bmy6k20o8unux" path="res://assets/Batalha_hud/batalha_text_menu.png" id="10_iecnr"]
 [ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="11_km3qq"]
@@ -993,6 +995,12 @@ stream = ExtResource("6_ncy0n")
 [node name="SndText" type="AudioStreamPlayer" parent="sfx" unique_id=592501277]
 stream = ExtResource("7_fnk8g")
 
+[node name="SndHurt1C" type="AudioStreamPlayer" parent="sfx" unique_id=442340221]
+stream = ExtResource("8_c5qcm")
+
+[node name="SndHurtloox" type="AudioStreamPlayer" parent="sfx" unique_id=1987092415]
+stream = ExtResource("9_hsl13")
+
 [node name="fundo" type="Control" parent="." unique_id=710570619]
 z_index = -7
 texture_filter = 1
@@ -1754,6 +1762,9 @@ shape = SubResource("RectangleShape2D_pn6wj")
 script = ExtResource("79_kidwl")
 
 [node name="dog_amalgamate" parent="." unique_id=850022498 instance=ExtResource("79_qdlbq")]
+
+[node name="padrao1" parent="dog_amalgamate/padrao de ataque" parent_id_path=PackedInt32Array(850022498, 1378927136) index="0" unique_id=1850829828]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dog_amalgamate" unique_id=707718729]
 libraries/ = SubResource("AnimationLibrary_c5qcm")

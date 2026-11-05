@@ -8,6 +8,7 @@ var projetil_saindo = projetil.instantiate()
 var dano = 3
 var liga: bool = true
 var desliga = true
+var iframe: bool
 
 func dar_dano(valor):
 	ScriptsGlobais.kris_status['vida'] -= valor

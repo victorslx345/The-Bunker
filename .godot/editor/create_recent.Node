@@ -1,11 +1,11 @@
 AnimationPlayer
+AnimatedSprite2D
+Node2D
 Timer
 CollisionShape2D
-AnimatedSprite2D
 Area2D
 AnimatableBody2D
 Control
-Node2D
 Panel
 Node
 Label
