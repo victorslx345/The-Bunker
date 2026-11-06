@@ -2,8 +2,8 @@ extends Node2D
 
 @export var Status = {
 	'Nome' : 'Enondogy',
-	'Vida' : 70,
-	'Vida_max' : 70
+	'Vida' : 150,
+	'Vida_max' : 150
 }
 @export var turnos = {
 	'turno1' : str('Enondogy apareceu.'),

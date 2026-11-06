@@ -48,7 +48,7 @@ func _process(delta: float) -> void:
 		$"../bicho_info".visible = true
 		bicho.disabled = false
 		$"../bicho_info/VBoxContainer/bicho".grab_focus()
-		$"../hud/text_container/texto".visible = true
+		$"../hud/text_container/texto".visible = false
 
 	if modo == 'item' and Input.is_action_just_pressed('voltar'):
 		modo = 'escolha'

@@ -1723,6 +1723,7 @@ sprite_frames = SubResource("SpriteFrames_ls2uy")
 animation = &"abrindo"
 
 [node name="alma" type="CharacterBody2D" parent="battle_box" unique_id=231752474 groups=["alma"]]
+visible = false
 script = ExtResource("77_nkr8e")
 
 [node name="sprite" type="AnimatedSprite2D" parent="battle_box/alma" unique_id=1941517060]
@@ -1762,9 +1763,6 @@ shape = SubResource("RectangleShape2D_pn6wj")
 script = ExtResource("79_kidwl")
 
 [node name="dog_amalgamate" parent="." unique_id=850022498 instance=ExtResource("79_qdlbq")]
-
-[node name="padrao1" parent="dog_amalgamate/padrao de ataque" parent_id_path=PackedInt32Array(850022498, 1378927136) index="0" unique_id=1850829828]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dog_amalgamate" unique_id=707718729]
 libraries/ = SubResource("AnimationLibrary_c5qcm")

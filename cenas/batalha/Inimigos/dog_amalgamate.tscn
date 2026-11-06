@@ -459,5 +459,9 @@ wait_time = 0.25
 [node name="padrao2" type="Node2D" parent="padrao de ataque" unique_id=1085236802]
 script = ExtResource("8_1nfc6")
 
+[node name="Timer" type="Timer" parent="padrao de ataque/padrao2" unique_id=1171050628]
+wait_time = 0.3
+
 [connection signal="body_entered" from="padrao de ataque/padrao1/dogy/colisao" to="padrao de ataque/padrao1" method="_on_colisao_body_entered"]
 [connection signal="timeout" from="padrao de ataque/padrao1/Timer" to="padrao de ataque/padrao1" method="_on_timer_timeout"]
+[connection signal="timeout" from="padrao de ataque/padrao2/Timer" to="padrao de ataque/padrao2" method="_on_timer_timeout"]

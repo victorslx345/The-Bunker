@@ -15,10 +15,10 @@ var Inv = ScriptsGlobais.inventario
 }
 
 func add_vida(N:int):
-	$"../../hud/status_hud/vida".vida += N
+	ScriptsGlobais.kris_status['vida'] += N
 	fechar = true
-	if $"../../hud/status_hud/vida".vida > $"../../hud/status_hud/vida".vida_max:
-		$"../../hud/status_hud/vida".vida = $"../../hud/status_hud/vida".vida_max
+	if ScriptsGlobais.kris_status['vida'] > ScriptsGlobais.kris_status['vida_max']:
+		ScriptsGlobais.kris_status['vida'] = ScriptsGlobais.kris_status['vida_max']
 	$"../../sfx/SndPower".play()
 
 func ativar_texto(item,texto,mais_texto:bool):

@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 		$sprite.play("abrindo")
 		await $sprite.animation_finished
 		comeca_ataque = true
+		SingnalManager.batalha_comeca.emit()
 		$alma.position = Vector2(0,0)
 		$alma/hitbox.disabled = false
 		$alma.Controle = true
@@ -51,6 +52,7 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(timer).timeout
 		terminar_batalha = true
 		comeca_ataque = false
+		SingnalManager.batalha_termina.emit()
 	if terminar_batalha == true:
 		comeca_ataque = false
 		desliga_ataque = true
@@ -63,6 +65,7 @@ func _process(delta: float) -> void:
 		$alma.Controle = false
 		visible = false
 		$"..".turnos += 1
+		SingnalManager.turno.emit()
 		$"../acts_hud".modo = 'acao'
 		$"../acts_hud/botoes/atacar".grab_focus()
 		$"../hud/text_container".visible = true
