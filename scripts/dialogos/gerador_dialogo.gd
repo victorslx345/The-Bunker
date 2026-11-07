@@ -22,6 +22,7 @@ func _on_entrada_1_body_entered(body: Node2D) -> void:
 func _on_entrada_1_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		$"../kris/CanvasLayer/text_box".can_play = false
+		$"../kris/CanvasLayer/text_box".texto = ''
 
 
 func _on_text_box_dialogo_acabo() -> void:

@@ -34,6 +34,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug"):
 		terminar_batalha = true
+	
 	if comecar_batalha == true:
 		$"../acts_hud".modo = 'lutando'
 		comecar_batalha = false

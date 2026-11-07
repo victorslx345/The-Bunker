@@ -11,7 +11,9 @@ extends Control
 var fechar:bool
 var Inv = ScriptsGlobais.inventario
 @export var textos = {
-	'ovo' = '	* Voce usou o ovo e recuperou 6 HP'
+	'ovo' = '	* Voce usou o ovo e recuperou todo o HP.',
+	'salgadinho' = '	* Voce usou Salgadinho e recuperou 6 de HP.',
+	'miojo' = '	* Você comeu o Miojo cru... Recuperou 4 de HP.'
 }
 
 func add_vida(N:int):
@@ -63,10 +65,16 @@ func _on_item_1_pressed() -> void:
 #		quando a batalha terminar usa essa linha de codigo pra salvar todos os itens nao usados
 		inv['slot1'] = ''
 		ativar_texto(item1,textos['ovo'],false)
+		add_vida(20)
+	elif item1.text == 'salgadinho':
+		inv['slot1'] = ''
+		ativar_texto(item1,textos['salgadinho'],false)
 		add_vida(6)
-	elif item1.text == 'outro_item':
-		pass
-#		quando adcionar novos items coloca aqui
+	elif item1.text == 'miojo':
+		inv['slot1'] = ''
+		ativar_texto(item1,textos['miojo'],false)
+		add_vida(6)
+
 
 func _on_item_2_pressed() -> void:
 	$coluna1/item2.focus_mode = Control.FOCUS_NONE
@@ -74,30 +82,67 @@ func _on_item_2_pressed() -> void:
 		inv['slot2'] = ''
 		ativar_texto(item2,textos['ovo'],false)
 		add_vida(6)
+	elif item2.text == 'salgadinho':
+		inv['slot2'] = ''
+		ativar_texto(item2,textos['salgadinho'],false)
+		add_vida(6)
+	elif item2.text == 'miojo':
+		inv['slot2'] = ''
+		ativar_texto(item2,textos['miojo'],false)
+		add_vida(6)
 func _on_item_3_pressed() -> void:
 	$coluna1/item3.focus_mode = Control.FOCUS_NONE
 	if item3.text == 'ovo':
 		inv['slot3'] = ''
 		ativar_texto(item3,textos['ovo'],false)
 		add_vida(6)
-
+	elif item3.text == 'salgadinho':
+		inv['slot3'] = ''
+		ativar_texto(item3,textos['salgadinho'],false)
+		add_vida(6)
+	elif item3.text == 'miojo':
+		inv['slot3'] = ''
+		ativar_texto(item3,textos['miojo'],false)
+		add_vida(6)
 func _on_item_4_pressed() -> void:
 	$coluna1/item4.focus_mode = Control.FOCUS_NONE
 	if item4.text == 'ovo':
 		inv['slot4'] = ''
 		ativar_texto(item4,textos['ovo'],false)
 		add_vida(6)
-
+	elif item4.text == 'salgadinho':
+		inv['slot4'] = ''
+		ativar_texto(item4,textos['salgadinho'],false)
+		add_vida(6)
+	elif item4.text == 'miojo':
+		inv['slot4'] = ''
+		ativar_texto(item4,textos['miojo'],false)
+		add_vida(6)
 func _on_item_5_pressed() -> void:
 	$coluna1/item5.focus_mode = Control.FOCUS_NONE
 	if item5.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item5,textos['ovo'],false)
 		add_vida(6)
-
+	elif item5.text == 'salgadinho':
+		inv['slot5'] = ''
+		ativar_texto(item5,textos['salgadinho'],false)
+		add_vida(6)
+	elif item5.text == 'miojo':
+		inv['slot5'] = ''
+		ativar_texto(item5,textos['miojo'],false)
+		add_vida(6)
 func _on_item_6_pressed() -> void:
 	$coluna1/item6.focus_mode = Control.FOCUS_NONE
 	if item6.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item6,textos['ovo'],false)
+		add_vida(6)
+	elif item6.text == 'salgadinho':
+		inv['slot6'] = ''
+		ativar_texto(item6,textos['salgadinho'],false)
+		add_vida(6)
+	elif item6.text == 'miojo':
+		inv['slot6'] = ''
+		ativar_texto(item6,textos['miojo'],false)
 		add_vida(6)

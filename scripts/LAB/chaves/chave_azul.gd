@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if ScriptsGlobais.chaves['azul'] == false or ScriptsGlobais.luzes['azul'] == false:
+	if ScriptsGlobais.chaves['azul'] == false:
 		if papel == true and Input.is_action_just_pressed('interagir') and dialogo.fim_dial == true:
 			papel = false
 			$Papel.hide()
@@ -24,8 +24,10 @@ func _process(delta: float) -> void:
 			$chave/interact_chave.monitorable = false
 			$chave/interact_chave.monitoring = false
 			$chave.hide()
+			ScriptsGlobais.chaves['azul'] = true
 			$"../../sfx/SndItem".play()
-	else:
+	if ScriptsGlobais.chaves['azul'] == true:
+		print('some')
 		$Papel.hide()
 		$chave.hide()
 		$Papel/interact.monitorable = false

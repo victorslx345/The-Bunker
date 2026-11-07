@@ -11,13 +11,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if dialogo_tv == true:
-		if Input.is_action_just_pressed("interagir") and dialogo.fim_dial == true:
-			dialogo.texto = ' '
-			print('apagou')
 	if salgadinho == true:
-		salgadinho = false
-		ScriptsGlobais.add_item('Salgadinho')
+		if ScriptsGlobais.itens['salgadinho'] == false:
+			dialogo.texto = 'Atras da televisão tinha um Pacote de Salgadinho.\nVoce pegou Salgadinho.'
+		if ScriptsGlobais.itens['salgadinho'] == false and Input.is_action_just_pressed('interagir'):
+			dialogo.texto = 'Atras da televisão tinha um Pacote de Salgadinho.\nVoce pegou Salgadinho'
+			ScriptsGlobais.itens['salgadinho'] = true
+			ScriptsGlobais.add_item('salgadinho')
+			$"../sfx/SndItem".play()
+			print(ScriptsGlobais.inventario)
+		elif ScriptsGlobais.itens['salgadinho'] == true:
+			dialogo.texto = 'As antenas da televisão foram cortadas'
 
 func _on_relogio_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
@@ -44,5 +48,11 @@ func _on_cama_body_exited(body: Node2D) -> void:
 func _on_tv_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.can_play = true
-		dialogo_tv = true
-		dialogo.texto = 'Atras da televisão a um pacote de salgadinhos. Voce pegou Salgadinho.'
+		salgadinho = true
+
+
+func _on_tv_body_exited(body: Node2D) -> void:
+	if body.name == 'kris':
+		dialogo.can_play = false
+		salgadinho = false
+		dialogo.texto = ''

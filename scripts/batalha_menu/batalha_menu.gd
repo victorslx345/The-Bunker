@@ -1,4 +1,6 @@
 extends Control
+#	CONTROLES DE DEBUG PARA TIRAR NO FINAL:
+# mudar os tunros, terminar os ataques, terminar a batle box
 @onready var text_cont = $hud/text_container
 
 @export var turnos: int = 1

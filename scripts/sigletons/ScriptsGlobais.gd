@@ -40,6 +40,12 @@ var chaves = {
 	'verde' = false,
 	'azul' = false
 }
+var pegou_chave = {
+	'vermelho' = false,
+	'amarelo' = false,
+	'verde' = false,
+	'azul' = false
+}
 var itens = {
 	'ovo' : false,
 	'salgadinho' : false,

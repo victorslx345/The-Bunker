@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="12_edjoo"]
 [ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="13_2rns8"]
 [ext_resource type="AudioStream" uid="uid://4ieeytg7yfvm" path="res://sfx/mus_sfx_generate.wav" id="14_ehw2b"]
+[ext_resource type="Script" uid="uid://c6y4bcmylxll3" path="res://scripts/LAB/chaves/chave_verde.gd" id="20_3q28q"]
+[ext_resource type="AudioStream" uid="uid://cxfmxr7bymmon" path="res://sfx/snd_item.wav" id="21_u1d8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4ci5"]
 bg_color = Color(0, 0, 0, 1)
@@ -597,6 +599,31 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huk1l"]
 size = Vector2(28, 179)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jscum"]
+atlas = ExtResource("1_l4b43")
+region = Rect2(68, 263, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foem3"]
+atlas = ExtResource("1_l4b43")
+region = Rect2(78, 263, 9, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdo5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jscum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foem3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfvuj"]
+size = Vector2(9.333336, 23.000004)
+
 [node name="banheiro" type="Node2D" unique_id=862211875]
 texture_filter = 1
 position = Vector2(-338, 55)
@@ -799,6 +826,7 @@ libraries/ = SubResource("AnimationLibrary_hdhjb")
 [node name="nevoa" parent="." unique_id=1502976648 instance=ExtResource("9_sxplx")]
 
 [node name="inimigo" type="StaticBody2D" parent="." unique_id=1165569179]
+visible = false
 texture_filter = 1
 
 [node name="dog" type="AnimatedSprite2D" parent="inimigo" unique_id=1375101291]
@@ -822,9 +850,36 @@ debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
 
 [node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("13_2rns8")]
 
+[node name="chave_verde" type="Node2D" parent="." unique_id=2014037196]
+texture_filter = 1
+scale = Vector2(3, 3)
+script = ExtResource("20_3q28q")
+
+[node name="sprite" type="AnimatedSprite2D" parent="chave_verde" unique_id=120666374]
+position = Vector2(251, 45.333336)
+sprite_frames = SubResource("SpriteFrames_tdo5t")
+autoplay = "default"
+frame_progress = 0.40676537
+
+[node name="chave" type="Area2D" parent="chave_verde" unique_id=517315188]
+monitoring = false
+monitorable = false
+
+[node name="hitbox" type="CollisionShape2D" parent="chave_verde/chave" unique_id=419252070]
+position = Vector2(251.00005, 52.5)
+shape = SubResource("RectangleShape2D_hfvuj")
+debug_color = Color(1.540184e-06, 0.6493065, 0.1610817, 0.41960785)
+
+[node name="sfx" type="Node" parent="." unique_id=261435940]
+
+[node name="SndItem" type="AudioStreamPlayer" parent="sfx" unique_id=1677991677]
+stream = ExtResource("21_u1d8g")
+
 [connection signal="body_entered" from="Banheira/interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="Banheira/interacao" to="." method="_on_interacao_body_exited"]
 [connection signal="body_entered" from="pia/pia1" to="." method="_on_pia_1_body_entered"]
 [connection signal="body_exited" from="pia/pia1" to="." method="_on_pia_1_body_exited"]
 [connection signal="body_entered" from="pia/pia2" to="." method="_on_pia_2_body_entered"]
 [connection signal="body_exited" from="pia/pia2" to="." method="_on_pia_2_body_exited"]
+[connection signal="body_entered" from="chave_verde/chave" to="chave_verde" method="_on_chave_body_entered"]
+[connection signal="body_exited" from="chave_verde/chave" to="chave_verde" method="_on_chave_body_exited"]

@@ -6,10 +6,14 @@ func troca_cena(cena):
 	
 
 func _ready() -> void:
-	if ScriptsGlobais.msc_tempo == 0:
-		$kris/HeWeAre.play()
+	if luzes['vermelho'] == true and luzes['amarelo'] == true and luzes['verde'] == true and luzes['azul'] == true and entrada == true:
+		pass
 	else:
-		$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
+		if ScriptsGlobais.msc_tempo == 0:
+			$kris/HeWeAre.play()
+		else:
+			$kris/HeWeAre.play(ScriptsGlobais.msc_tempo)
+	
 	$kris/darkworld_idle.animation = 'right'
 	$kris.darkworld = true
 

@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	if flag == true and Input.is_action_just_pressed('interagir'):
 		if ScriptsGlobais.chaves['amarelo'] == true:
 			ScriptsGlobais.luzes['amarelo'] = true
-			ScriptsGlobais.chaves['amarelo'] = false
+			ScriptsGlobais.pegou_chave['amarelo'] = true
 			dialogo.texto = 'Você colocou a chave amarela.'
 		elif ScriptsGlobais.chaves['amarelo'] == false and ScriptsGlobais.luzes['amarelo'] == true:
 			dialogo.texto = 'A maquina foi ligada.'
@@ -33,5 +33,5 @@ func _on_interagivel_body_entered(body: Node2D) -> void:
 func _on_interagivel_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.texto = ''
-		dialogo.can_play = true
+		dialogo.can_play = false
 		flag = false

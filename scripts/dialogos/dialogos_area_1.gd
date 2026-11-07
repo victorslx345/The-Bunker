@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 func _on_plantas_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		$"../kris/CanvasLayer/text_box".can_play = true
-		$"../kris/CanvasLayer/text_box".texto = 'pranta'
+		$"../kris/CanvasLayer/text_box".texto = 'A planta esta seca, parece que não é regada a muito tempo.'
 		if Input.is_action_just_pressed("interagir"):
 			$"../kris".mover = false
 

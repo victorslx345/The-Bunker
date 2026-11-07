@@ -573,6 +573,7 @@ offset_bottom = -115.0
 metadata/_edit_use_anchors_ = true
 
 [node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=515139804]
+visible = false
 texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)

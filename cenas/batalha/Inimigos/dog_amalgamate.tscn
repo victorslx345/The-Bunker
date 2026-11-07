@@ -585,6 +585,8 @@ frame = 7
 frame_progress = 1.0
 
 [node name="colisao" type="Area2D" parent="padrao de ataque/padrao1/dogy" unique_id=231775682]
+monitoring = false
+monitorable = false
 
 [node name="hitbox" type="CollisionShape2D" parent="padrao de ataque/padrao1/dogy/colisao" unique_id=1408982071]
 shape = SubResource("RectangleShape2D_eewm5")
@@ -671,7 +673,7 @@ libraries/ = SubResource("AnimationLibrary_vnnyf")
 wait_time = 2.5
 
 [node name="Timer2" type="Timer" parent="padrao de ataque/padrao3" unique_id=915053267]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="telegraph" type="Node2D" parent="padrao de ataque/padrao3" unique_id=1595726089]
 visible = false

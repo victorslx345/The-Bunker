@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://bqpxyvc7icpvn" path="res://scripts/dialogos/dialogos_quarto.gd" id="9_dbby8"]
 [ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="10_5ex46"]
 [ext_resource type="Texture2D" uid="uid://bassmekacjai4" path="res://assets/LAB/coisinho.png" id="12_is270"]
+[ext_resource type="AudioStream" uid="uid://cxfmxr7bymmon" path="res://sfx/snd_item.wav" id="13_tqrky"]
+[ext_resource type="Script" uid="uid://bo8n0avk62gch" path="res://scripts/LAB/chaves/chave_amarela.gd" id="14_o0yhg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgk6x"]
 bg_color = Color(0, 0, 0, 1)
@@ -118,18 +120,6 @@ tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f18y5")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nr2kn"]
-texture = ExtResource("3_eunh8")
-margins = Vector2i(15, 8)
-separation = Vector2i(1, 1)
-texture_region_size = Vector2i(46, 39)
-10:9/0 = 0
-11:9/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_aj4ri"]
-tile_size = Vector2i(20, 20)
-sources/0 = SubResource("TileSetAtlasSource_nr2kn")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nc4c4"]
 texture = ExtResource("3_eunh8")
 margins = Vector2i(1, 1)
@@ -192,6 +182,110 @@ tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tqrky")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
+size = Vector2(141, 147)
+
+[sub_resource type="Animation" id="Animation_o0yhg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lencol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-90, 86)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lencol:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_3pj8s"]
+resource_name = "lencol"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lencol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-90, 86), Vector2(-90, 117.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lencol:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(3, 1.3717949)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tk88q"]
+_data = {
+&"RESET": SubResource("Animation_o0yhg"),
+&"lencol": SubResource("Animation_3pj8s")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0yhg"]
+atlas = ExtResource("3_eunh8")
+region = Rect2(532, 368, 46, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0yhg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdo5t"]
+size = Vector2(46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pj8s"]
+atlas = ExtResource("3_eunh8")
+region = Rect2(68, 253, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk88q"]
+atlas = ExtResource("3_eunh8")
+region = Rect2(78, 253, 9, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hqy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pj8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk88q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [node name="quarto" type="Node2D" unique_id=951696547]
 script = ExtResource("1_ll4ru")
 
@@ -231,11 +325,6 @@ rotation = 6.2831855
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAKAAEAAAAJAAQAAAAGAAEAAAAJAAQAAAD+/wEAAAAKAAQAAAD6/wEAAAAJAAQAAAA=")
 tile_set = SubResource("TileSet_eewm5")
-
-[node name="lencol" type="TileMapLayer" parent="camas" unique_id=1920983522]
-texture_filter = 1
-tile_map_data = PackedByteArray("AAD+/wEAAAALAAkAAAA=")
-tile_set = SubResource("TileSet_aj4ri")
 
 [node name="decoracao" type="TileMapLayer" parent="." unique_id=2056369316]
 texture_filter = 1
@@ -325,11 +414,6 @@ position = Vector2(-330, 91.5)
 shape = SubResource("RectangleShape2D_n0nor")
 debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
 
-[node name="cama2" type="CollisionShape2D" parent="dialogos_quarto/cama" unique_id=587779357]
-position = Vector2(-90, 91.5)
-shape = SubResource("RectangleShape2D_n0nor")
-debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
-
 [node name="cama4" type="CollisionShape2D" parent="dialogos_quarto/cama" unique_id=1224018164]
 position = Vector2(390, 91.5)
 shape = SubResource("RectangleShape2D_n0nor")
@@ -360,8 +444,56 @@ texture_filter = 1
 position = Vector2(43.333332, -8.333334)
 texture = ExtResource("12_is270")
 
+[node name="sfx" type="Node" parent="." unique_id=2054523806]
+
+[node name="SndItem" type="AudioStreamPlayer" parent="sfx" unique_id=65158852]
+stream = ExtResource("13_tqrky")
+
+[node name="chave_amarela" type="Node2D" parent="." unique_id=1415246273]
+texture_filter = 1
+script = ExtResource("14_o0yhg")
+
+[node name="cama" type="Area2D" parent="chave_amarela" unique_id=1171126417]
+
+[node name="hitbox" type="CollisionShape2D" parent="chave_amarela/cama" unique_id=589933776]
+position = Vector2(-90.5, 90.5)
+shape = SubResource("RectangleShape2D_5hqy4")
+debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
+
+[node name="anim" type="AnimationPlayer" parent="chave_amarela" unique_id=1012000851]
+libraries/ = SubResource("AnimationLibrary_tk88q")
+
+[node name="lencol" type="AnimatedSprite2D" parent="chave_amarela" unique_id=1001020022]
+z_index = 1
+position = Vector2(-90, 86)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+
+[node name="chave" type="Node2D" parent="chave_amarela" unique_id=202116071]
+
+[node name="interact" type="Area2D" parent="chave_amarela/chave" unique_id=232576317]
+monitoring = false
+monitorable = false
+
+[node name="hitbox" type="CollisionShape2D" parent="chave_amarela/chave/interact" unique_id=2119617681]
+position = Vector2(-42, 69)
+shape = SubResource("RectangleShape2D_tdo5t")
+debug_color = Color(0.6671387, 0.51128393, 3.85046e-07, 0.41960785)
+
+[node name="sprite" type="AnimatedSprite2D" parent="chave_amarela/chave" unique_id=610535654]
+position = Vector2(-52, 69)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_5hqy4")
+autoplay = "default"
+frame_progress = 0.60939455
+
 [connection signal="body_entered" from="dialogos_quarto/relogio" to="dialogos_quarto" method="_on_relogio_body_entered"]
 [connection signal="body_exited" from="dialogos_quarto/relogio" to="dialogos_quarto" method="_on_relogio_body_exited"]
 [connection signal="body_entered" from="dialogos_quarto/cama" to="dialogos_quarto" method="_on_cama_body_entered"]
 [connection signal="body_exited" from="dialogos_quarto/cama" to="dialogos_quarto" method="_on_cama_body_exited"]
 [connection signal="body_entered" from="dialogos_quarto/TV" to="dialogos_quarto" method="_on_tv_body_entered"]
+[connection signal="body_exited" from="dialogos_quarto/TV" to="dialogos_quarto" method="_on_tv_body_exited"]
+[connection signal="body_entered" from="chave_amarela/cama" to="chave_amarela" method="_on_cama_body_entered"]
+[connection signal="body_exited" from="chave_amarela/cama" to="chave_amarela" method="_on_cama_body_exited"]
+[connection signal="body_entered" from="chave_amarela/chave/interact" to="chave_amarela" method="_on_interact_body_entered"]
+[connection signal="body_exited" from="chave_amarela/chave/interact" to="chave_amarela" method="_on_interact_body_exited"]

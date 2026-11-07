@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		if ScriptsGlobais.itens['miojo'] == false and Input.is_action_just_pressed('interagir'):
 			dialogo.texto = 'Dentro da geladeira havia um Miojo.\n Voce pegou o miojo'
 			ScriptsGlobais.itens['miojo'] = true
-			ScriptsGlobais.add_item('Miojo')
+			ScriptsGlobais.add_item('miojo')
 			$"../sfx/SndItem".play()
 			print(ScriptsGlobais.inventario)
 		elif ScriptsGlobais.itens['miojo'] == true:
