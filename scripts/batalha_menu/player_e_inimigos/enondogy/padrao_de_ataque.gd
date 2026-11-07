@@ -23,4 +23,7 @@ func _process(delta: float) -> void:
 		turno = 4
 	if rodar == true and Input.is_action_just_pressed('5'):
 		turno = 5
-	
+	if rodar == true and Input.is_action_just_pressed('q'):
+		SingnalManager.batalha_comeca.emit()
+	if rodar == true and Input.is_action_just_pressed('w'):
+		SingnalManager.batalha_termina.emit()

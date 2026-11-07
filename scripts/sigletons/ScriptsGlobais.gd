@@ -7,7 +7,8 @@ var DarkWorld: bool
 	'vida_max' : 20,
 	'vida' : 20,
 	'dano' : 10,
-	'defesa' : 0
+	'defesa' : 0,
+	'alma_pos_x' : 0
 }
 #scrpit para aplicar a defesa
 #dano -= (dano*kris_status['defesa'])

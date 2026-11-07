@@ -14,6 +14,9 @@ func i_frame():
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
+	ScriptsGlobais.kris_status['alma_pos_x'] = position.x
+	if ScriptsGlobais.kris_status['vida'] < 0:
+		pass
 	if Controle == true:
 		if Input.is_action_pressed('voltar'):
 			velocidade = 150

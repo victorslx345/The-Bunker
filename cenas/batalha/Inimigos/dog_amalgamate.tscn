@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://gtgkajqvqap1" path="res://assets/agamalgados/Enondogy/litle_dog.png" id="5_1yyvs"]
 [ext_resource type="Script" uid="uid://7ea0geq0jltf" path="res://scripts/batalha_menu/player_e_inimigos/enondogy/padrao_1.gd" id="5_ud22y"]
 [ext_resource type="Script" uid="uid://blnmkkq2kmgaj" path="res://scripts/batalha_menu/player_e_inimigos/enondogy/padrao_2.gd" id="8_1nfc6"]
+[ext_resource type="Script" uid="uid://b2feth4isfd4a" path="res://scripts/batalha_menu/player_e_inimigos/enondogy/padrao_3.gd" id="9_koyl2"]
+[ext_resource type="Texture2D" uid="uid://bwn2s72el3n78" path="res://assets/agamalgados/foice.png" id="10_xf4he"]
+[ext_resource type="Texture2D" uid="uid://bq3dds5w2trvi" path="res://assets/agamalgados/telegrafo/Telegraphing-1.png (1).png" id="11_bro3w"]
+[ext_resource type="Texture2D" uid="uid://iwt24xuaqgad" path="res://assets/agamalgados/telegrafo/Telegraphing-2.png (1).png" id="12_dl303"]
+[ext_resource type="AudioStream" uid="uid://rpuy7p82jii8" path="res://sfx/snd_scytheburst.wav" id="13_56r3a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2k8r"]
 atlas = ExtResource("3_koyl2")
@@ -217,10 +222,10 @@ tracks/1/path = NodePath("Corpo:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.62, 2.64, 4.14, 4.58, 6.4831185, 7.4531183, 8.403118, 8.838385, 9.568384, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.7, 1.221)]
+"values": [Vector2(0.7, 1.221), Vector2(0.7, 1.7050275), Vector2(0.7, 1.3816442), Vector2(0.7, 1.3816442), Vector2(0.7, 1.7796543), Vector2(0.7, 1.7796543), Vector2(0.7, 0.7995546), Vector2(0.7, 2.1030374), Vector2(0.7, 2.1030374), Vector2(0.7, 1.4413457), Vector2(0.7, 1.221)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -229,10 +234,10 @@ tracks/2/path = NodePath("Corpo:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.62, 2.64, 4.14, 4.58, 6.4831185, 7.4531183, 8.403118, 8.838385, 9.568384, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, -30.333332)]
+"values": [Vector2(0, -30.333332), Vector2(0, -14.118412), Vector2(0, -24.95175), Vector2(0, -24.95175), Vector2(0, -11.618412), Vector2(0, -11.618412), Vector2(0, -44.45175), Vector2(0, -0.78507996), Vector2(0, -0.78507996), Vector2(0, -22.95175), Vector2(0, -30.333332)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v5huf"]
@@ -403,6 +408,140 @@ _data = {
 &"dogy": SubResource("Animation_1yyvs")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
+size = Vector2(25.333328, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
+size = Vector2(21.17028, 26.52559)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdo5t"]
+size = Vector2(21.732712, 17.490433)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_jv2bd"]
+points = PackedVector2Array(30.280441, -0.80693054, -1.3027954, -9.920357, 6.2120514, 3.2947235)
+
+[sub_resource type="Animation" id="Animation_c5nwb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foice1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(182.333, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foice1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xf4he"]
+resource_name = "foice"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foice1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(182.333, -70), Vector2(182.333, 300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foice1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-6.283185307179586, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c5nwb"]
+_data = {
+&"RESET": SubResource("Animation_c5nwb"),
+&"foice": SubResource("Animation_xf4he")
+}
+
+[sub_resource type="Animation" id="Animation_bro3w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foice2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(182.333, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foice2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_dl303"]
+resource_name = "foice2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foice2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(182.333, -70), Vector2(182.333, 300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("foice2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.283185307179586, -6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vnnyf"]
+_data = {
+&"RESET": SubResource("Animation_bro3w"),
+&"foice2": SubResource("Animation_dl303")
+}
+
 [node name="dog_amalgamate" type="Node2D" unique_id=850022498]
 z_index = -7
 texture_filter = 1
@@ -429,6 +568,7 @@ libraries/ = SubResource("AnimationLibrary_v5huf")
 
 [node name="padrao de ataque" type="Node2D" parent="." unique_id=1378927136]
 z_index = 10
+position = Vector2(0, -1.3333334)
 script = ExtResource("4_7u666")
 
 [node name="padrao1" type="Node2D" parent="padrao de ataque" unique_id=1850829828]
@@ -462,6 +602,112 @@ script = ExtResource("8_1nfc6")
 [node name="Timer" type="Timer" parent="padrao de ataque/padrao2" unique_id=1171050628]
 wait_time = 0.3
 
+[node name="padrao3" type="Node2D" parent="padrao de ataque" unique_id=2085159379]
+script = ExtResource("9_koyl2")
+
+[node name="foice1" type="Area2D" parent="padrao de ataque/padrao3" unique_id=321047666]
+position = Vector2(182.333, -70)
+scale = Vector2(1.25, 1.25)
+
+[node name="Sprite" type="Sprite2D" parent="padrao de ataque/padrao3/foice1" unique_id=1076667889]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_xf4he")
+
+[node name="hitbox" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice1" unique_id=608947437]
+position = Vector2(28, -18.666668)
+shape = SubResource("RectangleShape2D_ls2uy")
+
+[node name="hitbox2" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice1" unique_id=720871710]
+position = Vector2(25.000015, 7.9999924)
+rotation = 0.26179937
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_5hqy4")
+
+[node name="hitbox3" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice1" unique_id=1367103321]
+position = Vector2(16.666687, 26.666666)
+rotation = -0.91629785
+shape = SubResource("RectangleShape2D_tdo5t")
+
+[node name="hitbox4" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice1" unique_id=1645779504]
+position = Vector2(10, 32.333336)
+rotation = 2.7488935
+shape = SubResource("ConvexPolygonShape2D_jv2bd")
+
+[node name="anim_foice1" type="AnimationPlayer" parent="padrao de ataque/padrao3" unique_id=1557482726]
+libraries/ = SubResource("AnimationLibrary_c5nwb")
+
+[node name="foice2" type="Area2D" parent="padrao de ataque/padrao3" unique_id=993443201]
+position = Vector2(182.333, -70)
+rotation = -6.2831855
+scale = Vector2(-1.25, -1.25)
+
+[node name="Sprite" type="Sprite2D" parent="padrao de ataque/padrao3/foice2" unique_id=1024067052]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_xf4he")
+
+[node name="hitbox" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice2" unique_id=642689345]
+position = Vector2(28.000008, -18.666668)
+shape = SubResource("RectangleShape2D_ls2uy")
+
+[node name="hitbox2" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice2" unique_id=2085130364]
+position = Vector2(25.000023, 7.9999924)
+rotation = 0.26179934
+shape = SubResource("RectangleShape2D_5hqy4")
+
+[node name="hitbox3" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice2" unique_id=10196715]
+position = Vector2(16.666687, 26.666672)
+rotation = -0.91629785
+shape = SubResource("RectangleShape2D_tdo5t")
+
+[node name="hitbox4" type="CollisionShape2D" parent="padrao de ataque/padrao3/foice2" unique_id=487389703]
+position = Vector2(10, 32.333336)
+rotation = 2.7488935
+shape = SubResource("ConvexPolygonShape2D_jv2bd")
+
+[node name="anim_foice2" type="AnimationPlayer" parent="padrao de ataque/padrao3" unique_id=725331848]
+libraries/ = SubResource("AnimationLibrary_vnnyf")
+
+[node name="Timer" type="Timer" parent="padrao de ataque/padrao3" unique_id=618457407]
+wait_time = 2.5
+
+[node name="Timer2" type="Timer" parent="padrao de ataque/padrao3" unique_id=915053267]
+wait_time = 3.0
+
+[node name="telegraph" type="Node2D" parent="padrao de ataque/padrao3" unique_id=1595726089]
+visible = false
+
+[node name="telegrafo" type="NinePatchRect" parent="padrao de ataque/padrao3/telegraph" unique_id=72685769]
+offset_left = 178.0
+offset_top = 68.333336
+offset_right = 196.33334
+offset_bottom = 163.33334
+texture = ExtResource("11_bro3w")
+region_rect = Rect2(0, 0, 11, 11)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="telegrafo2" type="NinePatchRect" parent="padrao de ataque/padrao3/telegraph" unique_id=922832091]
+visible = false
+offset_left = 178.0
+offset_top = 68.333336
+offset_right = 196.33334
+offset_bottom = 163.33334
+texture = ExtResource("12_dl303")
+region_rect = Rect2(0, 0, 11, 11)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="SndScytheburst" type="AudioStreamPlayer" parent="padrao de ataque/padrao3" unique_id=1160414917]
+stream = ExtResource("13_56r3a")
+
 [connection signal="body_entered" from="padrao de ataque/padrao1/dogy/colisao" to="padrao de ataque/padrao1" method="_on_colisao_body_entered"]
 [connection signal="timeout" from="padrao de ataque/padrao1/Timer" to="padrao de ataque/padrao1" method="_on_timer_timeout"]
 [connection signal="timeout" from="padrao de ataque/padrao2/Timer" to="padrao de ataque/padrao2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="padrao de ataque/padrao3/foice1" to="padrao de ataque/padrao3" method="_on_foice_1_body_entered"]
+[connection signal="body_entered" from="padrao de ataque/padrao3/foice2" to="padrao de ataque/padrao3" method="_on_foice_2_body_entered"]
+[connection signal="timeout" from="padrao de ataque/padrao3/Timer" to="padrao de ataque/padrao3" method="_on_timer_timeout"]
+[connection signal="timeout" from="padrao de ataque/padrao3/Timer2" to="padrao de ataque/padrao3" method="_on_timer_2_timeout"]

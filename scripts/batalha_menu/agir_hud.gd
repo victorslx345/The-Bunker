@@ -1,7 +1,13 @@
 extends Control
 @onready var text_cont = $"../../hud/text_container"
 var fechar: bool
-# Called when the node enters the scene tree for the first time.
+func add_vida(N:int):
+	ScriptsGlobais.kris_status['vida'] += N
+	fechar = true
+	if ScriptsGlobais.kris_status['vida'] > ScriptsGlobais.kris_status['vida_max']:
+		ScriptsGlobais.kris_status['vida'] = ScriptsGlobais.kris_status['vida_max']
+	$"../../sfx/SndPower".play()
+
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -21,7 +27,8 @@ func _on_acao_1_pressed() -> void:
 	$coluna1.hide()
 	$coluna1/acao1.release_focus()
 	text_cont.apagar_texto = true
-	text_cont.texto = '	*Voce controla a respiração...\n	* Defesa aumentada em 2 durante esse turno.'
+	text_cont.texto = '	*Voce controla a respiração...\n	* Voce recuperou 4 de HP.'
+	add_vida(4)
 	text_cont.visible = true
 	text_cont.can_play = true
 	fechar = true

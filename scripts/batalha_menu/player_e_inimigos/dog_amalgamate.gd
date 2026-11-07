@@ -1,13 +1,13 @@
 extends Node2D
 
 @export var Status = {
-	'Nome' : 'Enondogy',
+	'Nome' : 'ReaperBird',
 	'Vida' : 150,
 	'Vida_max' : 150
 }
 @export var turnos = {
-	'turno1' : str('Enondogy apareceu.'),
-	'turno2' : str('Um cheiro esquisito enchi o ar')
+	'turno1' : str('ReaperBird bloqueia o caminho.'),
+	'turno2' : str('Esta cada vez mais dificil de respirar.')
 }
 @export var liga_padrao1: bool
 @export var desliga_padrao1: bool = false

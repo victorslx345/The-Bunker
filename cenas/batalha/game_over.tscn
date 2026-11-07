@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://pnd14f547h2j"]
+
+[ext_resource type="Script" uid="uid://1o2tkfbngv6d" path="res://scripts/batalha_menu/player_e_inimigos/game_over.gd" id="1_6jy6i"]
+[ext_resource type="Texture2D" uid="uid://dlqkqrsv7vm70" path="res://assets/Batalha_hud/game_over.png" id="1_06ref"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="2_6jy6i"]
+[ext_resource type="Texture2D" uid="uid://clwygibfr1c8j" path="res://assets/HUD/Soul_Menu.png" id="3_a54bs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_560ie"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67185"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8n2k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_560ie"]
+
+[sub_resource type="Animation" id="Animation_06ref"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fundo2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("titulo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(365, 53)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/continuar:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/sair:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6jy6i"]
+resource_name = "game_over"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fundo2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("titulo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(365, 53), Vector2(365, 132)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/continuar:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/sair:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a54bs"]
+_data = {
+&"RESET": SubResource("Animation_06ref"),
+&"game_over": SubResource("Animation_6jy6i")
+}
+
+[node name="game_over" type="Control" unique_id=610780216]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6jy6i")
+
+[node name="fundo" type="Panel" parent="." unique_id=1026834069]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[node name="titulo" type="TextureRect" parent="." unique_id=420313520]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -211.0
+offset_top = 53.0
+offset_right = 211.0
+offset_bottom = 235.00043
+grow_horizontal = 2
+texture = ExtResource("1_06ref")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=200012325]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -347.5
+offset_top = -167.0
+offset_right = 347.5
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 200
+
+[node name="continuar" type="Button" parent="HBoxContainer" unique_id=587648114]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 35)
+custom_maximum_size = Vector2(-1, 35)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8390919, 0.80389476, 7.70092e-07, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_constants/icon_max_width = 29
+theme_override_fonts/font = ExtResource("2_6jy6i")
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("3_a54bs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_560ie")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_67185")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l8n2k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_560ie")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l8n2k")
+text = "Continuar"
+icon = ExtResource("3_a54bs")
+alignment = 2
+expand_icon = true
+
+[node name="sair" type="Button" parent="HBoxContainer" unique_id=894764223]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 35)
+custom_maximum_size = Vector2(-1, 35)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8390919, 0.80389476, 7.70092e-07, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_constants/icon_max_width = 29
+theme_override_fonts/font = ExtResource("2_6jy6i")
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("3_a54bs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_560ie")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_67185")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l8n2k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_560ie")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l8n2k")
+text = "Desistir"
+icon = ExtResource("3_a54bs")
+alignment = 2
+expand_icon = true
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=1776120452]
+libraries/ = SubResource("AnimationLibrary_a54bs")
+
+[node name="fundo2" type="Panel" parent="." unique_id=502995789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[connection signal="pressed" from="HBoxContainer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="HBoxContainer/sair" to="." method="_on_sair_pressed"]
