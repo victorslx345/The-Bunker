@@ -27,7 +27,7 @@ tile_size = Vector2i(2, 20)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6sdtk")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xqti2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwc2l"]
 texture = ExtResource("1_xh62j")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -46,9 +46,9 @@ texture_region_size = Vector2i(20, 20)
 
 [sub_resource type="TileSet" id="TileSet_g5w5j"]
 tile_size = Vector2i(20, 20)
-sources/1 = SubResource("TileSetAtlasSource_xqti2")
+sources/1 = SubResource("TileSetAtlasSource_gwc2l")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_281ce"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jih3s"]
 texture = ExtResource("1_xh62j")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
@@ -111,7 +111,7 @@ texture_region_size = Vector2i(20, 20)
 [sub_resource type="TileSet" id="TileSet_i0jeu"]
 tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_281ce")
+sources/0 = SubResource("TileSetAtlasSource_jih3s")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6yvv"]
 texture = ExtResource("1_xh62j")
@@ -360,7 +360,8 @@ debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
 [node name="AREA_TELEPORTE3" parent="teleportes" unique_id=1508454346 node_paths=PackedStringArray("cena") instance=ExtResource("3_801ib")]
 rotation = 0.0019507824
 cena = NodePath("../transicoes")
-Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
+Sala = "res://cenas/TRUE_LAB/quarto_2.tscn"
+JogadorPos = Vector2(71, 215)
 
 [node name="quarto2" type="CollisionShape2D" parent="teleportes/AREA_TELEPORTE3" unique_id=486915207]
 position = Vector2(2137.6418, 326.83054)

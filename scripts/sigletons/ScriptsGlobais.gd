@@ -13,12 +13,12 @@ var DarkWorld: bool
 #scrpit para aplicar a defesa
 #dano -= (dano*kris_status['defesa'])
 var inventario = {
-	'slot1': 'ovo',
-	'slot2': 'ovo',
-	'slot3': 'ovo',
-	'slot4': 'ovo',
-	'slot5': 'ovo',
-	'slot6': 'ovo',
+	'slot1': '',
+	'slot2': '',
+	'slot3': '',
+	'slot4': '',
+	'slot5': '',
+	'slot6': '',
 }
 var inventario_save = {
 	'slot1': '',
@@ -33,6 +33,18 @@ var luzes = {
 	'amarelo' = false,
 	'verde' = false,
 	'azul' = false
+}
+var chaves = {
+	'vermelho' = false,
+	'amarelo' = false,
+	'verde' = false,
+	'azul' = false
+}
+var itens = {
+	'ovo' : false,
+	'salgadinho' : false,
+	'miojo' : false
+	
 }
 func add_item(item):
 	for slot in inventario.keys():
