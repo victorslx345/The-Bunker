@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dlqkqrsv7vm70" path="res://assets/Batalha_hud/game_over.png" id="1_06ref"]
 [ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="2_6jy6i"]
 [ext_resource type="Texture2D" uid="uid://clwygibfr1c8j" path="res://assets/HUD/Soul_Menu.png" id="3_a54bs"]
+[ext_resource type="AudioStream" uid="uid://dw7v8qo311dnw" path="res://musicas/undertale-game-over-theme-(128-kbps)-made-with-Voicemod.mp3" id="5_a54bs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
 bg_color = Color(0, 0, 0, 1)
@@ -153,7 +154,7 @@ anchor_right = 0.5
 offset_left = -211.0
 offset_top = 53.0
 offset_right = 211.0
-offset_bottom = 235.00043
+offset_bottom = 235.00049
 grow_horizontal = 2
 texture = ExtResource("1_06ref")
 
@@ -231,6 +232,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[node name="UndertaleGameOverTheme(128Kbps)MadeWithVoicemod" type="AudioStreamPlayer" parent="." unique_id=318635824]
+stream = ExtResource("5_a54bs")
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="HBoxContainer/sair" to="." method="_on_sair_pressed"]

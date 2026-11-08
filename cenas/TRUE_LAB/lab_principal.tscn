@@ -545,7 +545,8 @@ debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
 
 [node name="AREA_TELEPORTE" parent="teleportes" unique_id=1609416973 node_paths=PackedStringArray("cena") instance=ExtResource("3_801ib")]
 cena = NodePath("../transicoes")
-Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
+Sala = "res://cenas/TRUE_LAB/maca.tscn"
+JogadorPos = Vector2(507, -94)
 
 [node name="maca" type="CollisionShape2D" parent="teleportes/AREA_TELEPORTE" unique_id=128767652]
 position = Vector2(629.5, 594)

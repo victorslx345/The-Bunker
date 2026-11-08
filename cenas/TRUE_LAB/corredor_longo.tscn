@@ -1,0 +1,500 @@
+[gd_scene format=4 uid="uid://n8iavffwa5mn"]
+
+[ext_resource type="Script" uid="uid://c8kf41rlp31w6" path="res://scripts/LAB/corredor_longo.gd" id="1_1wjh5"]
+[ext_resource type="Texture2D" uid="uid://d4ml7sgdduedw" path="res://assets/LAB/true_lab_shelt.png" id="1_4qrlp"]
+[ext_resource type="Script" uid="uid://bswbm5veun8hj" path="res://scripts/batalha_menu/player_e_inimigos/inimigo.gd" id="2_qyw6y"]
+[ext_resource type="PackedScene" uid="uid://bbfuobu4kq02x" path="res://cenas/kris.tscn" id="3_xuleh"]
+[ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="4_gylta"]
+[ext_resource type="Texture2D" uid="uid://c26ctlic22k08" path="res://assets/LAB/IMAGE_FRIEND.jpeg" id="4_ut488"]
+[ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="5_cow5w"]
+[ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="6_1wjh5"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="7_tnxr8"]
+[ext_resource type="Texture2D" uid="uid://7q5hh3jfrdtt" path="res://assets/agamalgados/Amalgamados_spritesheelt.png" id="8_1m61n"]
+[ext_resource type="Texture2D" uid="uid://clwygibfr1c8j" path="res://assets/HUD/Soul_Menu.png" id="9_cow5w"]
+[ext_resource type="AudioStream" uid="uid://futnab5riuvp" path="res://sfx/snd_b.wav" id="9_qyw6y"]
+[ext_resource type="AudioStream" uid="uid://bmnx2o0rmrubo" path="res://sfx/snd_battlefall.wav" id="11_1wjh5"]
+[ext_resource type="AudioStream" uid="uid://bkvl6dgq6vnyi" path="res://sfx/snd_noise.wav" id="12_tnxr8"]
+[ext_resource type="AudioStream" uid="uid://4ieeytg7yfvm" path="res://sfx/mus_sfx_generate.wav" id="14_tnxr8"]
+[ext_resource type="PackedScene" uid="uid://ntyf6s7xsitn" path="res://cenas/area_teleporte.tscn" id="15_4wosw"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="16_ut488"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wosw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ut488"]
+texture = ExtResource("1_4qrlp")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(20, 20)
+0:4/0 = 0
+0:5/0 = 0
+1:3/0 = 0
+1:5/0 = 0
+2:3/0 = 0
+0:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+2:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_57yfx"]
+tile_size = Vector2i(20, 20)
+sources/1 = SubResource("TileSetAtlasSource_ut488")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdo5t"]
+size = Vector2(177, 48)
+
+[sub_resource type="Animation" id="Animation_1m61n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../fundo:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../kris:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../kris:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../kris/Alma:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../sfx/SndBattlefall:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../sfx/SndNoise:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../kris/bicho:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4wosw"]
+resource_name = "batalha"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../fundo:z_index")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../kris:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../kris:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../kris/Alma:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../sfx/SndBattlefall:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../sfx/SndNoise:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../kris/bicho:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ut488"]
+_data = {
+&"RESET": SubResource("Animation_1m61n"),
+&"batalha": SubResource("Animation_4wosw")
+}
+
+[sub_resource type="Animation" id="Animation_57yfx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("?:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.53333336)]
+}
+
+[sub_resource type="Animation" id="Animation_kwe08"]
+resource_name = "friend"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("?:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1te5j"]
+_data = {
+&"RESET": SubResource("Animation_57yfx"),
+&"friend": SubResource("Animation_kwe08")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
+size = Vector2(270, 2998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
+size = Vector2(160, 3022)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwe08"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(2, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1te5j"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(91, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovfhi"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(180, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0byr"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(269, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjpmp"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(358, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghhic"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(447, 207, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g86p4"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(2, 267, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80u8q"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(91, 267, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtu0f"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(180, 267, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb86l"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(269, 267, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xomx3"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(358, 267, 87, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyhs4"]
+atlas = ExtResource("8_1m61n")
+region = Rect2(447, 267, 87, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls2uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwe08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1te5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovfhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0byr")
+}],
+"loop": 0,
+"name": &"inicio",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjpmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghhic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g86p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80u8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtu0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb86l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xomx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyhs4")
+}],
+"loop": 0,
+"name": &"transformacao",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv2bd"]
+size = Vector2(179, 42)
+
+[node name="corredor_longo" type="Node2D" unique_id=570431156]
+texture_filter = 1
+script = ExtResource("1_1wjh5")
+
+[node name="cenario" type="Node2D" parent="." unique_id=1155069855]
+
+[node name="fundo" type="Panel" parent="cenario" unique_id=46213388]
+offset_left = -339.0
+offset_top = -2299.0
+offset_right = 1504.0
+offset_bottom = 743.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wosw")
+
+[node name="Chao" type="TileMapLayer" parent="cenario" unique_id=556624872]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAJAAoAAQADAAYAAAAKAAoAAQADAAYAAAAIAAoAAQADAAYAAAAIAPb/AQADAAYAAAAIAPf/AQADAAYAAAAIAPj/AQADAAYAAAAIAPn/AQADAAYAAAAIAPr/AQADAAYAAAAIAPv/AQADAAYAAAAIAPz/AQADAAYAAAAIAP3/AQADAAYAAAAIAP7/AQADAAYAAAAIAP//AQADAAYAAAAIAAAAAQADAAYAAAAIAAEAAQADAAYAAAAIAAIAAQADAAYAAAAIAAMAAQADAAYAAAAIAAQAAQADAAYAAAAIAAUAAQADAAYAAAAIAAYAAQADAAYAAAAIAAcAAQADAAYAAAAIAAgAAQADAAYAAAAIAAkAAQADAAYAAAAJAPb/AQADAAYAAAAJAPf/AQADAAYAAAAJAPj/AQADAAYAAAAJAPn/AQADAAYAAAAJAPr/AQADAAYAAAAJAPv/AQADAAYAAAAJAPz/AQADAAYAAAAJAP3/AQADAAYAAAAJAP7/AQADAAYAAAAJAP//AQADAAYAAAAJAAAAAQADAAYAAAAJAAEAAQADAAYAAAAJAAIAAQADAAYAAAAJAAMAAQADAAYAAAAJAAQAAQADAAYAAAAJAAUAAQADAAYAAAAJAAYAAQADAAYAAAAJAAcAAQADAAYAAAAJAAgAAQADAAYAAAAJAAkAAQADAAYAAAAKAPb/AQADAAYAAAAKAPf/AQADAAYAAAAKAPj/AQADAAYAAAAKAPn/AQADAAYAAAAKAPr/AQADAAYAAAAKAPv/AQADAAYAAAAKAPz/AQADAAYAAAAKAP3/AQADAAYAAAAKAP7/AQADAAYAAAAKAP//AQADAAYAAAAKAAAAAQADAAYAAAAKAAEAAQADAAYAAAAKAAIAAQADAAYAAAAKAAMAAQADAAYAAAAKAAQAAQADAAYAAAAKAAUAAQADAAYAAAAKAAYAAQADAAYAAAAKAAcAAQADAAYAAAAKAAgAAQADAAYAAAAKAAkAAQADAAYAAAAIAOr/AQADAAYAAAAIAOv/AQADAAYAAAAIAOz/AQADAAYAAAAIAO3/AQADAAYAAAAIAO7/AQADAAYAAAAIAO//AQADAAYAAAAIAPD/AQADAAYAAAAIAPH/AQADAAYAAAAIAPL/AQADAAYAAAAIAPP/AQADAAYAAAAIAPT/AQADAAYAAAAIAPX/AQADAAYAAAAJAOr/AQADAAYAAAAJAOv/AQADAAYAAAAJAOz/AQADAAYAAAAJAO3/AQADAAYAAAAJAO7/AQADAAYAAAAJAO//AQADAAYAAAAJAPD/AQADAAYAAAAJAPH/AQADAAYAAAAJAPL/AQADAAYAAAAJAPP/AQADAAYAAAAJAPT/AQADAAYAAAAJAPX/AQADAAYAAAAKAOr/AQADAAYAAAAKAOv/AQADAAYAAAAKAOz/AQADAAYAAAAKAO3/AQADAAYAAAAKAO7/AQADAAYAAAAKAO//AQADAAYAAAAKAPD/AQADAAYAAAAKAPH/AQADAAYAAAAKAPL/AQADAAYAAAAKAPP/AQADAAYAAAAKAPT/AQADAAYAAAAKAPX/AQADAAYAAAAIANr/AQADAAYAAAAIANv/AQADAAYAAAAIANz/AQADAAYAAAAIAN3/AQADAAYAAAAIAN7/AQADAAYAAAAIAN//AQADAAYAAAAIAOD/AQADAAYAAAAIAOH/AQADAAYAAAAIAOL/AQADAAYAAAAIAOP/AQADAAYAAAAIAOT/AQADAAYAAAAIAOX/AQADAAYAAAAIAOb/AQADAAYAAAAIAOf/AQADAAYAAAAIAOj/AQADAAYAAAAIAOn/AQADAAYAAAAJANr/AQADAAYAAAAJANv/AQADAAYAAAAJANz/AQADAAYAAAAJAN3/AQADAAYAAAAJAN7/AQADAAYAAAAJAN//AQADAAYAAAAJAOD/AQADAAYAAAAJAOH/AQADAAYAAAAJAOL/AQADAAYAAAAJAOP/AQADAAYAAAAJAOT/AQADAAYAAAAJAOX/AQADAAYAAAAJAOb/AQADAAYAAAAJAOf/AQADAAYAAAAJAOj/AQADAAYAAAAJAOn/AQADAAYAAAAKANr/AQADAAYAAAAKANv/AQADAAYAAAAKANz/AQADAAYAAAAKAN3/AQADAAYAAAAKAN7/AQADAAYAAAAKAN//AQADAAYAAAAKAOD/AQADAAYAAAAKAOH/AQADAAYAAAAKAOL/AQADAAYAAAAKAOP/AQADAAYAAAAKAOT/AQADAAYAAAAKAOX/AQADAAYAAAAKAOb/AQADAAYAAAAKAOf/AQADAAYAAAAKAOj/AQADAAYAAAAKAOn/AQADAAYAAAA=")
+tile_set = SubResource("TileSet_57yfx")
+
+[node name="inimigo" type="Node2D" parent="cenario" unique_id=523962657]
+script = ExtResource("2_qyw6y")
+
+[node name="aparecer" type="Area2D" parent="cenario/inimigo" unique_id=1160605264]
+
+[node name="hitbox" type="CollisionShape2D" parent="cenario/inimigo/aparecer" unique_id=349104825]
+position = Vector2(570.5, -1435)
+shape = SubResource("RectangleShape2D_tdo5t")
+debug_color = Color(0.4392157, 0.29411766, 0, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cenario/inimigo" unique_id=1785763768]
+libraries/ = SubResource("AnimationLibrary_ut488")
+
+[node name="friend" type="AnimationPlayer" parent="cenario/inimigo" unique_id=521716398]
+libraries/ = SubResource("AnimationLibrary_1te5j")
+autoplay = &"friend"
+
+[node name="?" type="Sprite2D" parent="cenario/inimigo" unique_id=2056156534]
+modulate = Color(1, 1, 1, 0.53333336)
+position = Vector2(257, 431)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_ut488")
+
+[node name="colisao" type="StaticBody2D" parent="cenario" unique_id=91800795]
+
+[node name="hitbox" type="CollisionShape2D" parent="cenario/colisao" unique_id=2114805370]
+position = Vector2(345, -810)
+shape = SubResource("RectangleShape2D_ls2uy")
+
+[node name="hitbox2" type="CollisionShape2D" parent="cenario/colisao" unique_id=1826022425]
+position = Vector2(740, -811)
+shape = SubResource("RectangleShape2D_5hqy4")
+
+[node name="kris" parent="." unique_id=462716732 instance=ExtResource("3_xuleh")]
+z_index = 3
+position = Vector2(565, 519)
+
+[node name="HeWeAre" parent="kris" unique_id=402198000 instance=ExtResource("4_gylta")]
+position = Vector2(-136, -349)
+
+[node name="Camera" type="Camera2D" parent="kris" unique_id=1065753712]
+limit_left = 0
+limit_top = -2284
+limit_right = 1152
+limit_bottom = 650
+
+[node name="CanvasLayer" type="CanvasLayer" parent="kris" unique_id=1315020008]
+
+[node name="borda" type="Sprite2D" parent="kris/CanvasLayer" unique_id=785892600]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_cow5w")
+
+[node name="text_box" parent="kris/CanvasLayer" unique_id=2086050303 instance=ExtResource("6_1wjh5")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+
+[node name="Menu_Stats" parent="kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("7_tnxr8")]
+
+[node name="bicho" type="AnimatedSprite2D" parent="kris" unique_id=1786880580]
+visible = false
+z_index = 3
+texture_filter = 1
+position = Vector2(0, -165)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ls2uy")
+animation = &"inicio"
+frame = 3
+frame_progress = 1.0
+
+[node name="Alma" type="Sprite2D" parent="kris" unique_id=47327269]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("9_cow5w")
+
+[node name="sfx" type="Node" parent="." unique_id=1476899070]
+
+[node name="SndB" type="AudioStreamPlayer" parent="sfx" unique_id=1146378418]
+stream = ExtResource("9_qyw6y")
+
+[node name="SndBattlefall" type="AudioStreamPlayer" parent="sfx" unique_id=723948399]
+stream = ExtResource("11_1wjh5")
+
+[node name="SndNoise" type="AudioStreamPlayer" parent="sfx" unique_id=658097074]
+stream = ExtResource("12_tnxr8")
+
+[node name="MusSfxGenerate" type="AudioStreamPlayer" parent="sfx" unique_id=1596972035]
+stream = ExtResource("14_tnxr8")
+
+[node name="teleporte" type="Node2D" parent="." unique_id=700559253]
+
+[node name="AREA_TELEPORTE" parent="teleporte" unique_id=1834485037 node_paths=PackedStringArray("cena") instance=ExtResource("15_4wosw")]
+cena = NodePath("../transicoes")
+Sala = "res://cenas/TRUE_LAB/lab_area_1.tscn"
+JogadorPos = Vector2(716, -687)
+
+[node name="hitbox" type="CollisionShape2D" parent="teleporte/AREA_TELEPORTE" unique_id=168632559]
+position = Vector2(570.5, 630)
+shape = SubResource("RectangleShape2D_jv2bd")
+debug_color = Color(0.87058824, 0.3529412, 0, 0.41960785)
+
+[node name="AREA_TELEPORTE2" parent="teleporte" unique_id=713714455 node_paths=PackedStringArray("cena") instance=ExtResource("15_4wosw")]
+cena = NodePath("../transicoes")
+
+[node name="transicoes" parent="teleporte" unique_id=1863609941 instance=ExtResource("16_ut488")]
+
+[connection signal="body_entered" from="cenario/inimigo/aparecer" to="cenario/inimigo" method="_on_aparecer_body_entered"]
+
+[editable path="kris"]

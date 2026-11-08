@@ -14,11 +14,11 @@ func _process(delta: float) -> void:
 	else:
 		$cores.play("verde_d")
 	if flag == true and Input.is_action_just_pressed('interagir'):
-		if ScriptsGlobais.chaves['verde'] == true:
+		if ScriptsGlobais.chaves['verde'] == true and ScriptsGlobais.luzes['verde'] == false:
 			ScriptsGlobais.luzes['verde'] = true
 			ScriptsGlobais.pegou_chave['verde'] = true
 			dialogo.texto = 'Você colocou a chave verde.'
-		elif ScriptsGlobais.chaves['verde'] == false and ScriptsGlobais.luzes['verde'] == true:
+		elif ScriptsGlobais.chaves['verde'] == true and ScriptsGlobais.luzes['verde'] == true:
 			dialogo.texto = 'A maquina foi ligada.'
 		elif ScriptsGlobais.chaves['verde'] == false and ScriptsGlobais.luzes['verde'] == false:
 			dialogo.texto = 'Na maquina tem um buraco, e no buraco tem uma fechadura de cor verde.'

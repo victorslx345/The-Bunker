@@ -36,4 +36,5 @@ func _on_abrir_porta_body_entered(body: Node2D) -> void:
 	if body.name == 'kris':
 		if luzes['vermelho'] == true and luzes['amarelo'] == true and luzes['verde'] == true and luzes['azul'] == true and entrada == true:
 			$Porta/animacao_porta.play("porta_abrindo")
+			$saida/anim.play("saida")
 			entrada = false

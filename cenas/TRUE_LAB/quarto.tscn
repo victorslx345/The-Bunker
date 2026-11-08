@@ -470,6 +470,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_ls2uy")
 
 [node name="chave" type="Node2D" parent="chave_amarela" unique_id=202116071]
+z_index = -1
 
 [node name="interact" type="Area2D" parent="chave_amarela/chave" unique_id=232576317]
 monitoring = false

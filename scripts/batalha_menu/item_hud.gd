@@ -13,7 +13,8 @@ var Inv = ScriptsGlobais.inventario
 @export var textos = {
 	'ovo' = '	* Voce usou o ovo e recuperou todo o HP.',
 	'salgadinho' = '	* Voce usou Salgadinho e recuperou 6 de HP.',
-	'miojo' = '	* Você comeu o Miojo cru... Recuperou 4 de HP.'
+	'miojo' = '	* Você comeu o Miojo cru... Recuperou 4 de HP.',
+	'ração' = '	* Você comeu a ração... tem gosto de comida velha. Recuperou 4 de HP.'
 }
 
 func add_vida(N:int):
@@ -61,8 +62,7 @@ func _process(delta: float) -> void:
 func _on_item_1_pressed() -> void:
 	$coluna1/item1.focus_mode = Control.FOCUS_NONE
 	if item1.text == 'ovo':
-		#ScriptsGlobais.inventario_save['slot1'] = item1.text
-#		quando a batalha terminar usa essa linha de codigo pra salvar todos os itens nao usados
+		ScriptsGlobais.inventario_save['slot1'] = item1.text
 		inv['slot1'] = ''
 		ativar_texto(item1,textos['ovo'],false)
 		add_vida(20)
@@ -73,7 +73,11 @@ func _on_item_1_pressed() -> void:
 	elif item1.text == 'miojo':
 		inv['slot1'] = ''
 		ativar_texto(item1,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item1.text == 'ração':
+		inv['slot1'] = ''
+		ativar_texto(item1,textos['ração'],false)
+		add_vida(4)
 
 
 func _on_item_2_pressed() -> void:
@@ -89,13 +93,17 @@ func _on_item_2_pressed() -> void:
 	elif item2.text == 'miojo':
 		inv['slot2'] = ''
 		ativar_texto(item2,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item2.text == 'ração':
+		inv['slot2'] = ''
+		ativar_texto(item2,textos['ração'],false)
+		add_vida(4)
 func _on_item_3_pressed() -> void:
 	$coluna1/item3.focus_mode = Control.FOCUS_NONE
 	if item3.text == 'ovo':
 		inv['slot3'] = ''
 		ativar_texto(item3,textos['ovo'],false)
-		add_vida(6)
+		add_vida(20)
 	elif item3.text == 'salgadinho':
 		inv['slot3'] = ''
 		ativar_texto(item3,textos['salgadinho'],false)
@@ -103,13 +111,17 @@ func _on_item_3_pressed() -> void:
 	elif item3.text == 'miojo':
 		inv['slot3'] = ''
 		ativar_texto(item3,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item3.text == 'ração':
+		inv['slot3'] = ''
+		ativar_texto(item3,textos['ração'],false)
+		add_vida(4)
 func _on_item_4_pressed() -> void:
 	$coluna1/item4.focus_mode = Control.FOCUS_NONE
 	if item4.text == 'ovo':
 		inv['slot4'] = ''
 		ativar_texto(item4,textos['ovo'],false)
-		add_vida(6)
+		add_vida(20)
 	elif item4.text == 'salgadinho':
 		inv['slot4'] = ''
 		ativar_texto(item4,textos['salgadinho'],false)
@@ -117,13 +129,17 @@ func _on_item_4_pressed() -> void:
 	elif item4.text == 'miojo':
 		inv['slot4'] = ''
 		ativar_texto(item4,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item4.text == 'ração':
+		inv['slot4'] = ''
+		ativar_texto(item4,textos['ração'],false)
+		add_vida(4)
 func _on_item_5_pressed() -> void:
 	$coluna1/item5.focus_mode = Control.FOCUS_NONE
 	if item5.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item5,textos['ovo'],false)
-		add_vida(6)
+		add_vida(20)
 	elif item5.text == 'salgadinho':
 		inv['slot5'] = ''
 		ativar_texto(item5,textos['salgadinho'],false)
@@ -131,13 +147,17 @@ func _on_item_5_pressed() -> void:
 	elif item5.text == 'miojo':
 		inv['slot5'] = ''
 		ativar_texto(item5,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item5.text == 'ração':
+		inv['slot5'] = ''
+		ativar_texto(item5,textos['ração'],false)
+		add_vida(4)
 func _on_item_6_pressed() -> void:
 	$coluna1/item6.focus_mode = Control.FOCUS_NONE
 	if item6.text == 'ovo':
 		inv['slot5'] = ''
 		ativar_texto(item6,textos['ovo'],false)
-		add_vida(6)
+		add_vida(20)
 	elif item6.text == 'salgadinho':
 		inv['slot6'] = ''
 		ativar_texto(item6,textos['salgadinho'],false)
@@ -145,4 +165,8 @@ func _on_item_6_pressed() -> void:
 	elif item6.text == 'miojo':
 		inv['slot6'] = ''
 		ativar_texto(item6,textos['miojo'],false)
-		add_vida(6)
+		add_vida(4)
+	elif item6.text == 'ração':
+		inv['slot6'] = ''
+		ativar_texto(item6,textos['ração'],false)
+		add_vida(4)

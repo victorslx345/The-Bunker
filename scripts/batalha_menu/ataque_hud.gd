@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 		$barra.visible = true
 		$barra.move_local_x(10)
 		if $barra.position.x > 840 or hit == true:
+			barra = false
 			if critico == true:
 				$barra/critico.play("critico")
 				critico = false
@@ -40,7 +41,7 @@ func _process(delta: float) -> void:
 			else:
 				dano_final = str(int(dano_teste*porcentagem))
 				dano_real = int(dano_final)
-			barra = false
+			
 			hit = false
 			indicador_dano.text = dano_final
 			$ataque_vfx/slash.play("slash")
@@ -68,9 +69,10 @@ func _process(delta: float) -> void:
 				$"../../hud".visible = true
 				$"../../hud/text_container/texto".visible = true
 				$"../../dog_amalgamate/AnimationPlayer".play("morte")
+				$"../../sfx/UndertaleSoundEffectMonsterDyingMadeWithVoicemod".play(0.47)
 				$"../../hud/text_container".apagar_texto = true
 				$"../../hud/text_container".can_play = true
-				$"../../hud/text_container".texto = '	* Você venceu!\n * O inimigo deixou cair algo.'
+				$"../../hud/text_container".texto = '	* Você venceu!\n * O inimigo se desfez na sua frente.'
 				$"../..".fim = true
 	if timing_do_ataque == true and Input.is_action_just_pressed("interagir"):
 		hit = true

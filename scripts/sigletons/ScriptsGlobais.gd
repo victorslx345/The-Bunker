@@ -3,12 +3,15 @@ extends Node
 var anim: bool = true
 var msc_tempo: float
 var DarkWorld: bool
+var alma_pos: Vector2
+var kris_pos: Vector2
+var derrotou:bool
 @export var kris_status = {
 	'vida_max' : 20,
 	'vida' : 20,
 	'dano' : 10,
 	'defesa' : 0,
-	'alma_pos_x' : 0
+	'alma_pos_x' : 0,
 }
 #scrpit para aplicar a defesa
 #dano -= (dano*kris_status['defesa'])
@@ -27,6 +30,13 @@ var inventario_save = {
 	'slot4': '',
 	'slot5': '',
 	'slot6': '',
+}
+var kris_status_save = {
+	'vida_max' : 20,
+	'vida' : 20,
+	'dano' : 10,
+	'defesa' : 0,
+	'alma_pos_x' : 0
 }
 var luzes = {
 	'vermelho' = false,
@@ -49,7 +59,8 @@ var pegou_chave = {
 var itens = {
 	'ovo' : false,
 	'salgadinho' : false,
-	'miojo' : false
+	'miojo' : false,
+	'ração' : false
 	
 }
 func add_item(item):

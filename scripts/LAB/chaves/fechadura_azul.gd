@@ -15,13 +15,13 @@ func _process(delta: float) -> void:
 	else:
 		$cores.play("azul_d")
 	if flag == true and Input.is_action_just_pressed('interagir'):
-		if ScriptsGlobais.chaves['azul'] == true:
+		if ScriptsGlobais.chaves['azul'] == true and ScriptsGlobais.luzes['azul'] == false:
 			dialogo.texto = 'Você colocou a chave azul.'
 			ScriptsGlobais.luzes['azul'] = true
 			ScriptsGlobais.pegou_chave['azul'] = true
-		elif ScriptsGlobais.chaves['azul'] == false and ScriptsGlobais.luzes['amarelo'] == true:
+		elif ScriptsGlobais.chaves['azul'] == true and ScriptsGlobais.luzes['azul'] == true:
 			dialogo.texto = 'A maquina foi ligada.'
-		elif ScriptsGlobais.chaves['azul'] == false and ScriptsGlobais.luzes['amarelo'] == false:
+		elif ScriptsGlobais.chaves['azul'] == false and ScriptsGlobais.luzes['azul'] == false:
 			dialogo.texto = 'Na maquina tem um buraco, e no buraco tem uma fechadura de cor azul.'
 
 

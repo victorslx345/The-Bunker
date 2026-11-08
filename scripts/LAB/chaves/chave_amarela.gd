@@ -9,6 +9,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $"../kris".position.y > 110:
+		$lencol.z_index = 0
+	else:
+		$lencol.z_index = 1
 	if ScriptsGlobais.chaves['amarelo'] == false:
 		if lencol == true and Input.is_action_just_pressed('interagir'):
 			lencol = false
@@ -17,6 +21,7 @@ func _process(delta: float) -> void:
 			$cama.monitoring = false
 			$chave/interact.monitorable = true
 			$chave/interact.monitoring = true
+			$chave.z_index = 1
 		if chave == true and Input.is_action_just_pressed('interagir') and dialogo.fim_dial == true:
 			chave = false
 			$chave/interact.monitorable = true

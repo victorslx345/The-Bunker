@@ -42,10 +42,14 @@ func _physics_process(delta: float) -> void:
 	if mover == true and darkworld == false:
 		$darkworld.visible = false
 		$darkworld_idle.visible = false
-		
-		if velocity.x == 0 and velocity.y == 0:
-			$idle.visible = true
-			$kris_sprites.visible = false
+		if darkworld == false:
+			if velocity.x == 0 and velocity.y == 0:
+				$idle.visible = true
+				$kris_sprites.visible = false
+		else:
+			if velocity.x == 0 and velocity.y == 0:
+				$darkworld.hide()
+				$darkworld_idle.visible = true
 		if Input.is_action_pressed('ui_up'):
 			velocity.y = -1*velocidade
 			$kris_sprites.flip_h = false

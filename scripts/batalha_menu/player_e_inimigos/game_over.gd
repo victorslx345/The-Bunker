@@ -14,7 +14,12 @@ func _process(delta: float) -> void:
 
 
 func _on_continuar_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/batalha/Inimigos/batalha_menu_enondogy.tscn")
+	ScriptsGlobais.inventario['slot1'] = ScriptsGlobais.inventario_save['slot1']
+	ScriptsGlobais.inventario['slot2'] = ScriptsGlobais.inventario_save['slot2']
+	ScriptsGlobais.inventario['slot4'] = ScriptsGlobais.inventario_save['slot4']
+	ScriptsGlobais.inventario['slot5'] = ScriptsGlobais.inventario_save['slot5']
+	ScriptsGlobais.inventario['slot6'] = ScriptsGlobais.inventario_save['slot6']
+	get_tree().change_scene_to_file('res://cenas/TRUE_LAB/lab_area_1.tscn')
 	
 	
 
