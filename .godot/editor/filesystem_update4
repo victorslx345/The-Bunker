@@ -1,7 +1,2 @@
-res://cenas/batalha/Inimigos/dog_amalgamate.tscn
-res://scripts/batalha_menu/player_e_inimigos/enondogy/padrao_de_ataque.gd
-res://cenas/batalha/game_over.tscn
-res://scripts/batalha_menu/player_e_inimigos/game_over.gd
+res://scripts/elevador.gd
 res://cenas/TRUE_LAB/corredor_longo.tscn
-res://cenas/batalha/Inimigos/batalha_menu_enondogy.tscn
-res://cenas/batalha/Inimigos/foice.tscn
