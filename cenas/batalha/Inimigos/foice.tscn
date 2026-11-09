@@ -167,7 +167,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
-size = Vector2(40, 728)
+size = Vector2(37.489998, 728)
 
 [node name="foice" type="Area2D" unique_id=1879864152]
 texture_filter = 1
@@ -206,7 +206,7 @@ monitoring = false
 monitorable = false
 
 [node name="hitbox" type="CollisionShape2D" parent="explosao_hitbox" unique_id=1930440423]
-position = Vector2(0, -340)
+position = Vector2(1.2549992, -340)
 shape = SubResource("RectangleShape2D_5hqy4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

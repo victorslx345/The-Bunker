@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if turno > 4:
+	if turno > 3:
 		turno = 1
 	if rodar == true and Input.is_action_just_pressed('1'):
 		turno = 1

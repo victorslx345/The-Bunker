@@ -19,10 +19,9 @@ func _on_continuar_pressed() -> void:
 	ScriptsGlobais.inventario['slot4'] = ScriptsGlobais.inventario_save['slot4']
 	ScriptsGlobais.inventario['slot5'] = ScriptsGlobais.inventario_save['slot5']
 	ScriptsGlobais.inventario['slot6'] = ScriptsGlobais.inventario_save['slot6']
+	ScriptsGlobais.kris_status['vida'] = ScriptsGlobais.kris_status['vida_max']
 	get_tree().change_scene_to_file('res://cenas/TRUE_LAB/lab_area_1.tscn')
 	
-	
-
 
 func _on_sair_pressed() -> void:
 	queue_free()
