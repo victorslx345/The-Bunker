@@ -45,5 +45,5 @@ func _process(delta: float) -> void:
 		end = false
 		$texto.text = ''
 		SingnalManager.mover.emit()
-		fim_dial = false
+		
 		

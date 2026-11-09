@@ -1295,15 +1295,16 @@ offset_left = 36.0
 offset_top = 14.0
 offset_right = 782.0
 offset_bottom = 153.0
+theme_override_constants/separation = 155
 
 [node name="acao1" type="Button" parent="acoes_hud/agir_hud/coluna1" unique_id=897796790]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 35)
 custom_maximum_size = Vector2(-1, 35)
 layout_mode = 2
-focus_neighbor_left = NodePath(".")
+focus_neighbor_left = NodePath("../acao2")
 focus_neighbor_top = NodePath(".")
-focus_neighbor_right = NodePath(".")
+focus_neighbor_right = NodePath("../acao2")
 focus_neighbor_bottom = NodePath(".")
 theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.8390919, 0.80389476, 7.70092e-07, 1)
@@ -1324,6 +1325,38 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ffrte")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_oj44c")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ffrte")
 text = "*  Se acalmar"
+icon = ExtResource("15_4sgft")
+alignment = 0
+expand_icon = true
+
+[node name="acao2" type="Button" parent="acoes_hud/agir_hud/coluna1" unique_id=1095991449]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 35)
+custom_maximum_size = Vector2(-1, 35)
+layout_mode = 2
+focus_neighbor_left = NodePath("../acao1")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../acao1")
+focus_neighbor_bottom = NodePath(".")
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8390919, 0.80389476, 7.70092e-07, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_constants/h_separation = 15
+theme_override_constants/icon_max_width = 29
+theme_override_fonts/font = ExtResource("11_km3qq")
+theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("15_4sgft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3abhc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_82g5c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ffrte")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_oj44c")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ffrte")
+text = "*  Se concentrar"
 icon = ExtResource("15_4sgft")
 alignment = 0
 expand_icon = true
@@ -1890,6 +1923,7 @@ libraries/ = SubResource("AnimationLibrary_c5qcm")
 [node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("80_viuxj")]
 
 [connection signal="pressed" from="acoes_hud/agir_hud/coluna1/acao1" to="acoes_hud/agir_hud" method="_on_acao_1_pressed"]
+[connection signal="pressed" from="acoes_hud/agir_hud/coluna1/acao2" to="acoes_hud/agir_hud" method="_on_acao_2_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item1" to="acoes_hud/item_hud" method="_on_item_1_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item2" to="acoes_hud/item_hud" method="_on_item_2_pressed"]
 [connection signal="pressed" from="acoes_hud/item_hud/coluna1/item3" to="acoes_hud/item_hud" method="_on_item_3_pressed"]

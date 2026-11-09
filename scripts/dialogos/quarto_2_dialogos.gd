@@ -30,6 +30,7 @@ func _on_estante_1_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.can_play = false
 		dialogo.texto = ''
+		dialogo.fim_dial = false
 
 
 func _on_estante_2_body_entered(body: Node2D) -> void:
@@ -42,6 +43,7 @@ func _on_estante_2_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.can_play = false
 		dialogo.texto = ''
+		dialogo.fim_dial = false
 
 
 func _on_estante_3_body_entered(body: Node2D) -> void:
@@ -54,6 +56,7 @@ func _on_estante_3_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.can_play = false
 		dialogo.texto = ''
+		dialogo.fim_dial = false
 
 
 
@@ -68,6 +71,7 @@ func _on_geladeira_body_exited(body: Node2D) -> void:
 		dialogo.can_play = false
 		flag = false
 		dialogo.texto = ''
+		dialogo.fim_dial = false
 
 
 func _on_cama_body_entered(body: Node2D) -> void:
@@ -79,3 +83,4 @@ func _on_cama_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.can_play = false
 		dialogo.texto = ''
+		dialogo.fim_dial = false

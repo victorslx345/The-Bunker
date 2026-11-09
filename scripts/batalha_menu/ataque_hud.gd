@@ -7,6 +7,7 @@ extends Control
 @onready var kris_status = ScriptsGlobais.kris_status
 @onready var vida = $"../../hud/status_hud/vida".vida
 @export var animacao_dano: AnimationPlayer
+@export var dano_boost:float = 1
 var critico: bool
 var hit: bool
 var dano_teste: float = 10
@@ -32,14 +33,14 @@ func _process(delta: float) -> void:
 			if critico == true:
 				$barra/critico.play("critico")
 				critico = false
-				dano_final = str(int(dano_teste*porcentagem))
+				dano_final = str(int((dano_teste*dano_boost)*porcentagem))
 				dano_real = int(dano_final)
 			if miss == true:
 				dano_final = 'Errou'
 				miss = false
 				dano_real = 0
 			else:
-				dano_final = str(int(dano_teste*porcentagem))
+				dano_final = str(int((dano_teste*dano_boost)*porcentagem))
 				dano_real = int(dano_final)
 			
 			hit = false

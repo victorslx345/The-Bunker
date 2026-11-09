@@ -67,6 +67,7 @@ func _process(delta: float) -> void:
 			visible = false
 			$"..".dialogo_turnos_cont += 1
 			$"..".turnos += 1
+			$"../acoes_hud/agir_hud".turno += 1
 			SingnalManager.turno.emit()
 			$"../acts_hud".modo = 'acao'
 			$"../acts_hud/botoes/atacar".grab_focus()

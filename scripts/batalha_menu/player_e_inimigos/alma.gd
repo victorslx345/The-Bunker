@@ -15,8 +15,9 @@ func i_frame():
 func _physics_process(delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
-	ScriptsGlobais.alma_pos = position
+	ScriptsGlobais.alma_pos = global_position
 	ScriptsGlobais.kris_status['alma_pos_x'] = position.x
+	ScriptsGlobais.kris_status['alma_pos_y'] = position.y
 	if ScriptsGlobais.kris_status['vida'] <= 0 and game_over == false:
 		game_over = true
 		SingnalManager.batalha_termina.emit()
