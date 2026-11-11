@@ -61,12 +61,14 @@ func _on_foice_1_body_entered(body: Node2D) -> void:
 	if body.is_in_group('alma'):
 		print('dano')
 		dar_dano(3)
+		print('foice1')
 
 
 func _on_foice_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group('alma'):
 		print('dano')
 		dar_dano(3)
+		print('foice2')
 
 
 func _on_timer_timeout() -> void:

@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 		$coluna1.visible = true
 		hide()
 	if turno-guarda_turno == 4:
-		turno = 1
+		turno = -9999
 		$"../ataque_hud".dano_boost = 1
 
 func _on_acao_1_pressed() -> void:

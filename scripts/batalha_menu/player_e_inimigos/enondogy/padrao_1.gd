@@ -64,3 +64,4 @@ func _on_colisao_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == 'alma':
 		dar_dano(3)
+		print('dogy')
