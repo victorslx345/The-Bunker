@@ -8,6 +8,12 @@
 [ext_resource type="AudioStream" uid="uid://cc6j0hra7b4g6" path="res://sfx/snd_tempbell.wav" id="4_qdt8b"]
 [ext_resource type="AudioStream" uid="uid://c2qvyxgevg0jr" path="res://musicas/undertale-long-elevator.mp3" id="5_7rdks"]
 [ext_resource type="AudioStream" uid="uid://p258m742kkdu" path="res://sfx/snd_elecdoor_close.wav" id="6_o3l48"]
+[ext_resource type="AudioStream" uid="uid://cb1ro38uxgl3g" path="res://sfx/snd_bombsplosion.wav" id="6_ou31b"]
+[ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="6_tifad"]
+[ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="7_pso7b"]
+[ext_resource type="AudioStream" uid="uid://ck5hr3wfc0u28" path="res://sfx/mus_f_destroyed.ogg" id="7_sabmk"]
+[ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="8_pkr23"]
+[ext_resource type="AudioStream" uid="uid://drw51eg1vu1ay" path="res://sfx/impact.ogg" id="11_sabmk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
 bg_color = Color(0, 0, 0, 1)
@@ -155,6 +161,66 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("sfx/SndBombsplosion:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("sfx/MusFDestroyed:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("cenario/kris/darkworld:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("cenario/kris/darkworld_idle:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("cenario/kris/darkworld:animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"up"]
+}
 
 [sub_resource type="Animation" id="Animation_7rdks"]
 resource_name = "elevador"
@@ -166,10 +232,10 @@ tracks/0/path = NodePath("cenario:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 0.85, 2, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1.3333334, 2.5666666, 5, 6.21, 6.5666666, 6.73, 7.5, 7.9, 8.533334, 9.55, 12, 12.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-9, 0), Vector2(9, 0), Vector2(0, 0), Vector2(0, -19), Vector2(0, -38), Vector2(0, -38)]
+"values": [Vector2(0, 0), Vector2(-9, 0), Vector2(9, 0), Vector2(0, 0), Vector2(0, 19), Vector2(0, 38), Vector2(0, 40.005), Vector2(0, 47.565), Vector2(0, 0), Vector2(0, 10), Vector2(0, 10), Vector2(0, -20.265), Vector2(0, -40.755), Vector2(0, -89.69), Vector2(0, -120), Vector2(0, 120)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -178,10 +244,101 @@ tracks/1/path = NodePath("sfx/UndertaleLongElevator:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.76666665, 6.21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sfx/SndBombsplosion:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(6.22),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sfx/MusFDestroyed:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.5, 12.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cenario/kris")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pode_mover"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cenario/kris/darkworld")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(7.9, 12.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"caindo"],
+"method": &"play"
+}, {
+"args": [&"caido"],
+"method": &"play"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("cenario/kris/darkworld:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("cenario/kris/darkworld_idle:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("cenario/kris/darkworld:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.9, 12.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"caindo", &"caido"]
 }
 
 [sub_resource type="Animation" id="Animation_mvbyk"]
@@ -255,6 +412,67 @@ _data = {
 &"fim": SubResource("Animation_mvbyk")
 }
 
+[sub_resource type="Animation" id="Animation_ou31b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cenario/luz_vermelha:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cenario/luz_vermelha:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sabmk"]
+resource_name = "luzes"
+length = 4.699999999999999
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cenario/luz_vermelha:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cenario/luz_vermelha:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 4.7, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3udcw"]
+_data = {
+&"RESET": SubResource("Animation_ou31b"),
+&"luzes": SubResource("Animation_sabmk")
+}
+
 [node name="elevador" type="Node2D" unique_id=2000602011]
 texture_filter = 1
 script = ExtResource("1_qdt8b")
@@ -284,7 +502,7 @@ texture = ExtResource("2_ep2dh")
 [node name="porta_e" type="Panel" parent="cenario" unique_id=435253722]
 offset_left = 375.0
 offset_top = 540.0
-offset_right = 470.99976
+offset_right = 470.99982
 offset_bottom = 678.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5hqy4")
 
@@ -336,11 +554,29 @@ position = Vector2(559, 571)
 
 [node name="darkworld" parent="cenario/kris" index="4" unique_id=1343586256]
 animation = &"up"
-frame_progress = 0.96911263
+frame_progress = 0.0
 
 [node name="darkworld_idle" parent="cenario/kris" index="5" unique_id=45392325]
-animation = &"up"
-frame_progress = 0.30351743
+animation = &"right"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="cenario/kris" unique_id=825244853]
+
+[node name="borda" type="Sprite2D" parent="cenario/kris/CanvasLayer" unique_id=1789906858]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_tifad")
+
+[node name="text_box" parent="cenario/kris/CanvasLayer" unique_id=2086050303 instance=ExtResource("7_pso7b")]
+visible = false
+texture_filter = 1
+position = Vector2(571, 494)
+texto = ""
+
+[node name="Menu_Stats" parent="cenario/kris/CanvasLayer" unique_id=1244309477 instance=ExtResource("8_pkr23")]
+z_index = 4096
+offset_right = 214.0
+offset_bottom = 207.0
 
 [node name="interact" type="Area2D" parent="." unique_id=46012765]
 
@@ -353,7 +589,16 @@ debug_color = Color(0.6872441, 0.5001149, 0, 0.41960785)
 libraries/ = SubResource("AnimationLibrary_n633u")
 autoplay = &"kris_entrada"
 
+[node name="luz" type="AnimationPlayer" parent="." unique_id=480986713]
+libraries/ = SubResource("AnimationLibrary_3udcw")
+
 [node name="sfx" type="Node" parent="." unique_id=169478828]
+
+[node name="SndBombsplosion" type="AudioStreamPlayer" parent="sfx" unique_id=243643099]
+stream = ExtResource("6_ou31b")
+
+[node name="MusFDestroyed" type="AudioStreamPlayer" parent="sfx" unique_id=991199388]
+stream = ExtResource("7_sabmk")
 
 [node name="SndTempbell" type="AudioStreamPlayer" parent="sfx" unique_id=1655663047]
 stream = ExtResource("4_qdt8b")
@@ -363,6 +608,9 @@ stream = ExtResource("5_7rdks")
 
 [node name="SndElecdoorClose" type="AudioStreamPlayer" parent="sfx" unique_id=490714240]
 stream = ExtResource("6_o3l48")
+
+[node name="Impact" type="AudioStreamPlayer" parent="sfx" unique_id=624376584]
+stream = ExtResource("11_sabmk")
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_exited" from="interact" to="." method="_on_interact_body_exited"]
