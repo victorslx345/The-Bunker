@@ -9,7 +9,7 @@ func dar_dano(valor):
 	return
 
 func _ready() -> void:
-	posicao_y = randf_range(-0.5,0.5)
+	posicao_y = randf_range(-0.65,0.65)
 	posicao_x = -1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

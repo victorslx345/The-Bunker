@@ -18,6 +18,7 @@ func _on_aparecer_body_entered(body: Node2D) -> void:
 		SingnalManager.mover.emit()
 		ScriptsGlobais.inventario_save['slot1'] = ScriptsGlobais.inventario['slot1']
 		ScriptsGlobais.inventario_save['slot2'] = ScriptsGlobais.inventario['slot2']
+		ScriptsGlobais.inventario_save['slot3'] = ScriptsGlobais.inventario['slot3']
 		ScriptsGlobais.inventario_save['slot4'] = ScriptsGlobais.inventario['slot4']
 		ScriptsGlobais.inventario_save['slot5'] = ScriptsGlobais.inventario['slot5']
 		ScriptsGlobais.inventario_save['slot6'] = ScriptsGlobais.inventario['slot6']

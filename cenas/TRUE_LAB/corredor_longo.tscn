@@ -265,10 +265,16 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls2uy"]
-size = Vector2(270, 2969)
+size = Vector2(970, 2638)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
 size = Vector2(160, 2980)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgsbm"]
+size = Vector2(983, 231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckrqy"]
+size = Vector2(65, 158)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aue8o"]
 atlas = ExtResource("1_4qrlp")
@@ -592,7 +598,7 @@ script = ExtResource("1_1wjh5")
 [node name="cenario" type="Node2D" parent="." unique_id=1155069855]
 
 [node name="fundo" type="Panel" parent="cenario" unique_id=46213388]
-offset_left = -339.0
+offset_left = -1984.0
 offset_top = -2546.0
 offset_right = 1504.0
 offset_bottom = 743.0
@@ -630,12 +636,20 @@ texture = ExtResource("4_ut488")
 [node name="colisao" type="StaticBody2D" parent="cenario" unique_id=91800795]
 
 [node name="hitbox" type="CollisionShape2D" parent="cenario/colisao" unique_id=2114805370]
-position = Vector2(345, -795.5)
+position = Vector2(-5, -961)
 shape = SubResource("RectangleShape2D_ls2uy")
 
 [node name="hitbox2" type="CollisionShape2D" parent="cenario/colisao" unique_id=1826022425]
 position = Vector2(740, -790)
 shape = SubResource("RectangleShape2D_5hqy4")
+
+[node name="hitbox3" type="CollisionShape2D" parent="cenario/colisao" unique_id=1361040771]
+position = Vector2(-11.5, 631.5)
+shape = SubResource("RectangleShape2D_dgsbm")
+
+[node name="hitbox4" type="CollisionShape2D" parent="cenario/colisao" unique_id=340420757]
+position = Vector2(447.5, 437)
+shape = SubResource("RectangleShape2D_ckrqy")
 
 [node name="elevador" type="Node2D" parent="cenario" unique_id=1450656916]
 scale = Vector2(3, 3)

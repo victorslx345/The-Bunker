@@ -36,8 +36,11 @@ func _process(delta: float) -> void:
 	if $"..".turno == 4:
 		if comecar == true:
 			comecar = false
+			$Timer.start()
+			SingnalManager.lazer.emit()
 		if terminar == true:
 			terminar = false
+			$Timer.stop()
 
 
 

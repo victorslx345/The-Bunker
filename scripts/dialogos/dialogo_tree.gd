@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 				$"../kris/egg".play()
 				if item_pego == false:
 					ScriptsGlobais.add_item('ovo')
+					ScriptsGlobais.itens['ovo'] = true
 					item_pego = true
 				print(ScriptsGlobais.inventario)
 				man = false

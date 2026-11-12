@@ -20,3 +20,15 @@ func _on_interact_body_exited(body: Node2D) -> void:
 	if body.name == 'kris':
 		dialogo.texto = ''
 		dialogo.can_play = false
+
+
+func _on_desenho_body_entered(body: Node2D) -> void:
+	if body.name == 'kris':
+		dialogo.texto = 'Ha um desenho de uma arvore entre as salas.'
+		dialogo.can_play = true
+
+
+func _on_desenho_body_exited(body: Node2D) -> void:
+	if body.name == 'kris':
+		dialogo.texto = ''
+		dialogo.can_play = false

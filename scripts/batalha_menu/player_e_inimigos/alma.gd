@@ -3,7 +3,7 @@ extends CharacterBody2D
 var tempo_if = 1
 var velocidade = 100
 var game_over = false
-@export var Controle: bool = true
+@export var Controle: bool
 func i_frame():
 	$"../../sfx/SndHurt1C".play()
 	collision_layer = 0

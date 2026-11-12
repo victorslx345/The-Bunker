@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dopl12oc30dxt" path="res://scripts/batalha_menu/player_e_inimigos/enondogy/blaster_1.gd" id="1_46gqh"]
 [ext_resource type="Texture2D" uid="uid://bt54fog6qkqh0" path="res://assets/agamalgados/Enondogy/gaster_blaster (1).png" id="2_ylej4"]
+[ext_resource type="AudioStream" uid="uid://dyeda7wq31gbk" path="res://sfx/mus_sfx_a_gigatalk.wav" id="3_ppcoq"]
+[ext_resource type="AudioStream" uid="uid://nghliewau228" path="res://sfx/mus_sfx_segapower.wav" id="4_txwsb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgsbm"]
-size = Vector2(23.999994, 195.33333)
+size = Vector2(23.999994, 2100.0002)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny6kh"]
 atlas = ExtResource("2_ylej4")
@@ -97,38 +99,82 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("lazer:monitoring")
+tracks/3/path = NodePath("lazer/cor:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("lazer:monitorable")
+tracks/4/path = NodePath("sprite:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("lazer/cor:modulate")
+tracks/5/path = NodePath("sprite:animation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("lazer/hitbox:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_46gqh"]
+resource_name = "fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ylej4"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_yd1ae"]
@@ -144,7 +190,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 198), Vector2(23.666672, 198), Vector2(23.666672, 198), Vector2(0, 198)]
+"values": [Vector2(0, 636), Vector2(30.267, 636), Vector2(30.267, 636), Vector2(0, 636)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -156,7 +202,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(187.66667, 43), Vector2(174.66667, 43), Vector2(174.66667, 43), Vector2(187.66667, 43)]
+"values": [Vector2(0, 10), Vector2(-14.925, 10), Vector2(-14.925, 10), Vector2(0, 10)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -168,61 +214,63 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(187.66667, 144.66667), Vector2(186.66667, 144.33333), Vector2(186.66667, 144.33333), Vector2(187.66667, 144.66667)]
+"values": [Vector2(0, 144.667), Vector2(0, 144.333), Vector2(0, 144.333), Vector2(0, 144.667)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("lazer:monitoring")
+tracks/3/path = NodePath("lazer/cor:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("lazer:monitorable")
+tracks/4/path = NodePath("sprite:animation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [&"default"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("lazer/cor:modulate")
+tracks/5/path = NodePath("lazer/hitbox:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(0, 0), Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6dsl5"]
 _data = {
 &"RESET": SubResource("Animation_yirok"),
+&"fade_in": SubResource("Animation_46gqh"),
+&"fade_out": SubResource("Animation_ylej4"),
 &"lazer1": SubResource("Animation_yd1ae")
 }
 
 [node name="Blaster1" type="Node2D" unique_id=1972455132 node_paths=PackedStringArray("animacao")]
 texture_filter = 1
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_46gqh")
 animacao = NodePath("anim")
 
 [node name="lazer" type="Area2D" parent="." unique_id=585637082]
-monitoring = false
-monitorable = false
 
 [node name="cor" type="ColorRect" parent="lazer" unique_id=1642126696]
+modulate = Color(1, 1, 1, 0)
 offset_left = 173.99998
 offset_top = 43.0
 offset_right = 201.0
@@ -230,11 +278,24 @@ offset_bottom = 241.0
 
 [node name="hitbox" type="CollisionShape2D" parent="lazer" unique_id=770321267]
 position = Vector2(187.5, 144.66667)
+scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_dgsbm")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=521399093]
-position = Vector2(186.33334, 33.333336)
+modulate = Color(1, 1, 1, 0)
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_5hqy4")
 
 [node name="anim" type="AnimationPlayer" parent="." unique_id=1771687733]
 libraries/ = SubResource("AnimationLibrary_6dsl5")
+autoplay = &"fade_in"
+
+[node name="sfx" type="Node" parent="." unique_id=1944887901]
+
+[node name="MusSfxAGigatalk" type="AudioStreamPlayer" parent="sfx" unique_id=1923515604]
+stream = ExtResource("3_ppcoq")
+
+[node name="MusSfxSegapower" type="AudioStreamPlayer" parent="sfx" unique_id=1861254334]
+stream = ExtResource("4_txwsb")
+
+[connection signal="body_entered" from="lazer" to="." method="_on_lazer_body_entered"]

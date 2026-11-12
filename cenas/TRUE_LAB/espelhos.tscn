@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://to6yiogtkuft" path="res://cenas/nevoa.tscn" id="3_svcep"]
 [ext_resource type="PackedScene" uid="uid://r8wlyobsnf7h" path="res://cenas/he_we_are.tscn" id="4_23wlg"]
 [ext_resource type="Script" uid="uid://h8uv10kep7a5" path="res://scripts/LAB/chaves/fechadura_vermelha.gd" id="4_go5o8"]
+[ext_resource type="Texture2D" uid="uid://cfyqjw82wnsly" path="res://assets/egg/desenho_arvore (1).png" id="5_0f26m"]
 [ext_resource type="Texture2D" uid="uid://dpoqxgpt0awbu" path="res://assets/bordas/Borcda_breu.png" id="5_n3bfp"]
 [ext_resource type="PackedScene" uid="uid://cm4uo64j7tqq6" path="res://cenas/text_box.tscn" id="6_svcep"]
 [ext_resource type="PackedScene" uid="uid://bty3ayihiokfg" path="res://cenas/menu_stats.tscn" id="7_go5o8"]
@@ -120,7 +121,7 @@ size = Vector2(43.25, 356)
 size = Vector2(2100, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdo5t"]
-size = Vector2(1440, 46)
+size = Vector2(1440, 49)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kvnc"]
 atlas = ExtResource("1_pri8q")
@@ -307,7 +308,11 @@ size = Vector2(249, 180)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqy4"]
 size = Vector2(120, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv2bd"]
+size = Vector2(40, 107)
+
 [node name="espelhos" type="Node2D" unique_id=794898531]
+texture_filter = 1
 script = ExtResource("1_n3bfp")
 
 [node name="cenario" type="StaticBody2D" parent="." unique_id=1399292443]
@@ -353,7 +358,7 @@ position = Vector2(330, 498)
 shape = SubResource("RectangleShape2D_2hl1l")
 
 [node name="hitbox_espelhos" type="CollisionShape2D" parent="cenario/paredes" unique_id=2080985711]
-position = Vector2(0, 255)
+position = Vector2(0, 256.5)
 shape = SubResource("RectangleShape2D_tdo5t")
 
 [node name="nevoa" parent="cenario" unique_id=1502976648 instance=ExtResource("3_svcep")]
@@ -377,6 +382,11 @@ animation = &"vermelho_d"
 [node name="hitbox" type="CollisionShape2D" parent="cenario/fechadura_vermelha/interacao" unique_id=668777267]
 position = Vector2(304.33334, 79)
 shape = SubResource("RectangleShape2D_ls2uy")
+
+[node name="desenho" type="Sprite2D" parent="cenario" unique_id=1446925009]
+position = Vector2(1057, 219)
+scale = Vector2(2, 2)
+texture = ExtResource("5_0f26m")
 
 [node name="teleportes" type="StaticBody2D" parent="." unique_id=1631150950]
 
@@ -464,7 +474,16 @@ position = Vector2(-180, 259)
 shape = SubResource("RectangleShape2D_5hqy4")
 debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
 
+[node name="desenho" type="Area2D" parent="dialogo_espelhos" unique_id=1990123666]
+
+[node name="hitbox" type="CollisionShape2D" parent="dialogo_espelhos/desenho" unique_id=471311350]
+position = Vector2(1058, 244.5)
+shape = SubResource("RectangleShape2D_jv2bd")
+debug_color = Color(0.6431373, 0.5254902, 0, 0.41960785)
+
 [connection signal="body_entered" from="cenario/fechadura_vermelha/interacao" to="cenario/fechadura_vermelha" method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="cenario/fechadura_vermelha/interacao" to="cenario/fechadura_vermelha" method="_on_interacao_body_exited"]
 [connection signal="body_entered" from="dialogo_espelhos/interact" to="dialogo_espelhos" method="_on_interact_body_entered"]
 [connection signal="body_exited" from="dialogo_espelhos/interact" to="dialogo_espelhos" method="_on_interact_body_exited"]
+[connection signal="body_entered" from="dialogo_espelhos/desenho" to="dialogo_espelhos" method="_on_desenho_body_entered"]
+[connection signal="body_exited" from="dialogo_espelhos/desenho" to="dialogo_espelhos" method="_on_desenho_body_exited"]

@@ -85,7 +85,7 @@ func _on_item_2_pressed() -> void:
 	if item2.text == 'ovo':
 		inv['slot2'] = ''
 		ativar_texto(item2,textos['ovo'],false)
-		add_vida(6)
+		add_vida(20)
 	elif item2.text == 'salgadinho':
 		inv['slot2'] = ''
 		ativar_texto(item2,textos['salgadinho'],false)

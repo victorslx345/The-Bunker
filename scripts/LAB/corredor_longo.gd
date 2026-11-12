@@ -9,7 +9,8 @@ func _ready() -> void:
 		$kris.position = Vector2(565.0,519.0)
 	else:
 		$kris.position = ScriptsGlobais.kris_pos
-
+	if ScriptsGlobais.itens['ovo'] == true:
+		$cenario/colisao/hitbox4.disabled = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if ScriptsGlobais.derrotou == false:
