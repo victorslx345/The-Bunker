@@ -1,0 +1,328 @@
+[gd_scene format=3 uid="uid://s6c7sttrwtb1"]
+
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="1_2yng7"]
+[ext_resource type="AudioStream" uid="uid://bwjnybtndsxr6" path="res://musicas/ch2_credits.ogg" id="1_bdi3p"]
+[ext_resource type="Script" uid="uid://bwtfxvn3uhubs" path="res://scripts/creditos_menu.gd" id="1_kdxs6"]
+[ext_resource type="Texture2D" uid="uid://bxdqe3xgtqxfp" path="res://assets/undertale logo.png" id="2_bdi3p"]
+[ext_resource type="Texture2D" uid="uid://t0w8j8tjwqgf" path="res://assets/deltarune logo.png" id="3_kdxs6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52y4n"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
+
+[sub_resource type="Animation" id="Animation_kdxs6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("textos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("textos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bdi3p"]
+resource_name = "creditos"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("textos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 59),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3459)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("textos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(59, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdxs6"]
+_data = {
+&"RESET": SubResource("Animation_kdxs6"),
+&"creditos": SubResource("Animation_bdi3p")
+}
+
+[node name="creditos_menu" type="Control" unique_id=1652760183]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kdxs6")
+
+[node name="Ch2Credits" type="AudioStreamPlayer" parent="." unique_id=1793071155]
+stream = ExtResource("1_bdi3p")
+autoplay = true
+
+[node name="fundo" type="Panel" parent="." unique_id=1213574579]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 5656.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_52y4n")
+
+[node name="textos" type="Control" parent="." unique_id=694918443]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_director" type="Label" parent="textos" unique_id=1722321177]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 385.0
+offset_right = 228.0
+offset_bottom = 534.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -26
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Game Director
+Victor"
+horizontal_alignment = 1
+
+[node name="Game_designer" type="Label" parent="textos" unique_id=1890185880]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 670.0
+offset_right = 228.0
+offset_bottom = 819.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Game Designer
+Victor"
+horizontal_alignment = 1
+
+[node name="Level Designer" type="Label" parent="textos" unique_id=419812437]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 956.0
+offset_right = 228.0
+offset_bottom = 1105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Level Designer
+João"
+horizontal_alignment = 1
+
+[node name="programer" type="Label" parent="textos" unique_id=1747153005]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = 1233.0
+offset_right = 230.0
+offset_bottom = 1382.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -26
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Programmer
+
+Victor"
+horizontal_alignment = 1
+
+[node name="sound" type="Label" parent="textos" unique_id=1286738242]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 1518.0
+offset_right = 228.0
+offset_bottom = 1667.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Sound Designer
+Victor"
+horizontal_alignment = 1
+
+[node name="game tester" type="Label" parent="textos" unique_id=1789193572]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 1804.0
+offset_right = 228.0
+offset_bottom = 1953.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Game Tester
+João, Paulo, Mateus, Afonso"
+horizontal_alignment = 1
+
+[node name="Original Artist" type="Label" parent="textos" unique_id=1409201186]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 2086.0
+offset_right = 228.0
+offset_bottom = 2235.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -26
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Artista Original
+
+Temmie Chang"
+horizontal_alignment = 1
+
+[node name="Musics by" type="Label" parent="textos" unique_id=1303207642]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 2371.0
+offset_right = 228.0
+offset_bottom = 2520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Musicas por:
+Toby Fox"
+horizontal_alignment = 1
+
+[node name="sprites" type="Label" parent="textos" unique_id=1574663650]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 2657.0
+offset_right = 228.0
+offset_bottom = 2806.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Sprites Desponibilizados Por:
+The Sprite Resource"
+horizontal_alignment = 1
+
+[node name="sfx" type="Label" parent="textos" unique_id=1167677907]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = 2934.0
+offset_right = 230.0
+offset_bottom = 3083.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -26
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Sound Effects Desponibilizados Por:
+
+The Sound Resource"
+horizontal_alignment = 1
+
+[node name="undertale" type="Sprite2D" parent="textos" unique_id=190785460]
+position = Vector2(852, 3731.0002)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_bdi3p")
+
+[node name="deltarune" type="Sprite2D" parent="textos" unique_id=498425339]
+position = Vector2(271, 3717)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_kdxs6")
+
+[node name="inspiração" type="Label" parent="textos" unique_id=1376219620]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 3219.0
+offset_right = 228.0
+offset_bottom = 3368.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2yng7")
+theme_override_font_sizes/font_size = 50
+text = "Inspiração:
+"
+horizontal_alignment = 1
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=477197757]
+libraries/ = SubResource("AnimationLibrary_kdxs6")
+autoplay = &"creditos"

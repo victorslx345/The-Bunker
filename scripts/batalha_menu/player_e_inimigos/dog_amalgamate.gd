@@ -2,8 +2,8 @@ extends Node2D
 
 @export var Status = {
 	'Nome' : 'ReaperBird',
-	'Vida' : 150,
-	'Vida_max' : 150
+	'Vida' : 120,
+	'Vida_max' : 120
 }
 @export var turnos = {
 	'turno1' : str('ReaperBird bloqueia o caminho.'),

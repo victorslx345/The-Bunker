@@ -3,13 +3,17 @@ extends Control
 @onready var animacao = $ataque_hud/AnimationPlayer
 @onready var act = $"../acts_hud"
 @onready var bicho = $"../bicho_info/VBoxContainer/bicho"
+var poupa:bool
 func _ready() -> void:
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if poupa == true and act.acao == 'poupar' and $"../hud/text_container".texto_terminou == true and Input.is_action_just_pressed('interagir'):
+		$"../hud/text_container".hide()
+		act.modo = 'luta'
+		poupa = false
 
 
 func _on_bicho_pressed() -> void:
@@ -39,3 +43,12 @@ func _on_bicho_pressed() -> void:
 		bicho.disabled = true
 		$agir_hud/coluna1/acao1.mouse_filter = 1
 		$agir_hud/coluna1/acao1.disabled = true
+	elif act.acao == 'poupar':
+		$"../hud/text_container".visible = true
+		$"../hud/text_container/texto".visible = true
+		$"../bicho_info".visible = false
+		bicho.disabled = true
+		$"../hud/text_container".apagar_texto = true
+		$"../hud/text_container".texto = '	* Você ofereceu perdão...\n Mas ReaperBird não parece entender.'
+		$"../hud/text_container".can_play = true
+		poupa = true

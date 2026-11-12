@@ -64,10 +64,10 @@ size = Vector2(468, 22)
 size = Vector2(73, 536)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sncfd"]
-size = Vector2(120, 129)
+size = Vector2(325, 129)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf16f"]
-size = Vector2(120, 146)
+size = Vector2(389, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbp17"]
 size = Vector2(183, 31)
@@ -220,6 +220,30 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"up"]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("cenario/colisao/hitbox4:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(317.795, 604.5)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("cenario/colisao/hitbox5:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(855.885, 613)]
 }
 
 [sub_resource type="Animation" id="Animation_7rdks"]
@@ -404,6 +428,30 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("cenario/colisao/hitbox4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(317.275, 604.5), Vector2(474.58, 604.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("cenario/colisao/hitbox5:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(855.08, 613), Vector2(597, 613)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n633u"]
 _data = {
@@ -438,6 +486,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cenario/kris/CanvasLayer/borda:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_sabmk"]
 resource_name = "luzes"
@@ -467,10 +527,26 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_tifad"]
+resource_name = "some"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cenario/kris/CanvasLayer/borda:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3udcw"]
 _data = {
 &"RESET": SubResource("Animation_ou31b"),
-&"luzes": SubResource("Animation_sabmk")
+&"luzes": SubResource("Animation_sabmk"),
+&"some": SubResource("Animation_tifad")
 }
 
 [node name="elevador" type="Node2D" unique_id=2000602011]
@@ -502,7 +578,7 @@ texture = ExtResource("2_ep2dh")
 [node name="porta_e" type="Panel" parent="cenario" unique_id=435253722]
 offset_left = 375.0
 offset_top = 540.0
-offset_right = 470.99982
+offset_right = 470.99994
 offset_bottom = 678.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5hqy4")
 
@@ -536,11 +612,11 @@ position = Vector2(816.5, 328)
 shape = SubResource("RectangleShape2D_aj4ri")
 
 [node name="hitbox4" type="CollisionShape2D" parent="cenario/colisao" unique_id=328885969]
-position = Vector2(420, 604.5)
+position = Vector2(317.795, 604.5)
 shape = SubResource("RectangleShape2D_sncfd")
 
 [node name="hitbox5" type="CollisionShape2D" parent="cenario/colisao" unique_id=392856802]
-position = Vector2(720, 613)
+position = Vector2(855.885, 613)
 shape = SubResource("RectangleShape2D_cf16f")
 
 [node name="hitbox6" type="CollisionShape2D" parent="cenario/colisao" unique_id=1618660499]
@@ -560,6 +636,7 @@ frame_progress = 0.0
 animation = &"right"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="cenario/kris" unique_id=825244853]
+visible = false
 
 [node name="borda" type="Sprite2D" parent="cenario/kris/CanvasLayer" unique_id=1789906858]
 texture_filter = 1

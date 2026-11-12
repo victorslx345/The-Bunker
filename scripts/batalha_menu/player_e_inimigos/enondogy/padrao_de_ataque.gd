@@ -15,17 +15,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if turno > 4:
 		turno = 1
-	if rodar == true and Input.is_action_just_pressed('1'):
-		turno = 1
-	if rodar == true and Input.is_action_just_pressed('2'):
-		turno = 2
-	if rodar == true and Input.is_action_just_pressed('3'):
-		turno = 3
-	if rodar == true and Input.is_action_just_pressed('4'):
-		turno = 4
-	if rodar == true and Input.is_action_just_pressed('5'):
-		turno = 5
-	if rodar == true and Input.is_action_just_pressed('q'):
-		SingnalManager.batalha_comeca.emit()
-	if rodar == true and Input.is_action_just_pressed('w'):
-		SingnalManager.batalha_termina.emit()
+	#if rodar == true and Input.is_action_just_pressed('1'):
+		#turno = 1
+	#if rodar == true and Input.is_action_just_pressed('2'):
+		#turno = 2
+	#if rodar == true and Input.is_action_just_pressed('3'):
+		#turno = 3
+	#if rodar == true and Input.is_action_just_pressed('4'):
+		#turno = 4
+	#if rodar == true and Input.is_action_just_pressed('5'):
+		#turno = 5
+	#if rodar == true and Input.is_action_just_pressed('q'):
+		#SingnalManager.batalha_comeca.emit()
+	#if rodar == true and Input.is_action_just_pressed('w'):
+		#SingnalManager.batalha_termina.emit()

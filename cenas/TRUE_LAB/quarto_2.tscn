@@ -496,6 +496,7 @@ position = Vector2(45, 162.33334)
 shape = SubResource("RectangleShape2D_am5u2")
 
 [node name="chave" type="StaticBody2D" parent="cenario/chave_azul" unique_id=116773138]
+position = Vector2(32, 12)
 scale = Vector2(3, 3)
 
 [node name="sprite" type="AnimatedSprite2D" parent="cenario/chave_azul/chave" unique_id=856809951]

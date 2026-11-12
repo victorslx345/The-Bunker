@@ -1,10 +1,11 @@
+res://scripts/
+res://cenas/
 res://assets/kris/
 res://scripts/LAB/
 res://scripts/batalha_menu/player_e_inimigos/enondogy/
 res://cenas/batalha/Inimigos/
 res://assets/agamalgados/Enondogy/
 res://cenas/TRUE_LAB/
-res://scripts/
 res://assets/LAB/
 res://assets/agamalgados/
 res://scripts/dialogos/
@@ -13,7 +14,6 @@ res://scripts/batalha_menu/player_e_inimigos/
 res://assets/Batalha_hud/
 res://cenas/batalha/
 res://assets/agamalgados/telegrafo/
-res://cenas/
 res://scripts/batalha_menu/
 res://scripts/sigletons/
 res://scripts/textos/

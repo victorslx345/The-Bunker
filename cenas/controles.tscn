@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://b2d1a2tj4vulk"]
+
+[ext_resource type="Script" uid="uid://di3d8wqibfof6" path="res://scripts/controles.gd" id="1_12apv"]
+[ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="1_w01jw"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="2_12apv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls2uy"]
+bg_color = Color(0.014933487, 0.0029319134, 0, 1)
+
+[sub_resource type="Animation" id="Animation_12apv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tutoriel/avançar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgicp"]
+resource_name = "new_animation"
+length = 0.39999999999999997
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tutoriel/avançar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ktflw"]
+_data = {
+&"RESET": SubResource("Animation_12apv"),
+&"avança": SubResource("Animation_dgicp")
+}
+
+[node name="controles" type="Control" unique_id=1482478077]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_12apv")
+
+[node name="Panel" type="Panel" parent="." unique_id=805653548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls2uy")
+
+[node name="tutoriel" type="Control" parent="." unique_id=1383831965]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="controles" type="Label" parent="tutoriel" unique_id=2108427259]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 175.0
+offset_right = 663.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 21
+theme_override_fonts/font = ExtResource("1_w01jw")
+theme_override_font_sizes/font_size = 50
+text = "Z - Interagir / Confimar
+X - Correr / Voltar
+C - Avançar Dialogo"
+
+[node name="enunciado" type="Label" parent="tutoriel" unique_id=1308588320]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 298.0
+offset_top = 9.0
+offset_right = 927.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/line_spacing = 21
+theme_override_fonts/font = ExtResource("1_w01jw")
+theme_override_font_sizes/font_size = 50
+text = "Controles:"
+
+[node name="setinhas" type="Label" parent="tutoriel" unique_id=1135157284]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 768.0
+offset_top = 175.0
+offset_right = 1397.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 21
+theme_override_fonts/font = ExtResource("1_w01jw")
+theme_override_font_sizes/font_size = 50
+text = "Use as setas
+ para mover"
+
+[node name="avançar" type="Label" parent="tutoriel" unique_id=657867497]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 203.0
+offset_top = 524.0
+offset_right = 891.0
+offset_bottom = 767.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 21
+theme_override_fonts/font = ExtResource("1_w01jw")
+theme_override_font_sizes/font_size = 50
+text = "Aperte Z para prosseguir..."
+
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("2_12apv")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1729025320]
+libraries/ = SubResource("AnimationLibrary_ktflw")

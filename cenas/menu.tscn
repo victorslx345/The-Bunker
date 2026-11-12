@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://4teaefjsb4p4" path="res://fontes/deltarune.ttf" id="4_qvcyk"]
 [ext_resource type="FontFile" uid="uid://c8mnp2eyqx8kk" path="res://fontes/determination.ttf" id="5_nxpqr"]
 [ext_resource type="AudioStream" uid="uid://bcoqpl38ewrcs" path="res://musicas/AUDIO_ANOTHERHIM.ogg" id="6_nxpqr"]
+[ext_resource type="PackedScene" uid="uid://dmsw46sgetngg" path="res://cenas/transicoes.tscn" id="6_qcnrj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj4ri"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -16,7 +17,7 @@ bg_color = Color(0, 0, 0, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sncfd"]
 bg_color = Color(0, 0, 0, 0)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aj4ri"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qcnrj"]
 
 [node name="Menu" type="Control" unique_id=426771093]
 layout_mode = 3
@@ -76,6 +77,11 @@ theme_override_constants/separation = 12
 [node name="Jogar" type="Button" parent="BoxContainer/botoes" unique_id=1748851243]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Creditos")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Sair")
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
@@ -83,11 +89,17 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcnrj")
 text = "Jogar"
 
 [node name="Sair" type="Button" parent="BoxContainer/botoes" unique_id=1337747339]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Jogar")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Creditos")
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
@@ -95,12 +107,18 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcnrj")
 text = "Sair
 "
 
 [node name="Creditos" type="Button" parent="BoxContainer/botoes" unique_id=984352672]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Sair")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Jogar")
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
 theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
 theme_override_fonts/font = ExtResource("5_nxpqr")
@@ -108,20 +126,10 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_aj4ri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcnrj")
 text = "Creditos"
 
-[node name="Debug" type="Button" parent="BoxContainer/botoes" unique_id=1324428697]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_pressed_color = Color(3.386, 3.25, 0, 1)
-theme_override_colors/font_hover_color = Color(0.9411765, 0.9019608, 0, 1)
-theme_override_fonts/font = ExtResource("5_nxpqr")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_aj4ri")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cf16f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_sncfd")
-text = "Debug
-"
+[node name="transicoes" parent="." unique_id=1863609941 instance=ExtResource("6_qcnrj")]
 
 [node name="musga" type="AudioStreamPlayer2D" parent="." unique_id=625237643]
 position = Vector2(565, 350)
@@ -133,4 +141,3 @@ parameters/looping = true
 [connection signal="pressed" from="BoxContainer/botoes/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="BoxContainer/botoes/Creditos" to="." method="_on_creditos_pressed"]
-[connection signal="pressed" from="BoxContainer/botoes/Debug" to="." method="_on_debug_pressed"]

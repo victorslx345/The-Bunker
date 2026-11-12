@@ -5,6 +5,7 @@ var controle:bool = true
 var voa:bool
 var cai:bool
 var time = 0.1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ScriptsGlobais.DarkWorld = true
@@ -31,6 +32,11 @@ func _process(delta: float) -> void:
 			$cenario/kris.position.y += 2.5
 			await get_tree().create_timer(time*0.1).timeout
 		$sfx/Impact.play()
+		await get_tree().create_timer(0.1).timeout
+		$cenario.visible = false
+		$luz.play("some")
+		await get_tree().create_timer(3).timeout
+		get_tree().change_scene_to_file("res://cenas/creditos.tscn")
 	if flag == true and Input.is_action_just_pressed('interagir') and controle == true:
 		flag = false
 		controle = false
